@@ -64,11 +64,7 @@ void Checking()
 }
 int main()
 {
-    int x;
-    //int rand_x[3];
-
-    // Initialize random seed: 
-    
+    //int x; 
     Checking();
     //printf("Nhap vao do: ");
     //scanf("%d",&x);
@@ -76,12 +72,12 @@ int main()
     
     //std::cout << "\nSine_by_Trieu: " << Sine(radius) << std::endl;
     //std::cout << "\nSine_by_C: " << sin(radius) << std::endl;
-    */
+    
     return 0;
 }
 
 
-//Result:
+/*Result:
 Test #0: x = 304, True
 Test #1: x = 304, True
 Test #2: x = 44, True 
@@ -132,3 +128,4 @@ Test #46: x = 126, True
 Test #47: x = 100, True
 Test #48: x = 208, True
 Test #49: x = 164, True
+*/
