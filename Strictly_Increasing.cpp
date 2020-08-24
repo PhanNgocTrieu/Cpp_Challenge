@@ -16,17 +16,16 @@ You can remove 3 from the array to get the strictly increasing sequence[1, 2].Al
 
 */
 
+
+
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 bool IsCreasing(vector<int> sequence)
 {
 	int size = sequence.size();
-	if (size == 1)
-	{
-		return true;
-	}
 	for (int i = 1; i < size; i++)
 	{
 		if (sequence[i] <= sequence[i - 1])
@@ -58,23 +57,14 @@ vector<int> Removing(vector<int> sequence, int position)
 
 bool IsStrictlyCreasing(vector<int> sequence)
 {
-	int count = 0;
-	if (IsCreasing(sequence) == true)
-	{
-		return true;
-	}
 	int size = sequence.size();
 	for (int i = 0; i < size; i++) // imax = n - 1;
 	{
 		vector<int> temp = sequence;
 		if (IsCreasing(Removing(sequence,i)) == true)
 		{
-			count++;
+			return true;
 		}
-	}
-	if (count != 0)
-	{
-		return true;
 	}
 	return false;
 }
