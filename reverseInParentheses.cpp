@@ -24,60 +24,37 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <string.h>
+#include <stack>
+#include <algorithm>
 
+void reverseInParentheses(std::string &inputString) {
+    std::stack<char> st;
+    int len = inputString.length();
+    for (int i = 0; i < len; i++) {
 
-void Removing(std::string &inputString, int position)
-{
-	int size = inputString.length();
-	for (int i = position + 1; i < size; i++)
-	{
-		inputString[i - 1] = inputString[i];
-	}
-	inputString.pop_back();
-}
-void reverseInParentheses(std::string& inputString) {
+        // Push the index of the current 
+        // opening bracket 
+        if (inputString[i] == '(') {
+            st.push(i);
+        }
 
-	int size = inputString.length();
-	int last_open = 0;
-	int first_close = size;
-	do
-	{
-		for (int i = 0; i < size; i++)
-		{
-			if (inputString[i] == '(')
-			{
-				if (i > last_open)
-				{
-					last_open = i;
-				}
-			}
-		}
-		//deleta last '('
-		Removing(inputString, last_open);
+        // Reverse the substring starting 
+        // after the last encountered opening 
+        // bracket till the current character 
+        else if (inputString[i] == ')') {
+            reverse(inputString.begin() + st.top() + 1,
+                inputString.begin() + i);
+            st.pop();
+        }
+    }
 
-		for (int i = size - 1; i >=0; i--)
-		{
-			if (inputString[i] == '(')
-			{
-				if (i < first_close)
-				{
-					first_close = i;
-				}
-			}
-		}
-		//delete fist ')'
-		Removing(inputString, first_close);
-		for (int i = last_open; last_open < first_close; i++)
-		{
-    
-			char temp = inputString[i];
-			inputString[i] = inputString[first_close];
-			inputString[first_close] = temp;
-			first_close--;
-		}
-
-	} while (inputString.find('(') == std::string::npos);
+    // To store the modified string 
+    std::string res = "";
+    for (int i = 0; i < len; i++) {
+        if (inputString[i] != ')' && inputString[i] != '(')
+            res += (inputString[i]);
+    }
+    inputString = res;
 }
 
 int main()
