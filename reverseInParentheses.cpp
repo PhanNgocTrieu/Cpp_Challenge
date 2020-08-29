@@ -32,15 +32,12 @@ void reverseInParentheses(std::string &inputString) {
     int len = inputString.length();
     for (int i = 0; i < len; i++) {
 
-        // Push the index of the current 
-        // opening bracket 
+        //pushing position of '(' in stack; 
         if (inputString[i] == '(') {
             st.push(i);
         }
 
-        // Reverse the substring starting 
-        // after the last encountered opening 
-        // bracket till the current character 
+       	//reversing string from index of stack.top() and position of ')'
         else if (inputString[i] == ')') {
             reverse(inputString.begin() + st.top() + 1,
                 inputString.begin() + i);
