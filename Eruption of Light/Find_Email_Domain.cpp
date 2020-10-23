@@ -18,6 +18,8 @@
 
 std::string findEmailDomain(std::string address) {
 	
+	// Frist way:
+	/*
 	int Pos = address.find_last_of("@") + 1;
 	int Len = address.length() - Pos;
 	char buffer[20];
@@ -25,12 +27,26 @@ std::string findEmailDomain(std::string address) {
 	buffer[length] = '\0';
 	std::cout << "buffer contains: " << buffer << '\n';
 	return buffer;
+	*/
+	
+	// the second way: more power
+	int Pos = address.find_last_of("@") + 1;
+	int Len = address.length() - Pos;
+	std::string res = "";
+
+	for (int i = Pos; i < address.length(); i++)
+	{
+		res += address[i];
+	}
+	std::cout << res;
+
+	return res;
 }
 
 
 int main()
 {
-	std::string address = "Better@gmail.com";
+	std::string address = "better@teen@gmail.com";
 	findEmailDomain(address);
 
 	return 0;
