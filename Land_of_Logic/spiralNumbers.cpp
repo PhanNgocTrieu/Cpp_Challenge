@@ -9,7 +9,6 @@
 
 //----------------------------------------------------------------------------------------------------
 
-
 #include <iostream>
 #include <vector>
 
@@ -18,46 +17,45 @@ using namespace std;
 vector<vector<int>> spiralNumbers(int n)
 {
 	vector<vector<int>> res;
-	int cols = 0;
-	int rows = 0;
+	int pos = 0;
 	int num = 1;
 	
-	while (rows < n && cols <= n)
+	while (num <= n*n)
 	{
-		// n = 4
-		for (int i = cols; i < n; i++)
-		{
-			res[rows][i] = num;
-			num++;
-		}
-		rows++;
-		// rows = 1
-		for (int i = rows; i < n; i++)
-		{
-			res[i][n - 1] = num;
-			num++;
-		}
-		n--;
-		// n = 3
-		if (cols < n)
-		{
-			for	(int i = n - 1; i >= cols; i--) // cols == 0
-			{
-				res[n][i] = num;
-				num++;
-			}
-		}
 		
-		if (rows < n)
+		for (int i = pos; i < n; i++)
 		{
-			for (int i = n - 1; i >= rows; i++)
-			{
-				res[i][cols] = num;
-				num++;
-			}
+			res[pos][i] = num++; //coud not run to end of this loop
 		}
-		cols++;
+
+		for (int i = pos + 1; i < n; i++)
+		{
+			res[i][n - 1] = num++;
+		}
+
+        for	(int i = n - 2; i >= pos; i--) 
+        {
+            res[n - 1][i] = num++;
+        }
+
+        for (int i = n - 2; i > pos; i--)
+        {
+            res[i][pos] = num++;
+        }
+		n--;
+        pos++;
 	}
+
+    cout << "Coming to this!\n"; //debug
+    for (int i = 0; i < res.size(); i++)
+    {
+        for (int j = 0; j < res[0].size(); j++)
+        {
+            cout << res[i][j] << " ";
+        }
+        cout << "\n";
+    }
+    
 	return res;
 }
 
@@ -65,5 +63,6 @@ int main() {
 	
 	// your code goes here
 	spiralNumbers(4);
+
 	return 0;
 }
