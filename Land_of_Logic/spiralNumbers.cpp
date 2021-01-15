@@ -42,12 +42,12 @@ vector<vector<int>> spiralNumbers(int n)
 		}
 
 		//std::cout << "Running this 4: \n";
-        for (int i = len - 2; i > pos; i--)
-        {
-            res[i][pos] = num++;
-        }
+		for (int i = len - 2; i > pos; i--)
+		{
+		    res[i][pos] = num++;
+		}
 		len--;
-        pos++;
+		pos++;
 	}
 
     std::cout << "\nPrint!: \n"; //debug
