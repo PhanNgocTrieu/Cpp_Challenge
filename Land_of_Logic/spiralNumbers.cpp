@@ -8,7 +8,6 @@
 
 
 //----------------------------------------------------------------------------------------------------
-
 #include <iostream>
 #include <vector>
 
@@ -16,44 +15,49 @@ using namespace std;
 
 vector<vector<int>> spiralNumbers(int n)
 {
-	vector<vector<int>> res;
+	vector<vector<int>> res(n,vector<int> (n,0));
 	int pos = 0;
+	int len = n;
 	int num = 1;
 	
-	while (num <= n*n)
+	while (pos <= n)
 	{
-		
-		for (int i = pos; i < n; i++)
+		//std::cout << num << " ";
+		for (int i = pos; i < len; i++)
 		{
-			res[pos][i] = num++; //coud not run to end of this loop
+			res[pos][i] = num++;
 		}
 
-		for (int i = pos + 1; i < n; i++)
+		//std::cout << "Running this 2: \n";
+		for (int i = pos + 1; i < len; i++)
 		{
-			res[i][n - 1] = num++;
+			res[i][len - 1] = num++;
 		}
 
-        for	(int i = n - 2; i >= pos; i--) 
-        {
-            res[n - 1][i] = num++;
-        }
+		//std::cout << "Running this 3: \n";
+		for	(int i = len - 2; i >= pos; i--) 
+		{
+			//cout << num << " ";
+			res[len - 1][i] = num++;
+		}
 
-        for (int i = n - 2; i > pos; i--)
+		//std::cout << "Running this 4: \n";
+        for (int i = len - 2; i > pos; i--)
         {
             res[i][pos] = num++;
         }
-		n--;
+		len--;
         pos++;
 	}
 
-    cout << "Coming to this!\n"; //debug
-    for (int i = 0; i < res.size(); i++)
+    std::cout << "\nPrint!: \n"; //debug
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < res[0].size(); j++)
+        for (int j = 0; j < n; j++)
         {
-            cout << res[i][j] << " ";
+            std::cout << res[i][j] << " ";
         }
-        cout << "\n";
+        std::cout << "\n";
     }
     
 	return res;
@@ -66,3 +70,15 @@ int main() {
 
 	return 0;
 }
+
+
+/*
+output:
+
+Print!:
+1 2 3 4
+12 13 14 5
+11 16 15 6
+10 9 8 7
+
+*/
