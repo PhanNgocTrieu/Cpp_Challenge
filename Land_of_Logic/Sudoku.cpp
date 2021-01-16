@@ -20,6 +20,15 @@ the output should be
 sudoku(grid) = true;
 */
 
+
+/*Algorithm:
+- checking for each of rows: if sameElement.exist() => false;
+- checking for each of cols: if sameElement.exist() => false;
+- checking for 3x3 matrix: if anySameElement.exist() => false;
+*/
+
+
+
 #include <iostream>
 #include <vector>
 #include <set>
