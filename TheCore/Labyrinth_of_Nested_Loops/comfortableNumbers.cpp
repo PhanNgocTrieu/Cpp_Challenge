@@ -57,7 +57,7 @@ int comfortableNumbers(int l, int r) {
 
                 if ( j < i)
                 {
-                    if (std::find(pairs.begin(),pairs.end(),std::make_pair(j,i)) == pairs.end())
+                    if (std::find(pairs.begin(),pairs.end(),std::make_pair(j,i)) != pairs.end())
                     {
                         pairsNum++;
                     }
