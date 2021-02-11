@@ -66,8 +66,8 @@ int comfortableNumbers(int l, int r) {
         }
     }
 
-    //PrintPairs(pairs);
-    return pairs.size();
+    
+    return pairsNum;
 }
 
 
