@@ -20,15 +20,6 @@ the output should be
 sudoku(grid) = true;
 */
 
-
-/*Algorithm:
-- checking for each of rows: if sameElement.exist() => false;
-- checking for each of cols: if sameElement.exist() => false;
-- checking for 3x3 matrix: if anySameElement.exist() => false;
-*/
-
-
-
 #include <iostream>
 #include <vector>
 #include <set>
@@ -90,6 +81,8 @@ bool checkCols(vector<vector<int>> grid)
                 }
                 track.push_back(grid[rows_index][cols_index]);
             }
+            
+            
         }
         
     }
@@ -170,7 +163,18 @@ bool sudoku(vector<vector<int>> grid) {
             {
                 return false;
             }
+            // vector<vector<int>> sub_matrix = sub_grid(grid,start_r,start_r+3,start_c,start_c+3);
+            // for (int i = 0; i < sub_matrix.size(); i++)
+            // {
+            //     for (int j = 0; j < sub_matrix[0].size(); j++)
+            //     {
+            //         cout << sub_matrix[i][j] << " ";
+            //     }
+            //     cout << "\n";
+            // }
+            // break;
         }   
+        // break;
     }
     return true;
 }

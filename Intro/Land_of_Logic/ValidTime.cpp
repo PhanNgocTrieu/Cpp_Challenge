@@ -45,12 +45,12 @@ bool validTime(std::string time) {
     // }
 
     //------------Using Algorithm-------
-    // Too Hard:  return std::regex_match(time, std::regex("(?:[01]\\d|2[0-3]):[0-5]\\d"));
+    return std::regex_match(time, std::regex("(?:[01]\\d|2[0-3]):[0-5]\\d"));
 
 
 
    // ------------Another Way---------
-   return stoi(time.substr(0,2)) < 24 && stoi(time.substr(3,2)) < 60;
+   //return stoi(time.substr(0,2)) < 24 && stoi(time.substr(3,2)) < 60;
 }
 
 
