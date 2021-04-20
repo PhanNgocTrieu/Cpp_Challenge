@@ -10,6 +10,25 @@
 
 // For a = "ab" and b = "abcbcb", the output should be stringsConstruction(a, b) = 1.
 
+
+/*
+Algorithm:
+give: s1 = "abcdd" ---- s2 = "abcddcbadcad"
+-->recorgnize:
+  s1 --> a : 1 | b : 1 | c : 1 | d : 2
+  s2 --> a : 3 | b : 2 | c : 3 | d : 4
+
+if we build first string of s1 from s2 => a : 2 | b : 1 | c : 2 | d : 2 => we can build the second one -s2--> a : 2 | b : 0 | c : 1 | d : 0
+
+==> We can see that output of this problem is ---- min[a(s1)/a(s2);b(s1)/b(s2);c(s1)/c(s2);d(s1)/d(s2)]
+from above example:
+output = Min[3/1;2/1;3/1;4/2] = Min[3,2,3,2] => Min is 2 => we can construct 2 strings of s1 from s2;
+
+
+*/
+
+
+// ********************************************************CODE**************************************************************\\
 #include <iostream>
 #include <string>
 #include <map>
