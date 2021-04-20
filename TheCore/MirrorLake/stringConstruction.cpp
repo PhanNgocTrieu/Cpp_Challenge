@@ -40,20 +40,24 @@ int stringsConstruction(std::string a, std::string b) {
 	std::vector<char> vec_char;
 	std::map<char, int> pair_ch_num_a;
     	std::map<char, int> pair_ch_num_b;
-
+	
+	// create a vector of all letter in a
 	for (char c : a)
 	{
 		if (std::find(vec_char.begin(),vec_char.end(),c) == vec_char.end())
 			vec_char.push_back(c);
 	}
 	
+	// Insert list of char : count_char into 2 map a and b
+	// we can have min_output by this loop no need the third loop - just needing for more clearly
 	for (int i = 0; i < vec_char.size(); i++)
 	{
 		pair_ch_num_a.insert(std::make_pair(vec_char[i], std::count(a.begin(), a.end(), vec_char[i])));
 		pair_ch_num_b.insert(std::make_pair(vec_char[i], std::count(b.begin(), b.end(), vec_char[i])));
 	}
 	
-	std::map<char, int>::iterator it;
+	
+	
 	for (int i = 0; i < vec_char.size(); i++)
 	{
 		std::cout << "#" << vec_char[i] << ":";
