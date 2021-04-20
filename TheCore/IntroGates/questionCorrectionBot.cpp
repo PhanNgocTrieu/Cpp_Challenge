@@ -71,10 +71,7 @@ string questionCorrectionBot(string question) {
         __deleteLetter(question,last_pos);
         last_pos--;
     }
-    
-    
-    
-    // Go through all the element
+
     i = 0;
     while (i < question.length())
     {
@@ -121,7 +118,6 @@ string questionCorrectionBot(string question) {
         i++;
     }
     
-    //checking for white spaces which is multiples
     i = 1;
     while (i < question.length())
     {
@@ -135,7 +131,7 @@ string questionCorrectionBot(string question) {
         }
         i++;
     }
-    // fist letter have to be a capital petter
+    
     question[0] = toupper(question[0]);
     return question;
 }
