@@ -36,10 +36,10 @@ output = Min[3/1;2/1;3/1;4/2] = Min[3,2,3,2] => Min is 2 => we can construct 2 s
 #include <algorithm>
 
 int stringsConstruction(std::string a, std::string b) {
-    int min = 9999;
+   	int min = 9999;
 	std::vector<char> vec_char;
 	std::map<char, int> pair_ch_num_a;
-    std::map<char, int> pair_ch_num_b;
+    	std::map<char, int> pair_ch_num_b;
 
 	for (char c : a)
 	{
