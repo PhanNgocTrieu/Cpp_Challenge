@@ -18,11 +18,9 @@ For string1 = "aa" and string2 = "bc", the output should be
 isSubstitutionCipher(string1, string2) = false.
 */
 
+#include <iostream>
 
-
-
-
-
+using namespace std;
 
 struct CipherValue
 {
@@ -45,6 +43,10 @@ bool isSubstitutionCipher(string string1, string string2) {
 	for (; index < length; index++)
 	{
 			int in = 0;
+			// checking reversing from string2 -> string1[index] != message_value[j] ==> return false;
+			// str1 = "aabb"
+			// str2 = "aabc"
+			// => reference from str1 to str2 => b have 2 values --> false
 			for (int j = 0; j < index_Mess; j++)
 			{
 				if (string1[index] == Message_Value[j].key)
@@ -58,6 +60,10 @@ bool isSubstitutionCipher(string string1, string string2) {
 			}
 			if (in == 0)
 			{
+				// checking reversing from string2 -> string2[index] != message_value[j] ==> return false;
+				// str1 = "aabc"
+				// str2 = "aabb"
+				// => reference from str2 to str1 => b have 2 key --> false
 				for (int j = 0; j < index_Mess; j++)
 				{
 					if (string2[index] == Message_Value[j].value)
@@ -73,4 +79,14 @@ bool isSubstitutionCipher(string string1, string string2) {
 	}
 
     return true;
+}
+
+
+int main()
+{
+	if (isSubstitutionCipher("aaxyaa", "aazzaa"))
+		std::cout << "True!\n";
+	else
+		std::cout << "False!\n";
+	return 0;
 }
