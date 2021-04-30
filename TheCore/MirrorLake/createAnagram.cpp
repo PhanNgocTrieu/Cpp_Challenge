@@ -62,7 +62,7 @@ int main()
 	std::cout << createAnagram("AABCDS", "BASEAE"); //output should be: 2
   std::cout << createAnagram("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"); //output should be: 0
   std::cout << createAnagram("HDFFVR", "FEDDEE"); //output should be: 4
-  std::cout << createAnagram("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZY", "YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYZ"); //output should be: 2
+  std::cout << createAnagram("ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZY", "YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYZ"); //output should be: 31
   
 	return 0;
 }
