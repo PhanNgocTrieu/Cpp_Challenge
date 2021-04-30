@@ -13,10 +13,14 @@ createAnagram(s, t) = 4.
 
 
 Algorithm:
+s1: A - 4 | B - 1
+s2: A - 3 | B - 2
 
+we can see that if we replace B of s2 by A of s2 -> we can have a string which was built from s1 when we arrange s1.
 
----------------------------
- 8 - 4 = 4;
+it means we can find the max of difference between 2 string (s1 -> s2) -- they all are the same length. so don't worry about the length of them.
+-------------------
+difference_s = [s1(A) > s2(A) ? count_s1(A) - count_s2(A) : 0) + s1(B) > s2(B) ? count_s1(B) - count_s2(B) : 0)]
 
 */
 
