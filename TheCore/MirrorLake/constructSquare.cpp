@@ -25,18 +25,24 @@ Take a look:
 1: 1 - 9                  {1 - 2 - 3} - {1, 4, 9}
 2: 10 - 99                {4 - ... - 9} - {16 - ... - 81}
 3: 100 - 999              {10 - ... - 31 }- {100 - ... - 961 }
-4: 1000 - 9999		        {32 - ... - 99 } - { 1024 - ... - 9801 }
-5: 10000 - 99999	        {100 - ... - 316 } - { 10000 - ... - 99856}
-6: 100000 - 999999	      {317 - ... - 999 } - { 100489 - ... - 998001 }
+4: 1000 - 9999		  {32 - ... - 99 } - { 1024 - ... - 9801 }
+5: 10000 - 99999	  {100 - ... - 316 } - { 10000 - ... - 99856}
+6: 100000 - 999999	  {317 - ... - 999 } - { 100489 - ... - 998001 }
 7: 1000000 - 9999999      {1000 - ... - 3162 } - { 1000000 - .......... - 9998244}
 8: 10000000 - 99999999	  {3163 - ... - 9999 } - { 10004569 - ......... - 99980001}
 9: 100000000 - 999999999  {10000 - ... - 31622 } - { 100000000 - ........ - 999950884}
 
+We can se the bottom_limit of n_digits (n % 2 != 0) always equal sqrt(pow(10,n_digits - 1));
+
 example:
 s = "aaaabbcde" => sort(s) = "11124" (sorting by numbers of letter)
 digits of string = 9
-=> top_limit = 31622 
-=> bottom_limit = 9999
+=> top_limit = 31623 (in lone of 9 digits == ceil(sqrt(pow(10,digit_of_string)));    
+   ==> ceil(sqrt(1000000000)) => ceil(31622.7766017) => 31623
+=> bottom_limit = 9999 (in line of 8 digits) == floor(sqrt(pow(10,digit_of_string - 1) - 1);
+   ==> ceil(sqrt(100000000) - 1) => ceil(10000 - 1) = 9999
+   
+   
 
 finding square_number from top to bottom (because we find largest square number)
 loop
