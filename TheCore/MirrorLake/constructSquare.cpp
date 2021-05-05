@@ -86,10 +86,6 @@ std::vector<int> format(std::string s) {
 
 int constructSquare(std::string s) {
 
-	if (s.length() == 1)
-		return 9;
-
-	
 	int square_upper_limit = ceil(sqrt(pow(10, s.length()))); // 10
 	int square_below_limit = floor(sqrt(pow(10, s.length() - 1) - 1)); // 99
 	vector<int> vs = format(s);
