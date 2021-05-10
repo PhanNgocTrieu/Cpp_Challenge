@@ -60,45 +60,16 @@ using  namespace std;
 
 #define ll long long
 
-ll numberth(ll n)
-{
-	if (n <= pow(10, 4))
-		return 1;
-
-	int digits = n / pow(10, 4);
-	if (n > digits * pow(10, 4) && n <= ((digits + 1) * pow(10, 4)))
-	{
-		return digits + 1;
-	}
-	return digits;
-}
-
-bool isExist(map<ll, ll> grouping, ll value)
-{
-	for (map<ll, ll>::iterator run = grouping.begin(); run != grouping.end(); run++)
-	{
-		if (run->first == numberth(value))
-			return true;
-	}
-	return false;
-}
+#define range pow(10,4)
 
 int numbersGrouping(vector<int> a) {
 
-	map<ll, ll> numbers_Grouping;
+	set<int> list;
 
-	int len = a.size();
-
-	for (auto i : a)
-	{
-		ll digit = numberth(i);
-
-		if (isExist(numbers_Grouping, i) == false)
-		{
-			numbers_Grouping.insert(make_pair(digit, 1));
-		}
-	}
-	return  numbers_Grouping.size() + len;
+	for (auto element : a)
+		list.insert((element - 1) / range);
+	
+	return  list.size() + a.size();
 }
 
 
