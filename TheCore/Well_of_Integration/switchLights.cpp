@@ -13,11 +13,10 @@ void opposited(vector<int>& vec)
 {
     if (vec.empty())
         return;
-    bool lit = 1;
     int sz = vec.size();
     for (int index = 0; index < sz; index++)
     {
-        vec[index] = (vec[index] == lit) ? 0 : 1;
+        vec[index] = (vec[index] == 1) ? 0 : 1;
     }
 }
 
