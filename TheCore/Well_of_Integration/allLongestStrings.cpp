@@ -25,6 +25,5 @@ vector<string> allLongestStrings(vector<string> inputArray) {
 			}
 		}
 	}
-	Print(list);
 	return list;
 }
