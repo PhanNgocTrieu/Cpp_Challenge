@@ -26,44 +26,61 @@ Any swap of any two elements either in a or in b won't make a and b equal.
 #include <algorithm>
 using namespace std;
 
-bool areSimilar(vector<int> a, vector<int> b) {
-    if (a.size() !=  b.size())
-    {
+bool areSimilar(vector<int> a,vector<int> b)
+{
+    if (a.size() != b.size())
         return false;
-    }
-    int changeCount = 0;
-    for (int iRun = 0; iRun < a.size(); iRun++)
+    int len = a.size();
+    int diff = 0;
+    int saveA_1;
+    int saveA_2;
+    int saveB_1;
+    int saveB_2;
+    int i = 0;
+    for (int iRun = 0; iRun < len; iRun++)
     {
         if (a[iRun] != b[iRun])
         {
-            vector<int>::iterator it = find(b.begin() + iRun,b.end(),a[iRun]);
-            if (it == b.end())
+            diff++;
+            cout << "diff: " << diff << endl;
+            if (diff == 1)
             {
-                cout << "call note found!" << endl;
-                return false;
+                saveA_1 = a[iRun];
+                saveB_1 = b[iRun];
+            }
+        }
+
+        
+        if (diff >= 2)
+        {
+           
+            if (i == 0)
+            {
+                if (diff == 2)
+                {
+                    saveA_2 = a[iRun];
+                    saveB_2 = b[iRun];         
+                }
+                i++;
             }
             else
             {
-                swap(b[iRun],*it);
-                changeCount++;
+                if (diff > 2)
+                {
+                    return false;
+                }
             }
-            
-            // for (int jRun = iRun; jRun < b.size(); jRun++)
-            // {
-            //     if (b[jRun] == a[iRun])
-            //     {
-            //         std::swap(b[iRun],b[jRun]);
-            //         flag = true;
-            //         changeCount++;
-            //         break;
-            //     }
-            // }
-
-            if (changeCount > 1)
-            {
-                cout << "call Change > 1!" << endl;
-                return false;
-            }
+        }
+    }
+    if (diff == 1)
+    {
+        return false;
+    }
+    if (diff == 2)
+    {
+        if (saveA_1 != saveB_2 || saveB_1 != saveA_2)
+        {
+            return false;
         }
     }
     return true;
