@@ -25,44 +25,36 @@ Here are all possible ways:
 #include <set>
 using namespace std;
 
-int sumSplit(vector<int> a, int pos, int size)
+int calculate_sum_array(vector<int> a, int size)
 {
     int sum = 0;
-    // pos = 0 ---- > size == 0
-    for (int idex = pos; idex <= size; idex++)
+    for (int idex = 0; idex < size; idex++)
     {
         sum += a[idex];
     }
+
     return sum;
 }
 int threeSplit(vector<int> a)
 {
-    int len = a.size();
-    // checking whole array has sum of all elems is divisible 3;
-    if (sumSplit(a, 0, len - 1) % 3 != 0)
-    {
-        return 0;
-    }
     int ways = 0;
+    int first_part = 0;
+    int second_part;
+    int size = a.size();
+    int sum = calculate_sum_array(a, size);
 
-    for (int iFir = 0; iFir < len - 2; iFir++)
+    for (int i = 0; i < size - 2; i++)
     {
-        int sumFir = sumSplit(a, 0, iFir); // sum(a,0,0---len-2);
-        int iSecond = iFir + 1;
-        while (iSecond < len - 1)
+        first_part += a[i];
+        second_part = 0;
+        for (int j = i + 1; j < size - 1; j++)
         {
-            // sum(a,1,0----len-1);
-            int sumSec = sumSplit(a, iFir + 1, iSecond);
-            if (sumSec == sumFir)
+            second_part += a[j];
+            // check first_part == second_part && first_part == sum - first_part - second_part
+            if (first_part == second_part && first_part == sum - first_part - second_part)
             {
-                int iThird = iSecond + 1;
-                int sumThir = sumSplit(a, iSecond + 1, len - 1);
-                if (sumThir == sumSec)
-                {
-                    ways++;
-                }
+                ways++;
             }
-            iSecond++;
         }
     }
 
@@ -77,6 +69,5 @@ int main()
     vector<int> arr = {0, 1, 0, 1, 0, 1};
     cout << threeSplit(arr) << endl;
 
-    
     return 0;
 }
