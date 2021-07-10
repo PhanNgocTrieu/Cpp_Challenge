@@ -63,10 +63,10 @@ int threeSplit(vector<int> a)
 
 int main()
 {
-    vector<int> arr2 = {0, -1, 0, -1, 0, -1};
+    vector<int> arr2 = {0, -1, 0, -1, 0, -1}; // 4
     cout << threeSplit(arr2) << endl;
 
-    vector<int> arr = {0, 1, 0, 1, 0, 1};
+    vector<int> arr = {0, 1, 0, 1, 0, 1}; // 4
     cout << threeSplit(arr) << endl;
 
     return 0;
