@@ -69,6 +69,7 @@ void splitString(vector<string> &vs, string s)
             {
                 vs.push_back(str);
                 str = "";
+                digit = false;
             }
             str += s[idex];
             vs.push_back(str);
@@ -85,9 +86,12 @@ bool checkZeros(string numberString, int &_countZeros)
     int len = numberString.size();
     for (auto idex = 0; idex < len; idex++)
     {
-        if (numberString[idex] != '0')
+        if (!(numberString[idex] >= '0' && numberString[idex] <= '9'))
+        {
             return false;
-        _countZeros++;
+        }
+        if (numberString[idex] == '0')
+            _countZeros++;
     }
     return true;
 }
@@ -100,86 +104,62 @@ bool alphanumericLess(string s1, string s2)
     splitString(tokens1, s1);
     splitString(tokens2, s2);
 
-    for (auto it = tokens1.begin(); it != tokens1.end(); it++)
+    if (checkZeros(s1, countZeros1) && checkZeros(s2, countZeros2))
     {
-        cout << *it << " ";
+        if (countZeros1 > countZeros2)
+            return true;
+        if (countZeros1 < countZeros2)
+            return false;
     }
-    cout << endl;
 
-    for (auto it = tokens2.begin(); it != tokens2.end(); it++)
+    int limt = tokens1.size() < tokens2.size() ? tokens1.size() : tokens2.size();
+
+    for (int idex = 0; idex < limt; idex++)
     {
-        cout << *it << " ";
-    }
-    cout << endl;
-
-    int limit = tokens1.size() < tokens2.size() ? tokens1.size() : tokens2.size();
-
-    for (int idex = 0; idex < limit; idex++)
-    {
-        // handling letter
-        string str1 = tokens1[idex];
-        string str2 = tokens2[idex];
-        int iternal_limit = str2.length() < str1.length() ? str2.length() : str1.length();
-        if ((str1[0] >= '0' && str1[0] <= '9') && (str2[0] >= '0' && str2[0] <= '9'))
+        string _s1 = tokens1[idex];
+        string _s2 = tokens2[idex];
+        if (_s1[0] >= '0' && _s1[0] <= '9' && _s2[0] >= '0' && _s2[0] <= '9')
         {
-            if (stoi(str1) < stoi(str2))
-            {
+            if (stoi(_s1) < stoi(_s2))
                 return true;
-            }
-            if (stoi(str1) > stoi(str2))
-            {
+            if (stoi(_s1) > stoi(_s2))
                 return false;
-            }
-            if (stoi(str1) == stoi(str2))
+            if (checkZeros(_s1, countZeros1) && checkZeros(_s2, countZeros2))
             {
-                // all is 0s
-                if (checkZeros(str1, countZeros1) && checkZeros(str2, countZeros2))
+                if (countZeros1 > countZeros2)
                 {
-                    return countZeros1 > countZeros2 ? true : false;
-                }
-                else
-                {
-                    // 000124 vs 00124
-                    if (countZeros1 > countZeros2)
-                    {
-                        return true;
-                    }
-                    if (countZeros1 < countZeros2)
-                        return false;
+                    return true;
                 }
             }
         }
         else
         {
-            for (int jdex = 0; jdex < iternal_limit; jdex++)
-            {
-                if (str1[jdex] < str2[jdex])
-                {
-                    return true;
-                }
-                if (str1[jdex] > str2[jdex])
-                {
-                    return false;
-                }
-            }
+            if (_s1 < _s2)
+                return true;
+            if (_s1 > _s2)
+                return false;
         }
     }
 
     if (tokens1.size() < tokens2.size())
-    {
         return true;
-    }
     return false;
 }
 
 int main()
 {
-    //cout << stoi("0123") << endl;
-    // cout << alphanumericLess("0000", "000") << endl;
-    // cout << alphanumericLess("000124", "00124") << endl;
-    // cout << alphanumericLess("ab", "a1") << endl;
-    // cout << alphanumericLess("x11y012", "x011y13") << endl;
-    // cout << alphanumericLess("x11y012aaaa000000002312000", "x011y13aaaa00000003212") << endl;
-    cout << alphanumericLess("x11y013aaaaxccqds", "x011y13aaaa0") << endl;
+    //cout << stoi("0123") << endl << endl;
+    cout << alphanumericLess("0000", "000") << endl
+         << endl;
+    cout << alphanumericLess("000124", "000000124") << endl
+         << endl;
+    cout << alphanumericLess("ab", "a1") << endl
+         << endl;
+    cout << alphanumericLess("x11y012", "x011y13") << endl
+         << endl;
+    cout << alphanumericLess("x11y012aaaa000000002312000", "x011y13aaaa00000003212") << endl
+         << endl;
+    cout << alphanumericLess("x11y013aaaaxccqds", "x011y13aaaa0") << endl
+         << endl;
     return 0;
 }
