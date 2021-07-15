@@ -23,7 +23,7 @@ void findMaxMinLinear(vector<int> arr)
 }
 
 // Reducing comparisons:
-// Source: from GeeksforGeeks
+// Source: from GeeksforGeeks   
 struct Pair
 {
     int min;
