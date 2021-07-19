@@ -18,64 +18,35 @@ Thus, the answer is 3.
 using namespace std;
 
 int cyclicString(string s) {
-    
-    cout << "substr: " << s.substr(0,3) << endl;
     int len = s.length();
-    bool notOne = false;
-    for (int idex = 1; idex < len; idex++)
-    {
-        if (s[idex] != s[0])
-        {
-            notOne = true;
-            break;
-        }
-    }
 
-    if (notOne == false)
-        return 1;
-    
-    string took = "";
-    int idex = 0;
-    for (; idex < len; idex++)
+    for (int idex = 1; idex <= len; idex++)
     {
-        if (took == "")
-            took.push_back(s[idex]);
-        else
+        bool check = false;
+        for (int jdex = 0; jdex + idex <= len; jdex++)
         {
-            if (s[idex] == took[0])
+            string subCyclic(s.begin() + jdex, s.begin() + jdex + idex);
+            cout << "subCyclic: " << subCyclic << endl;
+            string p;
+            for (int zDex = 1; zDex <= len * 3; zDex++)
             {
-                string sub;
-                if (len - idex <= took.length())
-                {
-                    sub = s.substr(idex, len - idex);;
-                    string sub_Took = took.substr(0, len - idex);
-                    cout << "Sub: " << sub << endl;
-                    if (sub != sub_Took)
-                        took += sub;
-                    break;
-                }
-                else
-                {
-                    sub = s.substr(idex, took.length());
-                    if (sub != took)
-                        took += sub;
-                    idex += took.length();
-                }
+                p += subCyclic;
             }
-            else
-                took.push_back(s[idex]);
+            if (p.find(s) != string::npos)
+                check = true;
         }
-    
+        if (check)
+            return idex;
     }
 
-    cout << "Took: " << took << endl;
-    return took.length();
+    return len;
+    
 }
 
 int main()
 {
     cout << cyclicString("acbac") << endl;
     
-    cout << cyclicString("abcba") << endl;
+    //cout << cyclicString("abcba") << endl;
     return 0;
 }
