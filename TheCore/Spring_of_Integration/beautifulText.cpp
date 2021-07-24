@@ -30,61 +30,61 @@ Both of these values are not within our bounds.
 
 #include <iostream>
 #include <vector>
+#include <cmath>
+#include <algorithm>
+
 using namespace std;
 
-bool beautifulText(string inputString, int l, int r)
+bool  beautifulText(string inputString, int l, int r)
 {
     int len = inputString.length();
-    vector<string> subStrTrack;
-    
-
-    
-    for (int iRun = l; iRun < r; iRun++)
+    cout << "len: " << len << endl;
+    for (int idex = l; idex <= r; idex++)
     {
-        string copyInput = inputString;
-        bool flag = true;
-        int idex = -1;
-        while (idex < len)
+        if (len % (idex + 1) == idex)
         {
-            //idex += 1; // 0
-            string subString = copyInput.substr(idex + 1,iRun);
-            subStrTrack.push_back(subString);
-            idex += iRun + 1; // idex = l - 1
-            copyInput[idex] = '\n';
-            // "abc def ghi"
-            // idex = 0
-            // idex = 3 -> 4
-            // idex = 8 -> 8
-            // idex = 9
-        }
-
-        int len_compare = subStrTrack[0].length();
-        for (int jRun = 0; jRun < subStrTrack.size(); jRun++)
-        {
-            cout << "sub[" << jRun << "]: " << subStrTrack[jRun] << endl;
-            int len_subStr = subStrTrack[jRun].length();
-            if (len_subStr != len_compare)
+            cout << "idex: " << idex << endl;
+            bool beautiful = true;
+            int small_len = floor((len + 1) / (idex+1) - 1);
+            cout << "small_len: " << small_len << endl;
+            for (int jdex = 0; jdex < small_len ; jdex++)
             {
-                flag = false;
+                string s = inputString.substr(jdex,idex);
+                if (inputString[ (jdex+1) * (idex + 1) -1] != ' ')
+                {
+                    beautiful = false;
+                    break;
+                }
+                // if (s[s.length() - 1] != ' ')
+                // {
+                //     beautiful = false;
+                //     break;
+                // }
             }
+            if (beautiful)
+                return true;
         }
         
-
-        subStrTrack.clear();
     }
-    
+    cout << "False! " << endl;
     return false;
 }
 
 int main()
 {
+    // string test = "abcd abcd abcd";
+    // string s = test.substr(0,5);
+    // string s2 = test.substr(5,5);
+    // string s3 = test.substr(10,5);
+
+    // cout << "s: " << s << endl;
+    // cout << "s2: " << s2 << endl;
+    // cout << "s3: " << s3 << endl;
+
     if (beautifulText("Look at this example of a correct text", 5, 15))
     {
         cout << "True!" << endl;
     }
-    // if (beautifulText("abc def ghi", 4, 10))
-    // {
-    //     cout << "True!" << endl;
-    // }
+
     return 0;
 }
