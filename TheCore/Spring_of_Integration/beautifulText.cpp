@@ -55,11 +55,6 @@ bool  beautifulText(string inputString, int l, int r)
                     beautiful = false;
                     break;
                 }
-                // if (s[s.length() - 1] != ' ')
-                // {
-                //     beautiful = false;
-                //     break;
-                // }
             }
             if (beautiful)
                 return true;
