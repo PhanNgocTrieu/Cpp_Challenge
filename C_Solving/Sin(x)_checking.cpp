@@ -76,7 +76,6 @@ int main()
     return 0;
 }
 
-
 /*Result:
 Test #0: x = 304, True
 Test #1: x = 304, True
