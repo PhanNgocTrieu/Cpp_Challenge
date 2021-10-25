@@ -1,0 +1,5 @@
+/home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/build/CMakeFiles/package_source.dir
+/home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/build/CMakeFiles/rebuild_cache.dir
+/home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/build/CMakeFiles/package.dir
+/home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/build/CMakeFiles/edit_cache.dir
+/home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/build/CMakeFiles/CPPChallenge.dir

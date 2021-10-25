@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -pthread -O3 -DNDEBUG   -o CMakeFiles/CPPChallenge.dir/HackerRank/Easy/vectorSorting.cpp.o -c /home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/HackerRank/Easy/vectorSorting.cpp",
+  "file": "/home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/HackerRank/Easy/vectorSorting.cpp"
+}
+]
