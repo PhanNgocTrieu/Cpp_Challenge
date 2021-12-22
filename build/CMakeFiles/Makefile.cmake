@@ -8,9 +8,17 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
+  "../CodeSignal/CMakeLists.txt"
+  "../Graph/CMakeLists.txt"
+  "../Graph/examples/CMakeLists.txt"
+  "../HackerRank/CMakeLists.txt"
+  "../HackerRank/examples/CMakeLists.txt"
+  "../LeetCode/CMakeLists.txt"
+  "../LeetCode/examples/CMakeLists.txt"
   "CMakeFiles/3.16.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
+  "../competitiveProblems/CMakeLists.txt"
   "/usr/share/cmake-3.16/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -20,19 +28,23 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/usr/share/cmake-3.16/Modules/CPack.cmake"
-  "/usr/share/cmake-3.16/Modules/CPackComponent.cmake"
+  "/usr/share/cmake-3.16/Modules/CheckCSourceCompiles.cmake"
+  "/usr/share/cmake-3.16/Modules/CheckIncludeFile.cmake"
+  "/usr/share/cmake-3.16/Modules/CheckLibraryExists.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.16/Modules/Compiler/GNU.cmake"
+  "/usr/share/cmake-3.16/Modules/FindBoost.cmake"
+  "/usr/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake"
+  "/usr/share/cmake-3.16/Modules/FindPackageMessage.cmake"
+  "/usr/share/cmake-3.16/Modules/FindThreads.cmake"
   "/usr/share/cmake-3.16/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.16/Modules/Platform/UnixPaths.cmake"
-  "/usr/share/cmake-3.16/Templates/CPackConfig.cmake.in"
   )
 
 # The corresponding makefile is:
@@ -43,12 +55,25 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CPackConfig.cmake"
-  "CPackSourceConfig.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Graph/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Graph/examples/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "CodeSignal/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "competitiveProblems/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "HackerRank/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "HackerRank/examples/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "LeetCode/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "LeetCode/examples/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/CPPChallenge.dir/DependInfo.cmake"
+  "Graph/CMakeFiles/graphic.dir/DependInfo.cmake"
+  "Graph/examples/CMakeFiles/graphicProblems.dir/DependInfo.cmake"
+  "CodeSignal/CMakeFiles/codesignal.dir/DependInfo.cmake"
+  "competitiveProblems/CMakeFiles/competitive.dir/DependInfo.cmake"
+  "HackerRank/CMakeFiles/hackerRank.dir/DependInfo.cmake"
+  "HackerRank/examples/CMakeFiles/arrayProblems.dir/DependInfo.cmake"
+  "LeetCode/CMakeFiles/leetcode.dir/DependInfo.cmake"
+  "LeetCode/examples/CMakeFiles/leetCode.dir/DependInfo.cmake"
   )

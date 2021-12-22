@@ -51,18 +51,29 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/trieujohn/Documents/DoingWithGit/Cpp_Challenge
+CMAKE_SOURCE_DIR = /home/trieujohn/Documents/Cpp_Challenge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/build
+CMAKE_BINARY_DIR = /home/trieujohn/Documents/Cpp_Challenge/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/build/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/trieujohn/Documents/Cpp_Challenge/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -92,22 +103,11 @@ package/fast: package
 
 .PHONY : package/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/build/CMakeFiles /home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/trieujohn/Documents/Cpp_Challenge/build/CMakeFiles /home/trieujohn/Documents/Cpp_Challenge/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/trieujohn/Documents/Cpp_Challenge/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -136,44 +136,108 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CPPChallenge
+# Target rules for targets named graphic
 
 # Build rule for target.
-CPPChallenge: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CPPChallenge
-.PHONY : CPPChallenge
+graphic: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 graphic
+.PHONY : graphic
 
 # fast build rule for target.
-CPPChallenge/fast:
-	$(MAKE) -f CMakeFiles/CPPChallenge.dir/build.make CMakeFiles/CPPChallenge.dir/build
-.PHONY : CPPChallenge/fast
+graphic/fast:
+	$(MAKE) -f Graph/CMakeFiles/graphic.dir/build.make Graph/CMakeFiles/graphic.dir/build
+.PHONY : graphic/fast
 
-HackerRank/Easy/vectorSorting.o: HackerRank/Easy/vectorSorting.cpp.o
+#=============================================================================
+# Target rules for targets named graphicProblems
 
-.PHONY : HackerRank/Easy/vectorSorting.o
+# Build rule for target.
+graphicProblems: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 graphicProblems
+.PHONY : graphicProblems
 
-# target to build an object file
-HackerRank/Easy/vectorSorting.cpp.o:
-	$(MAKE) -f CMakeFiles/CPPChallenge.dir/build.make CMakeFiles/CPPChallenge.dir/HackerRank/Easy/vectorSorting.cpp.o
-.PHONY : HackerRank/Easy/vectorSorting.cpp.o
+# fast build rule for target.
+graphicProblems/fast:
+	$(MAKE) -f Graph/examples/CMakeFiles/graphicProblems.dir/build.make Graph/examples/CMakeFiles/graphicProblems.dir/build
+.PHONY : graphicProblems/fast
 
-HackerRank/Easy/vectorSorting.i: HackerRank/Easy/vectorSorting.cpp.i
+#=============================================================================
+# Target rules for targets named codesignal
 
-.PHONY : HackerRank/Easy/vectorSorting.i
+# Build rule for target.
+codesignal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 codesignal
+.PHONY : codesignal
 
-# target to preprocess a source file
-HackerRank/Easy/vectorSorting.cpp.i:
-	$(MAKE) -f CMakeFiles/CPPChallenge.dir/build.make CMakeFiles/CPPChallenge.dir/HackerRank/Easy/vectorSorting.cpp.i
-.PHONY : HackerRank/Easy/vectorSorting.cpp.i
+# fast build rule for target.
+codesignal/fast:
+	$(MAKE) -f CodeSignal/CMakeFiles/codesignal.dir/build.make CodeSignal/CMakeFiles/codesignal.dir/build
+.PHONY : codesignal/fast
 
-HackerRank/Easy/vectorSorting.s: HackerRank/Easy/vectorSorting.cpp.s
+#=============================================================================
+# Target rules for targets named competitive
 
-.PHONY : HackerRank/Easy/vectorSorting.s
+# Build rule for target.
+competitive: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 competitive
+.PHONY : competitive
 
-# target to generate assembly for a file
-HackerRank/Easy/vectorSorting.cpp.s:
-	$(MAKE) -f CMakeFiles/CPPChallenge.dir/build.make CMakeFiles/CPPChallenge.dir/HackerRank/Easy/vectorSorting.cpp.s
-.PHONY : HackerRank/Easy/vectorSorting.cpp.s
+# fast build rule for target.
+competitive/fast:
+	$(MAKE) -f competitiveProblems/CMakeFiles/competitive.dir/build.make competitiveProblems/CMakeFiles/competitive.dir/build
+.PHONY : competitive/fast
+
+#=============================================================================
+# Target rules for targets named hackerRank
+
+# Build rule for target.
+hackerRank: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 hackerRank
+.PHONY : hackerRank
+
+# fast build rule for target.
+hackerRank/fast:
+	$(MAKE) -f HackerRank/CMakeFiles/hackerRank.dir/build.make HackerRank/CMakeFiles/hackerRank.dir/build
+.PHONY : hackerRank/fast
+
+#=============================================================================
+# Target rules for targets named arrayProblems
+
+# Build rule for target.
+arrayProblems: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 arrayProblems
+.PHONY : arrayProblems
+
+# fast build rule for target.
+arrayProblems/fast:
+	$(MAKE) -f HackerRank/examples/CMakeFiles/arrayProblems.dir/build.make HackerRank/examples/CMakeFiles/arrayProblems.dir/build
+.PHONY : arrayProblems/fast
+
+#=============================================================================
+# Target rules for targets named leetcode
+
+# Build rule for target.
+leetcode: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 leetcode
+.PHONY : leetcode
+
+# fast build rule for target.
+leetcode/fast:
+	$(MAKE) -f LeetCode/CMakeFiles/leetcode.dir/build.make LeetCode/CMakeFiles/leetcode.dir/build
+.PHONY : leetcode/fast
+
+#=============================================================================
+# Target rules for targets named leetCode
+
+# Build rule for target.
+leetCode: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 leetCode
+.PHONY : leetCode
+
+# fast build rule for target.
+leetCode/fast:
+	$(MAKE) -f LeetCode/examples/CMakeFiles/leetCode.dir/build.make LeetCode/examples/CMakeFiles/leetCode.dir/build
+.PHONY : leetCode/fast
 
 # Help Target
 help:
@@ -181,14 +245,18 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... edit_cache"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... package"
-	@echo "... edit_cache"
-	@echo "... CPPChallenge"
-	@echo "... HackerRank/Easy/vectorSorting.o"
-	@echo "... HackerRank/Easy/vectorSorting.i"
-	@echo "... HackerRank/Easy/vectorSorting.s"
+	@echo "... graphic"
+	@echo "... graphicProblems"
+	@echo "... codesignal"
+	@echo "... competitive"
+	@echo "... hackerRank"
+	@echo "... arrayProblems"
+	@echo "... leetcode"
+	@echo "... leetCode"
 .PHONY : help
 
 

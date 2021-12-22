@@ -1,4 +1,4 @@
-# Install script for directory: /home/trieujohn/Documents/DoingWithGit/Cpp_Challenge
+# Install script for directory: /home/trieujohn/Documents/Cpp_Challenge
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -37,6 +37,16 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/trieujohn/Documents/Cpp_Challenge/build/Graph/cmake_install.cmake")
+  include("/home/trieujohn/Documents/Cpp_Challenge/build/CodeSignal/cmake_install.cmake")
+  include("/home/trieujohn/Documents/Cpp_Challenge/build/competitiveProblems/cmake_install.cmake")
+  include("/home/trieujohn/Documents/Cpp_Challenge/build/HackerRank/cmake_install.cmake")
+  include("/home/trieujohn/Documents/Cpp_Challenge/build/LeetCode/cmake_install.cmake")
+
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()
@@ -45,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/trieujohn/Documents/Cpp_Challenge/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

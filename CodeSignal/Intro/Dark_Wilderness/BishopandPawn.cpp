@@ -31,8 +31,8 @@ bool bishopAndPawn(std::string bishop, std::string pawn) {
 int main()
 {
 	if (bishopAndPawn("h1", "h3"))
-		std::cout << "true!";
+		std::cout << "true!\n";
 	else
-		std::cout << "False!";
+		std::cout << "False!\n";
 	return 0;
 }

@@ -1,7 +1,42 @@
 [
 {
-  "directory": "/home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9    -pthread -O3 -DNDEBUG   -o CMakeFiles/CPPChallenge.dir/HackerRank/Easy/vectorSorting.cpp.o -c /home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/HackerRank/Easy/vectorSorting.cpp",
-  "file": "/home/trieujohn/Documents/DoingWithGit/Cpp_Challenge/HackerRank/Easy/vectorSorting.cpp"
+  "directory": "/home/trieujohn/Documents/Cpp_Challenge/build/Graph",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/trieujohn/Documents/Cpp_Challenge/Graph/include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/graphic.dir/src/Graph.cpp.o -c /home/trieujohn/Documents/Cpp_Challenge/Graph/src/Graph.cpp",
+  "file": "/home/trieujohn/Documents/Cpp_Challenge/Graph/src/Graph.cpp"
+},
+{
+  "directory": "/home/trieujohn/Documents/Cpp_Challenge/build/Graph/examples",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/trieujohn/Documents/Cpp_Challenge/Graph/include -I/home/trieujohn/Documents/Cpp_Challenge/Graph/examples/../include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/graphicProblems.dir/main.cpp.o -c /home/trieujohn/Documents/Cpp_Challenge/Graph/examples/main.cpp",
+  "file": "/home/trieujohn/Documents/Cpp_Challenge/Graph/examples/main.cpp"
+},
+{
+  "directory": "/home/trieujohn/Documents/Cpp_Challenge/build/CodeSignal",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/codesignal.dir/Intro/Dark_Wilderness/BishopandPawn.cpp.o -c /home/trieujohn/Documents/Cpp_Challenge/CodeSignal/Intro/Dark_Wilderness/BishopandPawn.cpp",
+  "file": "/home/trieujohn/Documents/Cpp_Challenge/CodeSignal/Intro/Dark_Wilderness/BishopandPawn.cpp"
+},
+{
+  "directory": "/home/trieujohn/Documents/Cpp_Challenge/build/competitiveProblems",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/competitive.dir/bitwise/missingNumber.cpp.o -c /home/trieujohn/Documents/Cpp_Challenge/competitiveProblems/bitwise/missingNumber.cpp",
+  "file": "/home/trieujohn/Documents/Cpp_Challenge/competitiveProblems/bitwise/missingNumber.cpp"
+},
+{
+  "directory": "/home/trieujohn/Documents/Cpp_Challenge/build/HackerRank",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/trieujohn/Documents/Cpp_Challenge/HackerRank/include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/hackerRank.dir/src/arrayProblems.cpp.o -c /home/trieujohn/Documents/Cpp_Challenge/HackerRank/src/arrayProblems.cpp",
+  "file": "/home/trieujohn/Documents/Cpp_Challenge/HackerRank/src/arrayProblems.cpp"
+},
+{
+  "directory": "/home/trieujohn/Documents/Cpp_Challenge/build/HackerRank/examples",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/trieujohn/Documents/Cpp_Challenge/HackerRank/include -I/home/trieujohn/Documents/Cpp_Challenge/HackerRank/examples/../include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/arrayProblems.dir/main.cpp.o -c /home/trieujohn/Documents/Cpp_Challenge/HackerRank/examples/main.cpp",
+  "file": "/home/trieujohn/Documents/Cpp_Challenge/HackerRank/examples/main.cpp"
+},
+{
+  "directory": "/home/trieujohn/Documents/Cpp_Challenge/build/LeetCode",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/trieujohn/Documents/Cpp_Challenge/LeetCode/include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/leetcode.dir/src/leetCode.cpp.o -c /home/trieujohn/Documents/Cpp_Challenge/LeetCode/src/leetCode.cpp",
+  "file": "/home/trieujohn/Documents/Cpp_Challenge/LeetCode/src/leetCode.cpp"
+},
+{
+  "directory": "/home/trieujohn/Documents/Cpp_Challenge/build/LeetCode/examples",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/trieujohn/Documents/Cpp_Challenge/LeetCode/include -I/home/trieujohn/Documents/Cpp_Challenge/LeetCode/examples/../include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/leetCode.dir/main.cpp.o -c /home/trieujohn/Documents/Cpp_Challenge/LeetCode/examples/main.cpp",
+  "file": "/home/trieujohn/Documents/Cpp_Challenge/LeetCode/examples/main.cpp"
 }
 ]
