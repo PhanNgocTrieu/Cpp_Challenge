@@ -6,23 +6,99 @@ vector<int> ArrayProblems::reverseArray(vector<int> a) {
     {
         reverseArray.push_back(*itr);
     }
-    m_vector = reverseArray;
+    m_integerArray = reverseArray;
     printArray();
+    m_integerArray.clear();
     return reverseArray;
 }
 
 
-vector<int> ArrayProblems::dynamicArray(int n, vector<vector<int>> queries) {
-    
+vector<int> ArrayProblems::dynamicArray(int n, vector<vector<int>> queries)
+{
+    // chua hieu het de =))
+
+    return vector<int>();
 }
 
+vector<int> ArrayProblems::matchingStrings(vector<string> strings, vector<string> queries)
+{
+    map<char, vector<string>> _TableOfString;
+    int _sizeOfString = strings.size();
 
+    // Taking O(n) complexity time
+    for (int idex = 0; idex < _sizeOfString; idex++)
+    {
+        // taking first character
+        char _id = strings[idex][0];
+
+        // making hashtash
+        _TableOfString[_id].push_back(strings[idex]);
+    }
+
+    vector<int> matchingArray;
+    int _sizeOfQuery = queries.size();
+
+    // Taking O(O / 24) -> O(n) Complexity time
+    for (int idex = 0; idex < _sizeOfQuery; idex++)
+    {
+        string _compare = queries[idex];
+        char _idForTaking = queries[idex][0];
+        int _count = 0;
+        vector<string> _takingForSearching = _TableOfString[_idForTaking];
+
+        int _sizeOfStrings = _takingForSearching.size();
+
+        for (int jdex = 0; jdex < _sizeOfStrings; jdex++)
+        {
+            if ( _compare == _takingForSearching.at(jdex))
+            {
+                _count++;
+            }
+        }
+        matchingArray.push_back(_count);
+    }
+
+    m_integerArray = matchingArray;
+    printArray();
+    m_integerArray.clear();
+    return matchingArray;
+}
 
 void ArrayProblems::printArray()
 {
-    for (vector<int>::iterator it = m_vector.begin(); it != m_vector.end(); it++)
+    if (m_integerArray.size() != 0)
     {
-        std::cout << *it << " ";
+        for (vector<int>::iterator it = m_integerArray.begin(); it != m_integerArray.end(); it++)
+        {
+            std::cout << *it << " ";
+        }
+        std::cout << std::endl;
     }
-    std::cout << std::endl;
+
+    if (m_doubleArray.size() != 0)
+    {
+        for (vector<double>::iterator it = m_doubleArray.begin(); it != m_doubleArray.end(); it++)
+        {
+            std::cout << *it << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    if (m_stringArray.size() != 0)
+    {
+        for (vector<string>::iterator it = m_stringArray.begin(); it != m_stringArray.end(); it++)
+        {
+            std::cout << *it << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    if (m_charArray.size() != 0)
+    {
+        for (vector<char>::iterator it = m_charArray.begin(); it != m_charArray.end(); it++)
+        {
+            std::cout << *it << " ";
+        }
+        std::cout << std::endl;
+    }
 }
