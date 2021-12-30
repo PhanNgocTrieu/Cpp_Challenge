@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../DataStructure/include/dataStructure.h
+
+/home/trieujohn/Documents/Cpp_Challenge/DataStructure/src/dataStructure.cpp
+dataStructure.h
+/home/trieujohn/Documents/Cpp_Challenge/DataStructure/src/dataStructure.h
+

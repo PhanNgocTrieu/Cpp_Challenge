@@ -12,12 +12,13 @@ set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 # include(CPack)
 
-
+add_subdirectory(C_Solving)
 add_subdirectory(Graph)
 add_subdirectory(CodeSignal)
 add_subdirectory(competitiveProblems)
 add_subdirectory(HackerRank)
 add_subdirectory(LeetCode)
+add_subdirectory(DataStructure)
 
 # add_definitions(-DBOOST_LOG_DYN_LINK)
 

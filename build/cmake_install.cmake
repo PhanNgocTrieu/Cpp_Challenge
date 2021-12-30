@@ -39,11 +39,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/home/trieujohn/Documents/Cpp_Challenge/build/C_Solving/cmake_install.cmake")
   include("/home/trieujohn/Documents/Cpp_Challenge/build/Graph/cmake_install.cmake")
   include("/home/trieujohn/Documents/Cpp_Challenge/build/CodeSignal/cmake_install.cmake")
   include("/home/trieujohn/Documents/Cpp_Challenge/build/competitiveProblems/cmake_install.cmake")
   include("/home/trieujohn/Documents/Cpp_Challenge/build/HackerRank/cmake_install.cmake")
   include("/home/trieujohn/Documents/Cpp_Challenge/build/LeetCode/cmake_install.cmake")
+  include("/home/trieujohn/Documents/Cpp_Challenge/build/DataStructure/cmake_install.cmake")
 
 endif()
 

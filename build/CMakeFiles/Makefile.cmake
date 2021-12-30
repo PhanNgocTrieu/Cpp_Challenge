@@ -8,7 +8,10 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
+  "../C_Solving/CMakeLists.txt"
   "../CodeSignal/CMakeLists.txt"
+  "../DataStructure/CMakeLists.txt"
+  "../DataStructure/examples/CMakeLists.txt"
   "../Graph/CMakeLists.txt"
   "../Graph/examples/CMakeLists.txt"
   "../HackerRank/CMakeLists.txt"
@@ -56,6 +59,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "C_Solving/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Graph/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Graph/examples/CMakeFiles/CMakeDirectoryInformation.cmake"
   "CodeSignal/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -64,10 +68,13 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "HackerRank/examples/CMakeFiles/CMakeDirectoryInformation.cmake"
   "LeetCode/CMakeFiles/CMakeDirectoryInformation.cmake"
   "LeetCode/examples/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "DataStructure/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "DataStructure/examples/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "C_Solving/CMakeFiles/cSolving.dir/DependInfo.cmake"
   "Graph/CMakeFiles/graphic.dir/DependInfo.cmake"
   "Graph/examples/CMakeFiles/graphicProblems.dir/DependInfo.cmake"
   "CodeSignal/CMakeFiles/codesignal.dir/DependInfo.cmake"
@@ -76,4 +83,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "HackerRank/examples/CMakeFiles/arrayProblems.dir/DependInfo.cmake"
   "LeetCode/CMakeFiles/leetcode.dir/DependInfo.cmake"
   "LeetCode/examples/CMakeFiles/leetCode.dir/DependInfo.cmake"
+  "DataStructure/CMakeFiles/DTST.dir/DependInfo.cmake"
+  "DataStructure/examples/CMakeFiles/dataStructureProlems.dir/DependInfo.cmake"
   )

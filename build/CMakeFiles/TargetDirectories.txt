@@ -2,6 +2,11 @@
 /home/trieujohn/Documents/Cpp_Challenge/build/CMakeFiles/package_source.dir
 /home/trieujohn/Documents/Cpp_Challenge/build/CMakeFiles/rebuild_cache.dir
 /home/trieujohn/Documents/Cpp_Challenge/build/CMakeFiles/package.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/C_Solving/CMakeFiles/edit_cache.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/C_Solving/CMakeFiles/package_source.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/C_Solving/CMakeFiles/rebuild_cache.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/C_Solving/CMakeFiles/package.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/C_Solving/CMakeFiles/cSolving.dir
 /home/trieujohn/Documents/Cpp_Challenge/build/Graph/CMakeFiles/edit_cache.dir
 /home/trieujohn/Documents/Cpp_Challenge/build/Graph/CMakeFiles/package_source.dir
 /home/trieujohn/Documents/Cpp_Challenge/build/Graph/CMakeFiles/rebuild_cache.dir
@@ -42,3 +47,13 @@
 /home/trieujohn/Documents/Cpp_Challenge/build/LeetCode/examples/CMakeFiles/rebuild_cache.dir
 /home/trieujohn/Documents/Cpp_Challenge/build/LeetCode/examples/CMakeFiles/package.dir
 /home/trieujohn/Documents/Cpp_Challenge/build/LeetCode/examples/CMakeFiles/leetCode.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/DataStructure/CMakeFiles/edit_cache.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/DataStructure/CMakeFiles/package_source.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/DataStructure/CMakeFiles/rebuild_cache.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/DataStructure/CMakeFiles/package.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/DataStructure/CMakeFiles/DTST.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/DataStructure/examples/CMakeFiles/edit_cache.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/DataStructure/examples/CMakeFiles/package_source.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/DataStructure/examples/CMakeFiles/rebuild_cache.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/DataStructure/examples/CMakeFiles/package.dir
+/home/trieujohn/Documents/Cpp_Challenge/build/DataStructure/examples/CMakeFiles/dataStructureProlems.dir

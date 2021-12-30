@@ -136,6 +136,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named cSolving
+
+# Build rule for target.
+cSolving: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cSolving
+.PHONY : cSolving
+
+# fast build rule for target.
+cSolving/fast:
+	$(MAKE) -f C_Solving/CMakeFiles/cSolving.dir/build.make C_Solving/CMakeFiles/cSolving.dir/build
+.PHONY : cSolving/fast
+
+#=============================================================================
 # Target rules for targets named graphic
 
 # Build rule for target.
@@ -239,6 +252,32 @@ leetCode/fast:
 	$(MAKE) -f LeetCode/examples/CMakeFiles/leetCode.dir/build.make LeetCode/examples/CMakeFiles/leetCode.dir/build
 .PHONY : leetCode/fast
 
+#=============================================================================
+# Target rules for targets named DTST
+
+# Build rule for target.
+DTST: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 DTST
+.PHONY : DTST
+
+# fast build rule for target.
+DTST/fast:
+	$(MAKE) -f DataStructure/CMakeFiles/DTST.dir/build.make DataStructure/CMakeFiles/DTST.dir/build
+.PHONY : DTST/fast
+
+#=============================================================================
+# Target rules for targets named dataStructureProlems
+
+# Build rule for target.
+dataStructureProlems: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 dataStructureProlems
+.PHONY : dataStructureProlems
+
+# fast build rule for target.
+dataStructureProlems/fast:
+	$(MAKE) -f DataStructure/examples/CMakeFiles/dataStructureProlems.dir/build.make DataStructure/examples/CMakeFiles/dataStructureProlems.dir/build
+.PHONY : dataStructureProlems/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -249,6 +288,7 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... package"
+	@echo "... cSolving"
 	@echo "... graphic"
 	@echo "... graphicProblems"
 	@echo "... codesignal"
@@ -257,6 +297,8 @@ help:
 	@echo "... arrayProblems"
 	@echo "... leetcode"
 	@echo "... leetCode"
+	@echo "... DTST"
+	@echo "... dataStructureProlems"
 .PHONY : help
 
 
