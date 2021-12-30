@@ -44,10 +44,30 @@ class ArrayProblems
         * The function is expected to return an INTEGER_ARRAY.
         * The function accepts INTEGER_ARRAY a as parameter.
         */
-
         vector<int> reverseArray(vector<int> a);
 
+        /**
+         * @brief 
+         * 
+         * @param n 
+         * @param queries 
+         * @return vector<int> 
+         */
+        vector<int> dynamicArray(int n, vector<vector<int>> queries);
+
     private:
+        /**
+         * @brief method for display the array
+         * 
+         */
+        void printArray();
+
+    private:
+        /**
+         * @brief saving vector
+         * 
+         */
+        vector<int> m_vector;
 };
 
 
