@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <algorithm>
 using namespace std;
 
 
@@ -66,6 +67,17 @@ class ArrayProblems
          * @return vector<int> 
          */
         vector<int> matchingStrings(vector<string> strings, vector<string> queries);
+
+        /**
+         * @brief 
+         * A left rotation operation on an array of size n shifts each of the array's elements 1 unit to the left. 
+         * Given an integer, 'd' , rotate the array that many steps left and return the result. 
+         * 
+         * @param d the times for rotating
+         * @param arr the array for rotating
+         * @return vector<int> return the rotated array
+         */
+        vector<int> rotateLeft(int d, vector<int> arr);
 
     private:
         /**

@@ -64,6 +64,31 @@ vector<int> ArrayProblems::matchingStrings(vector<string> strings, vector<string
     return matchingArray;
 }
 
+
+vector<int> ArrayProblems::rotateLeft(int d, vector<int> arr) {
+    /*      Simply way      */
+    vector<int> result;
+    
+    for (vector<int>::iterator itr = arr.begin() + d; itr != arr.end(); itr++)
+    {
+        result.push_back(*itr);
+    }
+
+    for (vector<int>::iterator itr = arr.begin(); itr != arr.begin() + d; itr++)
+    {
+        result.push_back(*itr);
+    }
+    m_integerArray = result;
+    printArray();
+    m_integerArray.clear();
+
+
+    /* Simplier way */
+    std::rotate(arr.begin(), arr.begin() + arr.size() - d, arr.end());
+
+    return result;
+}
+
 void ArrayProblems::printArray()
 {
     if (m_integerArray.size() != 0)

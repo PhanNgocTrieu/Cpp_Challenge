@@ -1,8 +1,11 @@
 include_directories(include)
 
-set(DTST_HDR include/dataStructure.h)
+set(DTST_HDR    include/dataStructure.h
+                include/linkedlist.h
+)
 
-set(DTST_SRC src/dataStructure.cpp)
+set(DTST_SRC    src/dataStructure.cpp
+)
 
 # After setting we need to generate the library by this below command
 add_library(DTST STATIC ${DTST_HDR} ${DTST_SRC})

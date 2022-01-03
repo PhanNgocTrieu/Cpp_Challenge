@@ -27,13 +27,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 8,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 10,
+				"line" : 13,
 				"parent" : 0
 			},
 			{
@@ -71,7 +71,7 @@
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				1
+				2
 			]
 		}
 	],
@@ -89,14 +89,15 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		},
 		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				1
+				2
 			]
 		}
 	],
@@ -105,6 +106,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "DataStructure/include/dataStructure.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "DataStructure/include/linkedlist.h",
 			"sourceGroupIndex" : 0
 		},
 		{

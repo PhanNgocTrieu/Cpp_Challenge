@@ -18,5 +18,7 @@ int main()
             "syjaorepkxkalfdk", "syjaorepkxkalfdk", "fgokibonqxxpjigf", "hgnxyuifblafjfahpla", "inacrtucwutmwhrqoz"
         }
     }));
+
+    arrProblems.rotateLeft(2, std::vector<int>({1,2,3,4,5}));
     return 0;
 }

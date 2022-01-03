@@ -1,67 +1,22 @@
 #ifndef __DTST_H__
 #define __DTST_H__
 
+#include "linkedlist.h"
 #include <iostream>
+#include <vector>
+
 using namespace std;
 
 namespace DTST
 {
-    template <class _Typ>
-    struct SinglyLinkedListNode
-    {
-        // value with type of _Typ
-        _Typ m_value;
-
-        // pointer to the next node
-        SinglyLinkedListNode* next;
-
-        public: 
-            SinglyLinkedListNode() {};
-            SinglyLinkedListNode(const _Typ& value) : m_value{value}, next{nullptr}
-            {}
-            ~SinglyLinkedListNode() {};
-            
-            void push_frontIntValue(const _Typ& _value) 
-            {
-                SinglyLinkedListNode* newNode = SinglyLinkedListNode(_value)
-                if (this == nullptr)
-                {
-                    this = newNode;
-                    return;
-                }
-
-                newNode->next = this;
-                this = newNode;
-            }
-
-            void print()
-            {
-                SinglyLinkedListNode* iRun = this;
-
-                while (iRun != nullptr && iRun->next != nullptr)
-                {
-                    cout << iRun->m_value << " -> ";
-                }
-                cout << endl;
-            }
-    };
-
     class LinkedListProblems
     {
-                   
         public:
-            /**
-             * @brief Construct a new Linked List Problems object
-             * 
-             */
             LinkedListProblems();
-
-            /**
-             * @brief Destroy the Linked List Problems object
-             * 
-             */
             ~LinkedListProblems();
-
+            void initializingLinkedList(linkedlist<int>*& list, vector<int> arrOfValue);
+            
+        public:
             /**
              * @brief 
              * You’re given the pointer to the head nodes of two linked lists. 
@@ -74,15 +29,15 @@ namespace DTST
              * 
              * @return return the resulting of 2 lists
              */
-            bool compare_lists(SinglyLinkedListNode<int>* list1, SinglyLinkedListNode<int>* list2);
+            bool compare_lists(linkedlist<int>* list1, linkedlist<int>* list2);
 
             /**
              * @brief Giving a list -> reversing the given list
              * 
              * @param head the pointer to the list
-             * @return SinglyLinkedListNode* return the reversed list
+             * @return linkedlist* return the reversed list
              */
-            SinglyLinkedListNode<int>* reverse(SinglyLinkedListNode<int>* head);
+            linkedlist<int>* reverse(linkedlist<int>*& head);
 
             /**
              * @brief   
@@ -91,18 +46,53 @@ namespace DTST
              * 
              * @param head1 pointer to the first list
              * @param head2 pointer to the second list
-             * @return SinglyLinkedListNode<int>* return the merged list from 2 lists
+             * @return linkedlist<int>* return the merged list from 2 lists
              */
-            SinglyLinkedListNode<int>* mergeLists(SinglyLinkedListNode<int>* head1, SinglyLinkedListNode<int>* head2);
+            linkedlist<int>* mergeLists(linkedlist<int>* head1, linkedlist<int>* head2);
 
+            /**
+             * @brief 
+             * 
+             * @param llist the pointer to the list for deleting
+             * @param position the position for deleting
+             * @return linkedlist<int>* return the deleted list from origin list
+             */
+            linkedlist<int>* deleteNode(linkedlist<int>* llist, int position);
+
+            
         private:
             void printLinkedList();
 
+            template <class _Type>
+            void addingNode(linkedlist<_Type>*& list, const _Type& value)
+            {
+                // create a node
+                linkedlist<_Type>* node = new linkedlist<_Type>();
+                node->m_value = value;
+                node->next = nullptr;
+
+                // if list is null -> return node
+                if (list == nullptr)
+                {
+                    list = node;
+                    return;
+                }
+
+                // find the last node for adding
+                linkedlist<_Type>* llist = list;
+                while (llist -> next != nullptr)
+                {
+                    llist = llist->next;
+                }
+                llist->next = node;
+            }
+
+
         private:
-            SinglyLinkedListNode<int>* m_intLinkedList;
-            SinglyLinkedListNode<float>* m_floatLinkedList;
-            SinglyLinkedListNode<double>* m_doubleLinkedList;
-            SinglyLinkedListNode<string>* m_stringLinkedList;
+            linkedlist<int>* m_intLinkedList;
+            linkedlist<float>* m_floatLinkedList;
+            linkedlist<double>* m_doubleLinkedList;
+            linkedlist<string>* m_stringLinkedList;
             
     };
 
