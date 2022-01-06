@@ -14,7 +14,8 @@ int main()
         1,2,3,5,6
     }));
     // m_llProblems.reverse(list);
-    m_llProblems.mergeLists(list, list2);
+    // m_llProblems.mergeLists(list, list2);
+    m_llProblems.deleteNode(list2,7);
     
 
     return 0;

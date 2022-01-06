@@ -62,6 +62,8 @@ namespace DTST
             
         private:
             void printLinkedList();
+            void moveNode(linkedlist<int>*& dest, linkedlist<int>*& src);
+
 
             template <class _Type>
             void addingNode(linkedlist<_Type>*& list, const _Type& value)

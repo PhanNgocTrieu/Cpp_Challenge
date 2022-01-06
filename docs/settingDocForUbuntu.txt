@@ -1,0 +1,46 @@
+Setting up Ubuntu first: https://www.youtube.com/watch?v=GrI5c9PXS5k
+	1. Initial Setup
+	2. Enable Partner Respositories & Update the system
+	3. Install Proprietary Drivers
+	4. Install Additional Applications	
+		sudo apt install vlc gimp gparted synaptic
+		Chrome (if neccessary)
+	5. Ubuntu Media Codecs
+		sudo apt install ubuntu-restricted-extras
+	6. Timeshift backup
+		-- can restore system setup
+		-- command: sudo apt install timeshift
+	7. Preload:
+		sudo apt install preload
+		for helping system was instanced more faster because using RAM for saving
+		
+	8. Boost Internet Speed: (needed)
+		Step1: Click on the connected wifi
+		Step2: Click on wifi setting
+		Step3: Click on the setting button of connected wifi or wired
+		Step4: adding - address port: 8.8.8.8, 8.8.4.4
+		Step5: Turn of wifi and connect again!
+	
+	9. Dark theme: on setting (if willing)
+		
+	10. Adding/Managing app into favourite taskbar
+	
+	11. Advanced Firefox Tweaks:
+		Step1: open firefox
+		Step2: enter on url: about:config
+		Step3: on searching box - copy this one and paste it: layers.acceleration.force-enabled
+			If in false mode -> change to true mode of layers.accleration.force-enabled
+		Step4: on searching box - copy this one and paste it: gfx.webrender.all
+			If in false mode -> change to true mode of gfx.webrender.all
+			
+	12. Night light: Not really needed
+	
+	13. Gnome Tweaks: ... 
+
+	14. Impro laptop Battery:
+		sudo apt install tlp tlp-rdw 
+		(Just run the above command and you don’t need to do anything else. It’ll make your laptop battery last longer by implementing some power-saving protocols.)
+	
+	15. clear up ubuntu:
+		sudo apt install bleachbit
+		--- Open bleachbit as root

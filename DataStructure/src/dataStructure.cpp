@@ -1,5 +1,6 @@
 #include "dataStructure.h"
 #include "linkedlist.h"
+#include <cassert>
 
 namespace DTST
 {
@@ -120,91 +121,80 @@ namespace DTST
      */
     linkedlist<int>* LinkedListProblems::mergeLists(linkedlist<int>* head1, linkedlist<int>* head2)
     {
-        if (head1 == nullptr)
-        {
-            return head2;
-        }
+        linkedlist<int> dummy;
+        dummy.next = nullptr;
+        linkedlist<int>* tail = &dummy;
 
-        if (head2 == nullptr)
+        while (true)
         {
-            return head1;
-        }
+            if (head1 == nullptr)
+            {
+                tail->next = head2;
+                break;
+            }
+            else if (head2 == nullptr)
+            {
+                tail->next = head1;
 
-        linkedlist<int>* runForList1 = head1;
-        linkedlist<int>* runForList2 = head2;
-        linkedlist<int>* temp = nullptr;
-        linkedlist<int>* res = temp;
-
-        while (runForList1 != nullptr && runForList2 != nullptr)
-        {
-            printf("line: %d\n",__LINE__);
-            linkedlist<int>* node = new linkedlist<int>();
-            node->next = nullptr;
+                // connect to the whole list -> so we break directly
+                break;
+            }
+            linkedlist<int>* node;
+            // comparing value of 2 node
+            if (head1->m_value < head2->m_value)
+            {
+                node = head1;
+                head1 = head1->next;
+            }
+            else
+            {
+                node = head2;
+                head2 = head2->next;
+            }
             
-            if (runForList1->m_value < runForList2->m_value)
-            {
-                node->m_value = runForList1->m_value;
-                runForList1 = runForList1->next;
-            }
-            else
-            {
-                node->m_value = runForList2->m_value;
-                runForList2 = runForList2->next;
-            }
-
-            printf("line: %d\n",__LINE__);
-            if (temp == nullptr)
-            {
-                temp = node;
-                res = temp;
-            }
-            else
-            {
-                printf("line: %d\n",__LINE__);
-                temp->next = node;
-            }
-
-            temp = temp->next;
+            node->next = nullptr;
+            tail->next = node;
+            tail = tail->next;
         }
-
-        // printf("line: %d\n",__LINE__);
-        // if (runForList1 == nullptr && runForList2 != nullptr)
-        // {
-        //     printf("line: %d\n",__LINE__);
-        //     temp->next = runForList2;
-        // }
-        // printf("line: %d\n",__LINE__);
-        // if (runForList2 == nullptr && runForList1 != nullptr)
-        // {
-        //     printf("line: %d\n",__LINE__);
-        //     temp->next = runForList1;
-        // }
-        
         
 
-        m_intLinkedList = res;
-        printf("line: %d\n",__LINE__);
+        m_intLinkedList = dummy.next;
         printLinkedList();
-        printf("line: %d\n",__LINE__);
         m_intLinkedList = nullptr;
-        return res;
+        return dummy.next;
     }
 
 
+    /**
+     * @brief 
+     * 
+     * @param llist 
+     * @param position 
+     * @return linkedlist<int>* 
+     */
     linkedlist<int>* LinkedListProblems::deleteNode(linkedlist<int>* llist, int position)
     {
+        if (position == 0)
+        {
+            return llist->next;
+        }
+
         linkedlist<int>* iRun = llist;
         linkedlist<int>* pre = nullptr;
         int _count = 0;
-
-        while (_count < position && iRun -> next != nullptr)
+        
+        while (_count < position)
         {
+            if (iRun -> next == nullptr)
+                break;
             pre = iRun;
             iRun = iRun->next;
             _count++;
         }
         
-        pre->next = iRun->next;
+        printf("pos: %d\n", _count);
+        if (_count == position)
+            pre->next = iRun->next;
 
         m_intLinkedList = llist;
         printLinkedList();
