@@ -1,5 +1,19 @@
-add_executable(codesignal ./Intro/Dark_Wilderness/BishopandPawn.cpp)
+include_directories(include)
 
-target_compile_options(codesignal PRIVATE -std=c++11 -Wall)
+set(CODESIGNAL_HDR  include/Intro.h
+                    include/Core.h
+                    include/supportedFunction.h
+)
 
+set(CODESIGNAL_SRC  src/Core.cpp
 
+)
+
+# After setting we need to generate the library by this below command
+add_library(codeSignal STATIC ${CODESIGNAL_HDR} ${CODESIGNAL_SRC})
+
+target_compile_options(codeSignal PRIVATE -std=c++11 -Wall)
+
+add_subdirectory(Intro)
+add_subdirectory(TheCore)
+add_subdirectory(examples)

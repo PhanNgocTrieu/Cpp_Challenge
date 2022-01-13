@@ -431,6 +431,6 @@ namespace leetcode
     };
 };
 
-#endif __LEETCODE_H
+#endif
 
 

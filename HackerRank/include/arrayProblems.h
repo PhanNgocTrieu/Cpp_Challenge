@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <deque>
 #include <algorithm>
 using namespace std;
 
@@ -78,6 +79,63 @@ class ArrayProblems
          * @return vector<int> return the rotated array
          */
         vector<int> rotateLeft(int d, vector<int> arr);
+
+        /**
+         * @brief   Given a set of arrays of size N and an integer K, 
+         *          you have to find the maximum integer for each and every contiguous subarray of size K for each of the given arrays.
+         * 
+         * @param arr array of integer
+         * @param n size of array
+         * @param k size of subarray | 1 <= K <= N
+         */
+        void printKMax(vector<int> arr, int k){
+            if (k == 1)
+            {
+                m_integerArray = arr;
+                printArray();
+                m_integerArray.clear();
+
+                return;
+            }
+
+            std::deque<int> subArr;
+            std::deque<int> maxOfSub;
+            int _sizeOfBreaking = arr.size() - k;
+            for (auto elem : arr)
+            {
+                if (_sizeOfBreaking == 0)
+                {
+                    break;
+                }
+                subArr.push_back(elem);
+
+                if (subArr.size() == k)
+                {
+                    int _max = INT32_MIN;
+                    for (auto elem : subArr)
+                    {
+                        if (elem > _max)
+                        {
+                            _max = elem;
+                        }
+                    }
+                    subArr.pop_front();
+                    maxOfSub.push_back(_max);
+                }
+                _sizeOfBreaking--;
+            }
+
+
+            /**
+             * @brief We do not need to do this way! we can print immediately after finding the max number
+             * 
+             */
+            for (auto elems : maxOfSub)
+            {
+                std::cout << elems << " ";
+            }
+            std::cout << std::endl;
+        }
 
     private:
         /**

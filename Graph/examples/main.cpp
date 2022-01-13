@@ -13,7 +13,7 @@ int main()
         {0, 0, 0, 0, 0, 0, 6},
         {0, 0, 0, 0, 0, 0, 0}};
 
-    Graphic graph(graphicTable,7,0);
+    // Graphic graph(graphicTable,7,0);
 
     // graph.Dijkstra();
     // graph.printGraphic();

@@ -5,65 +5,46 @@
 #include <vector>
 #include <limits>
 
-class Graphic
-{        
-    public:
+namespace DTST
+{
+    template <class _Typ>
+    struct tree
+    {
+        _Typ _value;
+        tree* left;
+        tree* right;
+    };
 
-        /**
-         * @brief adding edge into vertex
-         * 
-         * @param vertex 
-         * @param value 
-         */
-        void addingEdge(uint32_t vertex, uint32_t weight);
+    class Graphic
+    {   
+        public:
 
-        /**
-         * @brief 
-         * 
-         */
-        void Dijkstra();
-
-        /**
-         * @brief 
-         * 
-         * @return int 
-         */
-        int32_t minDistance();
-
-        /**
-         * @brief Get the Shortest To From Source object
-         * 
-         * @param _des 
-         * @return int32_t 
-         */
-        int32_t getShortestToFromSource(const int32_t& _des);
-
-        /**
-         * @brief 
-         * 
-         */
-        void printGraphic();
+            /**
+             * @brief 
+             * 
+             */
+            void printGraphic();
 
 
-        /**
-         * @brief Construct a new Graphic object
-         * 
-        */
-        Graphic(const std::vector<std::vector<int32_t>>& graphic, const int32_t& vertexNums, const int32_t& source);
+            /**
+             * @brief Construct a new Graphic object
+             * 
+            */
+            Graphic(const uint32_t& vertexNums);
 
-        /**
-         * @brief Destroy the Graphic object
-         * 
-         */
-        ~Graphic();
+            /**
+             * @brief Destroy the Graphic object
+             * 
+             */
+            ~Graphic();
 
-    private:
-        std::vector<std::vector<int32_t>> m_graph;
-        std::vector<int32_t> m_distance; // <! Distance from source to i;
-        std::vector<bool> m_shortestPathSet; // <! Flag for checking whether we passed the vertex-th or not
-        int32_t m_defaultVertex; // <! Head of graphic
-        int32_t m_numOfVertex; // <! Number of vertexs
+        private:
+            uint32_t m_numOfVertexs;
+            tree<int> m_integerTree;
+            tree<float> m_floatTree;
+            tree<std::string> m_stringTree;
+            std::vector<bool> m_visited;
+    };
 
 };
-
 #endif
