@@ -114,14 +114,14 @@ namespace leetcode
 
     int LeetCodeProblems::strStr(string haystack, string needle) 
     {
-        if (haystack.length() == 0 && needle.length() == 0)
+        int _lengthOfStack = haystack.length();
+        int _lengthOfNeedle = needle.length();
+        if (_lengthOfStack == 0 && _lengthOfNeedle == 0)
             return 0;
 
-        int needle_length = needle.length();
-
-        for (int index = 0; index < haystack.length(); index++)
+        for (int index = 0; index < _lengthOfStack; index++)
         {
-            string temp = haystack.substr(index, needle_length);
+            string temp = haystack.substr(index, _lengthOfNeedle);
             if (temp == needle)
                 return index;
         }
@@ -285,8 +285,8 @@ namespace leetcode
     vector<vector<int>> LeetCodeProblems::combinationSum(vector<int>& candidates, int target) 
     {
         vector<vector<int>> res;
-
-        for (int i=0 ; i < candidates.size(); i++) {
+        int _numberOfCadidates = candidates.size();
+        for (int i=0 ; i < _numberOfCadidates; i++) {
             vector<Combination> stack;
             struct Combination com;
 
@@ -312,8 +312,8 @@ namespace leetcode
                 struct Combination temp;
                 temp = stack[stack.size()-1]; 
                 stack.pop_back();
-
-                for (int j = temp.idx; j < candidates.size(); j++)
+                int _numOfCandidate = candidates.size();
+                for (int j = temp.idx; j < _numOfCandidate; j++)
                 {
                     struct Combination temp2;
                     temp2 = temp;
@@ -457,7 +457,8 @@ namespace leetcode
     {
         string ans = "";
         int len = 0, maxLen = 0, idx = 0;
-        for (int i = 0; i < s.size(); ++i) {
+        int _sizeOfString = s.size();
+        for (int i = 0; i < _sizeOfString; ++i) {
             int left = i-1, right = i+1;
             len = pallindromeLength(left, right, s);
             idx = (len > maxLen) ? left : idx;
@@ -476,7 +477,8 @@ namespace leetcode
     
     int LeetCodeProblems::pallindromeLength(int &l, int &r, string &s) 
     {
-        while(l >= 0 && r < s.size() && s[l] == s[r]) {
+        int _sizeOfStr = s.size();
+        while(l >= 0 && r < _sizeOfStr && s[l] == s[r]) {
             l--; r++;
         }
         l++; r--;

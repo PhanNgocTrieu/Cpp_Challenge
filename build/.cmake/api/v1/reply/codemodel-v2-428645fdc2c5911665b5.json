@@ -1,0 +1,377 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						4,
+						8,
+						9,
+						11,
+						13
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "C_Solving",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "C_Solving",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "Graph",
+					"childIndexes" : 
+					[
+						3
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Graph",
+					"targetIndexes" : 
+					[
+						7
+					]
+				},
+				{
+					"build" : "Graph/examples",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 0,
+					"source" : "Graph/examples",
+					"targetIndexes" : 
+					[
+						8
+					]
+				},
+				{
+					"build" : "CodeSignal",
+					"childIndexes" : 
+					[
+						5,
+						6,
+						7
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "CodeSignal",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "CodeSignal/Intro",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "CodeSignal/Intro"
+				},
+				{
+					"build" : "CodeSignal/TheCore",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "CodeSignal/TheCore"
+				},
+				{
+					"build" : "CodeSignal/examples",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 0,
+					"source" : "CodeSignal/examples",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "competitiveProblems",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "competitiveProblems",
+					"targetIndexes" : 
+					[
+						5
+					]
+				},
+				{
+					"build" : "HackerRank",
+					"childIndexes" : 
+					[
+						10
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "HackerRank",
+					"targetIndexes" : 
+					[
+						9
+					]
+				},
+				{
+					"build" : "HackerRank/examples",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 9,
+					"projectIndex" : 0,
+					"source" : "HackerRank/examples",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "LeetCode",
+					"childIndexes" : 
+					[
+						12
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "LeetCode",
+					"targetIndexes" : 
+					[
+						11
+					]
+				},
+				{
+					"build" : "LeetCode/examples",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 11,
+					"projectIndex" : 0,
+					"source" : "LeetCode/examples",
+					"targetIndexes" : 
+					[
+						10
+					]
+				},
+				{
+					"build" : "DataStructure",
+					"childIndexes" : 
+					[
+						14
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "DataStructure",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "DataStructure/examples",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0.0"
+					},
+					"parentIndex" : 13,
+					"projectIndex" : 0,
+					"source" : "DataStructure/examples",
+					"targetIndexes" : 
+					[
+						6
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14
+					],
+					"name" : "CPPChallenge",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 13,
+					"id" : "DTST::@979ad56ba9eb12e405c0",
+					"jsonFile" : "target-DTST-Release-4dcfccbf18184772fb1c.json",
+					"name" : "DTST",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 10,
+					"id" : "arrayProblems::@487f4f69af272b2acc96",
+					"jsonFile" : "target-arrayProblems-Release-2edd535c4fc972e1b721.json",
+					"name" : "arrayProblems",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "cSolving::@934969b64a8e0e594890",
+					"jsonFile" : "target-cSolving-Release-7ddd9cfb153e85ca6498.json",
+					"name" : "cSolving",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "codeSignal::@9a9debeae69c6359b894",
+					"jsonFile" : "target-codeSignal-Release-9f8dfa955ba5e19cd91f.json",
+					"name" : "codeSignal",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 7,
+					"id" : "codeSignalProblems::@31b6a0218aeacc78dc5b",
+					"jsonFile" : "target-codeSignalProblems-Release-0e05ad28b11cf15e33bf.json",
+					"name" : "codeSignalProblems",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 8,
+					"id" : "competitive::@a5998ef6a675ccb504ed",
+					"jsonFile" : "target-competitive-Release-70f888c2e51b38c8cd5b.json",
+					"name" : "competitive",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 14,
+					"id" : "dataStructureProlems::@88d433cc8bcf992a8a45",
+					"jsonFile" : "target-dataStructureProlems-Release-ab00252cf95d0874def4.json",
+					"name" : "dataStructureProlems",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "graphic::@06fc7ec90843a0ff69c7",
+					"jsonFile" : "target-graphic-Release-5a4371614c24d7a3f58e.json",
+					"name" : "graphic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "graphicProblems::@9b1db5bde2e5c587860d",
+					"jsonFile" : "target-graphicProblems-Release-0ba5751a04105adf32cd.json",
+					"name" : "graphicProblems",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 9,
+					"id" : "hackerRank::@9986345f3c8acfeda5f0",
+					"jsonFile" : "target-hackerRank-Release-f87a2387888dda92fe3f.json",
+					"name" : "hackerRank",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 12,
+					"id" : "leetCode::@1fe6b6d4e48be7b4d094",
+					"jsonFile" : "target-leetCode-Release-fed40daa57838684afc1.json",
+					"name" : "leetCode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 11,
+					"id" : "leetcode::@5ff464a4e4d786b6980f",
+					"jsonFile" : "target-leetcode-Release-e1c8ac44c0ba1468eab8.json",
+					"name" : "leetcode",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/mnt/d/DocumentByMaking/Cpp_Challenge/build",
+		"source" : "/mnt/d/DocumentByMaking/Cpp_Challenge"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

@@ -36,10 +36,10 @@ int runnersMeetings(vector<int> startPosition, vector<int> speed);
 int runnersMeetings(vector<int> startPosition, vector<int> speed) {
     int countMeeting = 0;
     int _sizeOfParticipants = startPosition.size();
-    cout << "line: " << __LINE__ << " - Line 9: " << endl;
+    cout << "line: " << __LINE__ <<  endl;
     for (int curr_person = 0; curr_person < _sizeOfParticipants - 1; curr_person++)
     {
-        cout << "line: " << __LINE__ << " - Line 12: " << endl;
+        cout << "line: " << __LINE__ <<  endl;
         for (int next_person = curr_person + 1; next_person < _sizeOfParticipants; next_person++)
         {
             cout << "line: " << "14 - starting new elems" << endl;
@@ -122,14 +122,14 @@ int isMeeting(int _pos1, int _speed1, int _pos2, int _speed2)
 
 int isCheckingMeeting(int _pos1, int _speed1, int _pos2, int _speed2, int& meetingTimes)
 {
-    cout << "line: " << "87" << endl;
+    cout << "line: " << __LINE__ << endl;
     int _isMeeting;
     if (_pos1 == _pos2)
     {
-        cout << "line: " << "91" << endl;
+        cout << "line: " << __LINE__ << endl;
         if (_speed1 == _speed2)
         {
-            cout << "line: " << "94" << endl;
+            cout << "line: " << __LINE__ << endl;
             // this case for 2 persons who runs in the same speed and start from same position
             // so this will have infinite times for meeting 
             // but we have limit from length of road <= 10^4
@@ -142,38 +142,38 @@ int isCheckingMeeting(int _pos1, int _speed1, int _pos2, int _speed2, int& meeti
         }
         else
         {
-            cout << "line: " << "107" << endl;
+            cout << "line: " << __LINE__ << endl;
             _isMeeting = 0;
         }
     }
     else if (_pos1 > _pos2)
     {
-        cout << "line: " << "113" << endl;
+        cout << "line: " << __LINE__ << endl;
         if (_speed1 >= _speed2)
         {
-            cout << "line: " << "116" << endl;
+            cout << "line: " << __LINE__ << endl;
             // never meeting
             _isMeeting = 0;
         }
         else
         {
-            cout << "line: " << "122" << endl;
+            cout << "line: " << __LINE__ << endl;
             // needing for checking
             _isMeeting = 1;
         }
     }
     else
     {
-        cout << "line: " << "129" << endl;
+        cout << "line: " << __LINE__ << endl;
         if (_speed1 <= _speed2)
         {
-            cout << "line: " << "132" << endl;
+            cout << "line: " << __LINE__ << endl;
             // never meeting
             _isMeeting = 0;
         }
         else
         {
-            cout << "line: " << "138" << endl;
+            cout << "line: " << __LINE__ << endl;
             // need for checking
             _isMeeting = 1;
         }

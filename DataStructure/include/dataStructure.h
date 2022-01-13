@@ -2,6 +2,7 @@
 #define __DTST_H__
 
 #include "linkedlist.h"
+#include "BST.h"
 #include <iostream>
 #include <vector>
 
@@ -98,6 +99,73 @@ namespace DTST
             
     };
 
+
+    class BST_Problems
+    {
+        public:
+
+            /**
+             * @brief   Problem from leet code
+             * 
+             *          Given the root node of a binary search tree and two integers low and high, 
+             *          return the sum of values of all nodes with a value in the inclusive range [low, high].
+             * 
+             * @param root pointer to the BST
+             * @param low below limit of range
+             * @param high above limit of range
+             * @return int sum of all values of BST which is in range
+             */
+            int rangeSumBST(DTST_BST::BST<int>* root, int low, int high) {
+
+                if (!root)
+                 return 0;
+        
+                int _sum = 0;
+                
+                // checking left
+                if (root->_value >= low && root->_value <= high)
+                {
+                    _sum += root->_value;
+                }
+
+                if (root->left != nullptr)
+                    _sum += rangeSumBST(root->left, low, high);
+                if (root->right != nullptr)
+                    _sum += rangeSumBST(root->right, low, high);
+                
+                return _sum;
+            }
+
+
+        /**
+         * @brief   Problem from LeetCode
+         * 
+         *          Given the root of a Binary Search Tree (BST), 
+         *          return the minimum absolute difference between the values of any two different nodes in the tree.
+         * 
+         * @param root 
+         * @return int 
+        //  */
+        // int getMinimumDifference(DTST_BST::BST* root) {
+            
+        // }
+
+
+        public:
+            // BST_Problems() {
+            //     isGetBST = false;
+            // }
+
+            void print()
+            {
+                if (m_BST)
+                    DTST_BST::inOrderTravel(m_BST);
+            }
+        
+        private:
+            DTST_BST::BST<int>* m_BST;
+
+    };
 
 };
 

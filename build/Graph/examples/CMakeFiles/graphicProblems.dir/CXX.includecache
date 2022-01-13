@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../Graph/include/Graph.h
+map
+-
+list
+-
+vector
+-
+limits
+-
+
+/mnt/d/DocumentByMaking/Cpp_Challenge/Graph/examples/main.cpp
+iostream
+-
+Graph.h
+/mnt/d/DocumentByMaking/Cpp_Challenge/Graph/examples/Graph.h
+vector
+-
+
