@@ -575,7 +575,6 @@ namespace codeSignalProblems
 
             struct SpringOfIntegration
             {
-
                 /**
                  * @brief 
                  *      Some people run along a straight line in the same direction. 
