@@ -506,15 +506,9 @@ namespace codeSignalProblems
      * @brief Prolems of The Spring Of Integration   *
      *                                               *
      *************************************************/
-    int Core::SpringOfIntegration::runnersMeeting(vector<int> startPosition, vector<int> speed) {
-
-        map<int, int> alwaysMeet;
-
-        int numOfParticipants = startPosition.size();
-        for (int i = 0; i < numOfParticipants; i++)
-        {
-            
-        }
+    int Core::SpringOfIntegration::runnersMeeting(vector<int> startPosition, vector<int> speed) 
+    {
+        
         return 0;
     }
 };
