@@ -1,1 +1,1 @@
-/bin/x86_64-linux-gnu-g++-9  -pthread -O3 -DNDEBUG  -rdynamic -s CMakeFiles/competitive.dir/bitwise/missingNumber.cpp.o  -o competitive 
+/usr/bin/c++  -pthread -O3 -DNDEBUG  -rdynamic -s CMakeFiles/competitive.dir/bitwise/missingNumber.cpp.o  -o competitive 

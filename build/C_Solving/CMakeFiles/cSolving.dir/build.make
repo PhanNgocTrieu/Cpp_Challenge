@@ -46,10 +46,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/DocumentByMaking/Cpp_Challenge
+CMAKE_SOURCE_DIR = /mnt/f/DocumentByMaking/Cpp_Challenge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/DocumentByMaking/Cpp_Challenge/build
+CMAKE_BINARY_DIR = /mnt/f/DocumentByMaking/Cpp_Challenge/build
 
 # Include any dependencies generated for this target.
 include C_Solving/CMakeFiles/cSolving.dir/depend.make
@@ -60,42 +60,43 @@ include C_Solving/CMakeFiles/cSolving.dir/progress.make
 # Include the compile flags for this target's objects.
 include C_Solving/CMakeFiles/cSolving.dir/flags.make
 
-C_Solving/CMakeFiles/cSolving.dir/calculateSineX.cpp.o: C_Solving/CMakeFiles/cSolving.dir/flags.make
-C_Solving/CMakeFiles/cSolving.dir/calculateSineX.cpp.o: ../C_Solving/calculateSineX.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/DocumentByMaking/Cpp_Challenge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object C_Solving/CMakeFiles/cSolving.dir/calculateSineX.cpp.o"
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build/C_Solving && /bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cSolving.dir/calculateSineX.cpp.o -c /mnt/d/DocumentByMaking/Cpp_Challenge/C_Solving/calculateSineX.cpp
+C_Solving/CMakeFiles/cSolving.dir/src/solvingC.cpp.o: C_Solving/CMakeFiles/cSolving.dir/flags.make
+C_Solving/CMakeFiles/cSolving.dir/src/solvingC.cpp.o: ../C_Solving/src/solvingC.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/f/DocumentByMaking/Cpp_Challenge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object C_Solving/CMakeFiles/cSolving.dir/src/solvingC.cpp.o"
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build/C_Solving && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cSolving.dir/src/solvingC.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/src/solvingC.cpp
 
-C_Solving/CMakeFiles/cSolving.dir/calculateSineX.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cSolving.dir/calculateSineX.cpp.i"
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build/C_Solving && /bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/DocumentByMaking/Cpp_Challenge/C_Solving/calculateSineX.cpp > CMakeFiles/cSolving.dir/calculateSineX.cpp.i
+C_Solving/CMakeFiles/cSolving.dir/src/solvingC.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cSolving.dir/src/solvingC.cpp.i"
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build/C_Solving && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/src/solvingC.cpp > CMakeFiles/cSolving.dir/src/solvingC.cpp.i
 
-C_Solving/CMakeFiles/cSolving.dir/calculateSineX.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cSolving.dir/calculateSineX.cpp.s"
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build/C_Solving && /bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/DocumentByMaking/Cpp_Challenge/C_Solving/calculateSineX.cpp -o CMakeFiles/cSolving.dir/calculateSineX.cpp.s
+C_Solving/CMakeFiles/cSolving.dir/src/solvingC.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cSolving.dir/src/solvingC.cpp.s"
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build/C_Solving && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/src/solvingC.cpp -o CMakeFiles/cSolving.dir/src/solvingC.cpp.s
 
 # Object files for target cSolving
 cSolving_OBJECTS = \
-"CMakeFiles/cSolving.dir/calculateSineX.cpp.o"
+"CMakeFiles/cSolving.dir/src/solvingC.cpp.o"
 
 # External object files for target cSolving
 cSolving_EXTERNAL_OBJECTS =
 
-C_Solving/cSolving: C_Solving/CMakeFiles/cSolving.dir/calculateSineX.cpp.o
-C_Solving/cSolving: C_Solving/CMakeFiles/cSolving.dir/build.make
-C_Solving/cSolving: C_Solving/CMakeFiles/cSolving.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/DocumentByMaking/Cpp_Challenge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable cSolving"
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build/C_Solving && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cSolving.dir/link.txt --verbose=$(VERBOSE)
+C_Solving/libcSolving.a: C_Solving/CMakeFiles/cSolving.dir/src/solvingC.cpp.o
+C_Solving/libcSolving.a: C_Solving/CMakeFiles/cSolving.dir/build.make
+C_Solving/libcSolving.a: C_Solving/CMakeFiles/cSolving.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/f/DocumentByMaking/Cpp_Challenge/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libcSolving.a"
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build/C_Solving && $(CMAKE_COMMAND) -P CMakeFiles/cSolving.dir/cmake_clean_target.cmake
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build/C_Solving && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cSolving.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-C_Solving/CMakeFiles/cSolving.dir/build: C_Solving/cSolving
+C_Solving/CMakeFiles/cSolving.dir/build: C_Solving/libcSolving.a
 
 .PHONY : C_Solving/CMakeFiles/cSolving.dir/build
 
 C_Solving/CMakeFiles/cSolving.dir/clean:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build/C_Solving && $(CMAKE_COMMAND) -P CMakeFiles/cSolving.dir/cmake_clean.cmake
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build/C_Solving && $(CMAKE_COMMAND) -P CMakeFiles/cSolving.dir/cmake_clean.cmake
 .PHONY : C_Solving/CMakeFiles/cSolving.dir/clean
 
 C_Solving/CMakeFiles/cSolving.dir/depend:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/d/DocumentByMaking/Cpp_Challenge /mnt/d/DocumentByMaking/Cpp_Challenge/C_Solving /mnt/d/DocumentByMaking/Cpp_Challenge/build /mnt/d/DocumentByMaking/Cpp_Challenge/build/C_Solving /mnt/d/DocumentByMaking/Cpp_Challenge/build/C_Solving/CMakeFiles/cSolving.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/f/DocumentByMaking/Cpp_Challenge /mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving /mnt/f/DocumentByMaking/Cpp_Challenge/build /mnt/f/DocumentByMaking/Cpp_Challenge/build/C_Solving /mnt/f/DocumentByMaking/Cpp_Challenge/build/C_Solving/CMakeFiles/cSolving.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : C_Solving/CMakeFiles/cSolving.dir/depend
 

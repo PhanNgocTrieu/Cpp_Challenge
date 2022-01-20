@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/DocumentByMaking/Cpp_Challenge
+CMAKE_SOURCE_DIR = /mnt/f/DocumentByMaking/Cpp_Challenge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/DocumentByMaking/Cpp_Challenge/build
+CMAKE_BINARY_DIR = /mnt/f/DocumentByMaking/Cpp_Challenge/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,14 +83,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/DocumentByMaking/Cpp_Challenge/build/CMakeFiles /mnt/d/DocumentByMaking/Cpp_Challenge/build/LeetCode/CMakeFiles/progress.marks
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 LeetCode/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/DocumentByMaking/Cpp_Challenge/build/CMakeFiles 0
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/DocumentByMaking/Cpp_Challenge/build/CMakeFiles /mnt/f/DocumentByMaking/Cpp_Challenge/build/LeetCode/CMakeFiles/progress.marks
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 LeetCode/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/DocumentByMaking/Cpp_Challenge/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 LeetCode/clean
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 LeetCode/clean
 .PHONY : clean
 
 # The main clean target
@@ -100,22 +100,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 LeetCode/preinstall
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 LeetCode/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 LeetCode/preinstall
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 LeetCode/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 LeetCode/CMakeFiles/leetcode.dir/rule:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 LeetCode/CMakeFiles/leetcode.dir/rule
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 LeetCode/CMakeFiles/leetcode.dir/rule
 .PHONY : LeetCode/CMakeFiles/leetcode.dir/rule
 
 # Convenience name for target.
@@ -125,7 +125,7 @@ leetcode: LeetCode/CMakeFiles/leetcode.dir/rule
 
 # fast build rule for target.
 leetcode/fast:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f LeetCode/CMakeFiles/leetcode.dir/build.make LeetCode/CMakeFiles/leetcode.dir/build
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f LeetCode/CMakeFiles/leetcode.dir/build.make LeetCode/CMakeFiles/leetcode.dir/build
 .PHONY : leetcode/fast
 
 src/leetCode.o: src/leetCode.cpp.o
@@ -134,7 +134,7 @@ src/leetCode.o: src/leetCode.cpp.o
 
 # target to build an object file
 src/leetCode.cpp.o:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f LeetCode/CMakeFiles/leetcode.dir/build.make LeetCode/CMakeFiles/leetcode.dir/src/leetCode.cpp.o
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f LeetCode/CMakeFiles/leetcode.dir/build.make LeetCode/CMakeFiles/leetcode.dir/src/leetCode.cpp.o
 .PHONY : src/leetCode.cpp.o
 
 src/leetCode.i: src/leetCode.cpp.i
@@ -143,7 +143,7 @@ src/leetCode.i: src/leetCode.cpp.i
 
 # target to preprocess a source file
 src/leetCode.cpp.i:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f LeetCode/CMakeFiles/leetcode.dir/build.make LeetCode/CMakeFiles/leetcode.dir/src/leetCode.cpp.i
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f LeetCode/CMakeFiles/leetcode.dir/build.make LeetCode/CMakeFiles/leetcode.dir/src/leetCode.cpp.i
 .PHONY : src/leetCode.cpp.i
 
 src/leetCode.s: src/leetCode.cpp.s
@@ -152,7 +152,7 @@ src/leetCode.s: src/leetCode.cpp.s
 
 # target to generate assembly for a file
 src/leetCode.cpp.s:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f LeetCode/CMakeFiles/leetcode.dir/build.make LeetCode/CMakeFiles/leetcode.dir/src/leetCode.cpp.s
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f LeetCode/CMakeFiles/leetcode.dir/build.make LeetCode/CMakeFiles/leetcode.dir/src/leetCode.cpp.s
 .PHONY : src/leetCode.cpp.s
 
 # Help Target
@@ -178,6 +178,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/DocumentByMaking/Cpp_Challenge
+CMAKE_SOURCE_DIR = /mnt/f/DocumentByMaking/Cpp_Challenge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/DocumentByMaking/Cpp_Challenge/build
+CMAKE_BINARY_DIR = /mnt/f/DocumentByMaking/Cpp_Challenge/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,9 +83,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/DocumentByMaking/Cpp_Challenge/build/CMakeFiles /mnt/d/DocumentByMaking/Cpp_Challenge/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/DocumentByMaking/Cpp_Challenge/build/CMakeFiles /mnt/f/DocumentByMaking/Cpp_Challenge/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/DocumentByMaking/Cpp_Challenge/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/DocumentByMaking/Cpp_Challenge/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -125,6 +125,19 @@ cSolving: cmake_check_build_system
 cSolving/fast:
 	$(MAKE) -f C_Solving/CMakeFiles/cSolving.dir/build.make C_Solving/CMakeFiles/cSolving.dir/build
 .PHONY : cSolving/fast
+
+#=============================================================================
+# Target rules for targets named solving
+
+# Build rule for target.
+solving: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 solving
+.PHONY : solving
+
+# fast build rule for target.
+solving/fast:
+	$(MAKE) -f C_Solving/examples/CMakeFiles/solving.dir/build.make C_Solving/examples/CMakeFiles/solving.dir/build
+.PHONY : solving/fast
 
 #=============================================================================
 # Target rules for targets named graphic
@@ -278,6 +291,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... cSolving"
+	@echo "... solving"
 	@echo "... graphic"
 	@echo "... graphicProblems"
 	@echo "... codeSignal"

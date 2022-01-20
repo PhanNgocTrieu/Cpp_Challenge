@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/cSolving.dir/calculateSineX.cpp.o"
-  "cSolving"
-  "cSolving.pdb"
+  "CMakeFiles/cSolving.dir/src/solvingC.cpp.o"
+  "libcSolving.a"
+  "libcSolving.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

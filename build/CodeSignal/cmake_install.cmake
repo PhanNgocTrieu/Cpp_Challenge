@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/DocumentByMaking/Cpp_Challenge/CodeSignal
+# Install script for directory: /mnt/f/DocumentByMaking/Cpp_Challenge/CodeSignal
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/d/DocumentByMaking/Cpp_Challenge/build/CodeSignal/Intro/cmake_install.cmake")
-  include("/mnt/d/DocumentByMaking/Cpp_Challenge/build/CodeSignal/TheCore/cmake_install.cmake")
-  include("/mnt/d/DocumentByMaking/Cpp_Challenge/build/CodeSignal/examples/cmake_install.cmake")
+  include("/mnt/f/DocumentByMaking/Cpp_Challenge/build/CodeSignal/Intro/cmake_install.cmake")
+  include("/mnt/f/DocumentByMaking/Cpp_Challenge/build/CodeSignal/TheCore/cmake_install.cmake")
+  include("/mnt/f/DocumentByMaking/Cpp_Challenge/build/CodeSignal/examples/cmake_install.cmake")
 
 endif()
 

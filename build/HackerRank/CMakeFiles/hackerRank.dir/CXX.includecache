@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/d/DocumentByMaking/Cpp_Challenge/HackerRank/include/arrayProblems.h
+/mnt/f/DocumentByMaking/Cpp_Challenge/HackerRank/include/arrayProblems.h
 iostream
 -
 vector
@@ -18,7 +18,7 @@ deque
 algorithm
 -
 
-/mnt/d/DocumentByMaking/Cpp_Challenge/HackerRank/src/arrayProblems.cpp
+/mnt/f/DocumentByMaking/Cpp_Challenge/HackerRank/src/arrayProblems.cpp
 ../include/arrayProblems.h
-/mnt/d/DocumentByMaking/Cpp_Challenge/HackerRank/include/arrayProblems.h
+/mnt/f/DocumentByMaking/Cpp_Challenge/HackerRank/include/arrayProblems.h
 

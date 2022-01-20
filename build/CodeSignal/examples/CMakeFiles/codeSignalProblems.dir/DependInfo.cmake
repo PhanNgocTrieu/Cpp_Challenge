@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/d/DocumentByMaking/Cpp_Challenge/CodeSignal/examples/main.cpp" "/mnt/d/DocumentByMaking/Cpp_Challenge/build/CodeSignal/examples/CMakeFiles/codeSignalProblems.dir/main.cpp.o"
+  "/mnt/f/DocumentByMaking/Cpp_Challenge/CodeSignal/examples/main.cpp" "/mnt/f/DocumentByMaking/Cpp_Challenge/build/CodeSignal/examples/CMakeFiles/codeSignalProblems.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,7 +16,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/mnt/d/DocumentByMaking/Cpp_Challenge/build/DataStructure/CMakeFiles/DTST.dir/DependInfo.cmake"
+  "/mnt/f/DocumentByMaking/Cpp_Challenge/build/DataStructure/CMakeFiles/DTST.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

@@ -4,12 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/d/DocumentByMaking/Cpp_Challenge/C_Solving/calculateSineX.cpp" "/mnt/d/DocumentByMaking/Cpp_Challenge/build/C_Solving/CMakeFiles/cSolving.dir/calculateSineX.cpp.o"
+  "/mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/src/solvingC.cpp" "/mnt/f/DocumentByMaking/Cpp_Challenge/build/C_Solving/CMakeFiles/cSolving.dir/src/solvingC.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../C_Solving/include"
   )
 
 # Targets to which this target links.

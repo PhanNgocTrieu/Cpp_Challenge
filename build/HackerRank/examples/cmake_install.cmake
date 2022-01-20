@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/DocumentByMaking/Cpp_Challenge/HackerRank/examples
+# Install script for directory: /mnt/f/DocumentByMaking/Cpp_Challenge/HackerRank/examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

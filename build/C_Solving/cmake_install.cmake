@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/DocumentByMaking/Cpp_Challenge/C_Solving
+# Install script for directory: /mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,11 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/mnt/f/DocumentByMaking/Cpp_Challenge/build/C_Solving/examples/cmake_install.cmake")
+
 endif()
 

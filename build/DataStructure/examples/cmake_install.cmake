@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/DocumentByMaking/Cpp_Challenge/DataStructure/examples
+# Install script for directory: /mnt/f/DocumentByMaking/Cpp_Challenge/DataStructure/examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

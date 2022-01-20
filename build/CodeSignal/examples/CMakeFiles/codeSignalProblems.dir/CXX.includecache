@@ -25,6 +25,8 @@ algorithm
 -
 
 ../CodeSignal/include/supportedFunction.h
+Core.h
+../CodeSignal/include/Core.h
 vector
 -
 stack
@@ -32,7 +34,7 @@ stack
 iostream
 -
 
-/mnt/d/DocumentByMaking/Cpp_Challenge/CodeSignal/examples/main.cpp
+/mnt/f/DocumentByMaking/Cpp_Challenge/CodeSignal/examples/main.cpp
 Core.h
-/mnt/d/DocumentByMaking/Cpp_Challenge/CodeSignal/examples/Core.h
+/mnt/f/DocumentByMaking/Cpp_Challenge/CodeSignal/examples/Core.h
 

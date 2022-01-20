@@ -1,2 +1,2 @@
-/bin/ar qc libhackerRank.a  CMakeFiles/hackerRank.dir/src/arrayProblems.cpp.o
-/bin/ranlib libhackerRank.a
+/usr/bin/ar qc libhackerRank.a  CMakeFiles/hackerRank.dir/src/arrayProblems.cpp.o
+/usr/bin/ranlib libhackerRank.a

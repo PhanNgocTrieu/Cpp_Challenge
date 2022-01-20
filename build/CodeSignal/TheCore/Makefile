@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/DocumentByMaking/Cpp_Challenge
+CMAKE_SOURCE_DIR = /mnt/f/DocumentByMaking/Cpp_Challenge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/DocumentByMaking/Cpp_Challenge/build
+CMAKE_BINARY_DIR = /mnt/f/DocumentByMaking/Cpp_Challenge/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,14 +83,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/DocumentByMaking/Cpp_Challenge/build/CMakeFiles /mnt/d/DocumentByMaking/Cpp_Challenge/build/CodeSignal/TheCore/CMakeFiles/progress.marks
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 CodeSignal/TheCore/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/DocumentByMaking/Cpp_Challenge/build/CMakeFiles 0
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/DocumentByMaking/Cpp_Challenge/build/CMakeFiles /mnt/f/DocumentByMaking/Cpp_Challenge/build/CodeSignal/TheCore/CMakeFiles/progress.marks
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 CodeSignal/TheCore/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/DocumentByMaking/Cpp_Challenge/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 CodeSignal/TheCore/clean
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 CodeSignal/TheCore/clean
 .PHONY : clean
 
 # The main clean target
@@ -100,17 +100,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 CodeSignal/TheCore/preinstall
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 CodeSignal/TheCore/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 CodeSignal/TheCore/preinstall
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 CodeSignal/TheCore/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -132,6 +132,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

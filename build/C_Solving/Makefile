@@ -51,10 +51,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/DocumentByMaking/Cpp_Challenge
+CMAKE_SOURCE_DIR = /mnt/f/DocumentByMaking/Cpp_Challenge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/DocumentByMaking/Cpp_Challenge/build
+CMAKE_BINARY_DIR = /mnt/f/DocumentByMaking/Cpp_Challenge/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -83,14 +83,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/DocumentByMaking/Cpp_Challenge/build/CMakeFiles /mnt/d/DocumentByMaking/Cpp_Challenge/build/C_Solving/CMakeFiles/progress.marks
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 C_Solving/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/DocumentByMaking/Cpp_Challenge/build/CMakeFiles 0
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/DocumentByMaking/Cpp_Challenge/build/CMakeFiles /mnt/f/DocumentByMaking/Cpp_Challenge/build/C_Solving/CMakeFiles/progress.marks
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 C_Solving/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/f/DocumentByMaking/Cpp_Challenge/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 C_Solving/clean
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 C_Solving/clean
 .PHONY : clean
 
 # The main clean target
@@ -100,22 +100,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 C_Solving/preinstall
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 C_Solving/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 C_Solving/preinstall
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 C_Solving/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 C_Solving/CMakeFiles/cSolving.dir/rule:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 C_Solving/CMakeFiles/cSolving.dir/rule
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f CMakeFiles/Makefile2 C_Solving/CMakeFiles/cSolving.dir/rule
 .PHONY : C_Solving/CMakeFiles/cSolving.dir/rule
 
 # Convenience name for target.
@@ -125,35 +125,35 @@ cSolving: C_Solving/CMakeFiles/cSolving.dir/rule
 
 # fast build rule for target.
 cSolving/fast:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f C_Solving/CMakeFiles/cSolving.dir/build.make C_Solving/CMakeFiles/cSolving.dir/build
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f C_Solving/CMakeFiles/cSolving.dir/build.make C_Solving/CMakeFiles/cSolving.dir/build
 .PHONY : cSolving/fast
 
-calculateSineX.o: calculateSineX.cpp.o
+src/solvingC.o: src/solvingC.cpp.o
 
-.PHONY : calculateSineX.o
+.PHONY : src/solvingC.o
 
 # target to build an object file
-calculateSineX.cpp.o:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f C_Solving/CMakeFiles/cSolving.dir/build.make C_Solving/CMakeFiles/cSolving.dir/calculateSineX.cpp.o
-.PHONY : calculateSineX.cpp.o
+src/solvingC.cpp.o:
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f C_Solving/CMakeFiles/cSolving.dir/build.make C_Solving/CMakeFiles/cSolving.dir/src/solvingC.cpp.o
+.PHONY : src/solvingC.cpp.o
 
-calculateSineX.i: calculateSineX.cpp.i
+src/solvingC.i: src/solvingC.cpp.i
 
-.PHONY : calculateSineX.i
+.PHONY : src/solvingC.i
 
 # target to preprocess a source file
-calculateSineX.cpp.i:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f C_Solving/CMakeFiles/cSolving.dir/build.make C_Solving/CMakeFiles/cSolving.dir/calculateSineX.cpp.i
-.PHONY : calculateSineX.cpp.i
+src/solvingC.cpp.i:
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f C_Solving/CMakeFiles/cSolving.dir/build.make C_Solving/CMakeFiles/cSolving.dir/src/solvingC.cpp.i
+.PHONY : src/solvingC.cpp.i
 
-calculateSineX.s: calculateSineX.cpp.s
+src/solvingC.s: src/solvingC.cpp.s
 
-.PHONY : calculateSineX.s
+.PHONY : src/solvingC.s
 
 # target to generate assembly for a file
-calculateSineX.cpp.s:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f C_Solving/CMakeFiles/cSolving.dir/build.make C_Solving/CMakeFiles/cSolving.dir/calculateSineX.cpp.s
-.PHONY : calculateSineX.cpp.s
+src/solvingC.cpp.s:
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(MAKE) -f C_Solving/CMakeFiles/cSolving.dir/build.make C_Solving/CMakeFiles/cSolving.dir/src/solvingC.cpp.s
+.PHONY : src/solvingC.cpp.s
 
 # Help Target
 help:
@@ -164,9 +164,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... cSolving"
-	@echo "... calculateSineX.o"
-	@echo "... calculateSineX.i"
-	@echo "... calculateSineX.s"
+	@echo "... src/solvingC.o"
+	@echo "... src/solvingC.i"
+	@echo "... src/solvingC.s"
 .PHONY : help
 
 
@@ -178,6 +178,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/d/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/f/DocumentByMaking/Cpp_Challenge/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

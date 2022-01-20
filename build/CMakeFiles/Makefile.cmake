@@ -9,6 +9,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
   "../CMakeLists.txt"
   "../C_Solving/CMakeLists.txt"
+  "../C_Solving/examples/CMakeLists.txt"
   "../CodeSignal/CMakeLists.txt"
   "../CodeSignal/Intro/CMakeLists.txt"
   "../CodeSignal/TheCore/CMakeLists.txt"
@@ -63,6 +64,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "C_Solving/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "C_Solving/examples/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Graph/CMakeFiles/CMakeDirectoryInformation.cmake"
   "Graph/examples/CMakeFiles/CMakeDirectoryInformation.cmake"
   "CodeSignal/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -81,6 +83,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "C_Solving/CMakeFiles/cSolving.dir/DependInfo.cmake"
+  "C_Solving/examples/CMakeFiles/solving.dir/DependInfo.cmake"
   "Graph/CMakeFiles/graphic.dir/DependInfo.cmake"
   "Graph/examples/CMakeFiles/graphicProblems.dir/DependInfo.cmake"
   "CodeSignal/CMakeFiles/codeSignal.dir/DependInfo.cmake"

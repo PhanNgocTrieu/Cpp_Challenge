@@ -6,11 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/mnt/d/DocumentByMaking/Cpp_Challenge/C_Solving/calculateSineX.cpp
+../C_Solving/include/solvingC.h
+stdio.h
+-
+malloc.h
+-
+cstring
+-
+string.h
+-
+stdlib.h
+-
 iostream
 -
-math.h
--
-time.h
--
+
+/mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/src/solvingC.cpp
+solvingC.h
+/mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/src/solvingC.h
 

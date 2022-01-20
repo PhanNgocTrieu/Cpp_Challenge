@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/DocumentByMaking/Cpp_Challenge
+# Install script for directory: /mnt/f/DocumentByMaking/Cpp_Challenge
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,13 +39,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/d/DocumentByMaking/Cpp_Challenge/build/C_Solving/cmake_install.cmake")
-  include("/mnt/d/DocumentByMaking/Cpp_Challenge/build/Graph/cmake_install.cmake")
-  include("/mnt/d/DocumentByMaking/Cpp_Challenge/build/CodeSignal/cmake_install.cmake")
-  include("/mnt/d/DocumentByMaking/Cpp_Challenge/build/competitiveProblems/cmake_install.cmake")
-  include("/mnt/d/DocumentByMaking/Cpp_Challenge/build/HackerRank/cmake_install.cmake")
-  include("/mnt/d/DocumentByMaking/Cpp_Challenge/build/LeetCode/cmake_install.cmake")
-  include("/mnt/d/DocumentByMaking/Cpp_Challenge/build/DataStructure/cmake_install.cmake")
+  include("/mnt/f/DocumentByMaking/Cpp_Challenge/build/C_Solving/cmake_install.cmake")
+  include("/mnt/f/DocumentByMaking/Cpp_Challenge/build/Graph/cmake_install.cmake")
+  include("/mnt/f/DocumentByMaking/Cpp_Challenge/build/CodeSignal/cmake_install.cmake")
+  include("/mnt/f/DocumentByMaking/Cpp_Challenge/build/competitiveProblems/cmake_install.cmake")
+  include("/mnt/f/DocumentByMaking/Cpp_Challenge/build/HackerRank/cmake_install.cmake")
+  include("/mnt/f/DocumentByMaking/Cpp_Challenge/build/LeetCode/cmake_install.cmake")
+  include("/mnt/f/DocumentByMaking/Cpp_Challenge/build/DataStructure/cmake_install.cmake")
 
 endif()
 
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/d/DocumentByMaking/Cpp_Challenge/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/f/DocumentByMaking/Cpp_Challenge/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

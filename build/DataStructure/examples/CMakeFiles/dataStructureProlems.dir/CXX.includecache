@@ -30,13 +30,13 @@ iostream
 vector
 -
 
-/mnt/d/DocumentByMaking/Cpp_Challenge/DataStructure/examples/main.cpp
+/mnt/f/DocumentByMaking/Cpp_Challenge/DataStructure/examples/main.cpp
 iostream
 -
 dataStructure.h
-/mnt/d/DocumentByMaking/Cpp_Challenge/DataStructure/examples/dataStructure.h
+/mnt/f/DocumentByMaking/Cpp_Challenge/DataStructure/examples/dataStructure.h
 linkedlist.h
-/mnt/d/DocumentByMaking/Cpp_Challenge/DataStructure/examples/linkedlist.h
+/mnt/f/DocumentByMaking/Cpp_Challenge/DataStructure/examples/linkedlist.h
 BST.h
-/mnt/d/DocumentByMaking/Cpp_Challenge/DataStructure/examples/BST.h
+/mnt/f/DocumentByMaking/Cpp_Challenge/DataStructure/examples/BST.h
 

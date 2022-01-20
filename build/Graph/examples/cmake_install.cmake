@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/DocumentByMaking/Cpp_Challenge/Graph/examples
+# Install script for directory: /mnt/f/DocumentByMaking/Cpp_Challenge/Graph/examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
