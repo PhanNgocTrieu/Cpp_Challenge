@@ -1,1 +1,0 @@
-/usr/bin/c++  -pthread -O2 -g -DNDEBUG  -rdynamic CMakeFiles/solving.dir/main.cpp.o  -o solving  ../libcSolving.a 
