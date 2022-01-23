@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../LeetCode/include/leetCode.h
+iostream
+-
+map
+-
+vector
+-
+algorithm
+-
+stack
+-
+limits.h
+-
+
+/mnt/f/DocumentByMaking/Cpp_Challenge/LeetCode/src/leetCode.cpp
+leetCode.h
+/mnt/f/DocumentByMaking/Cpp_Challenge/LeetCode/src/leetCode.h
+

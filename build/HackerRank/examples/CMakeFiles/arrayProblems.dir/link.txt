@@ -1,0 +1,1 @@
+/usr/bin/c++  -pthread -O2 -g -DNDEBUG  -rdynamic CMakeFiles/arrayProblems.dir/main.cpp.o  -o arrayProblems  ../libhackerRank.a -lpthread 

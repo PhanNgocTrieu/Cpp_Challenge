@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../C_Solving/include/solvingC.h
+stdio.h
+-
+malloc.h
+-
+cstring
+-
+string.h
+-
+stdlib.h
+-
+iostream
+-
+
+/mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/examples/main.cpp
+solvingC.h
+/mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/examples/solvingC.h
+debug/array
+-
+
