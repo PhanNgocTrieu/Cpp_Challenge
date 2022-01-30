@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../IOLib/include/IOLibrary.h
+iostream
+-
+string
+-
+cstring
+-
+
+/mnt/f/DocumentByMaking/Cpp_Challenge/IOLib/src/IOLibrary.cpp
+IOLibrary.h
+/mnt/f/DocumentByMaking/Cpp_Challenge/IOLib/src/IOLibrary.h
+

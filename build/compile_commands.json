@@ -1,0 +1,97 @@
+[
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/IOLib",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/f/DocumentByMaking/Cpp_Challenge/IOLib/include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/iolib.dir/src/IOLibrary.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/IOLib/src/IOLibrary.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/IOLib/src/IOLibrary.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/IOLib/examples",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/f/DocumentByMaking/Cpp_Challenge/IOLib/include -I/mnt/f/DocumentByMaking/Cpp_Challenge/IOLib/examples/../include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/solving.dir/main.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/IOLib/examples/main.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/IOLib/examples/main.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/C_Solving",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/cSolving.dir/src/solvingC.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/src/solvingC.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/src/solvingC.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/C_Solving/examples",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/include -I/mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/examples/../include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/solvingc.dir/main.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/examples/main.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/C_Solving/examples/main.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/Graph",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/f/DocumentByMaking/Cpp_Challenge/Graph/include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/graphic.dir/src/Graph.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/Graph/src/Graph.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/Graph/src/Graph.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/Graph/examples",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/f/DocumentByMaking/Cpp_Challenge/Graph/include -I/mnt/f/DocumentByMaking/Cpp_Challenge/Graph/examples/../include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/graphicProblems.dir/main.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/Graph/examples/main.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/Graph/examples/main.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/CodeSignal",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/f/DocumentByMaking/Cpp_Challenge/CodeSignal/include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/codeSignal.dir/src/Core.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/CodeSignal/src/Core.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/CodeSignal/src/Core.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/CodeSignal/examples",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/f/DocumentByMaking/Cpp_Challenge/CodeSignal/include -I/mnt/f/DocumentByMaking/Cpp_Challenge/CodeSignal/examples/../include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/codeSignalProblems.dir/main.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/CodeSignal/examples/main.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/CodeSignal/examples/main.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/competitiveProblems",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/competitive.dir/bitwise/missingNumber.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/competitiveProblems/bitwise/missingNumber.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/competitiveProblems/bitwise/missingNumber.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/HackerRank",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/f/DocumentByMaking/Cpp_Challenge/HackerRank/include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/hackerRank.dir/src/arrayProblems.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/HackerRank/src/arrayProblems.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/HackerRank/src/arrayProblems.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/HackerRank/examples",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/f/DocumentByMaking/Cpp_Challenge/HackerRank/include -I/mnt/f/DocumentByMaking/Cpp_Challenge/HackerRank/examples/../include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/arrayProblems.dir/main.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/HackerRank/examples/main.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/HackerRank/examples/main.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/LeetCode",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/f/DocumentByMaking/Cpp_Challenge/LeetCode/include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/leetcode.dir/src/leetCode.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/LeetCode/src/leetCode.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/LeetCode/src/leetCode.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/LeetCode/examples",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/f/DocumentByMaking/Cpp_Challenge/LeetCode/include -I/mnt/f/DocumentByMaking/Cpp_Challenge/LeetCode/examples/../include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/leetCode.dir/main.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/LeetCode/examples/main.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/LeetCode/examples/main.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/DataStructure",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/f/DocumentByMaking/Cpp_Challenge/DataStructure/include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/DTST.dir/src/dataStructure.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/DataStructure/src/dataStructure.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/DataStructure/src/dataStructure.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/DataStructure/examples",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/mnt/f/DocumentByMaking/Cpp_Challenge/DataStructure/include -I/mnt/f/DocumentByMaking/Cpp_Challenge/DataStructure/examples/../include  -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/dataStructureProlems.dir/main.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/DataStructure/examples/main.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/DataStructure/examples/main.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/socket/examples",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/hdlFunc.dir/handleFunction.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/socket/examples/handleFunction.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/socket/examples/handleFunction.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/socket/examples",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/binding.dir/handleBinding.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/socket/examples/handleBinding.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/socket/examples/handleBinding.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/socket/examples",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/sync.dir/synchronousTimer.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/socket/examples/synchronousTimer.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/socket/examples/synchronousTimer.cpp"
+},
+{
+  "directory": "/mnt/f/DocumentByMaking/Cpp_Challenge/build/socket/examples",
+  "command": "/bin/x86_64-linux-gnu-g++-9    -pthread -O3 -DNDEBUG   -std=c++11 -Wall -o CMakeFiles/async.dir/ansynchronousTimer.cpp.o -c /mnt/f/DocumentByMaking/Cpp_Challenge/socket/examples/ansynchronousTimer.cpp",
+  "file": "/mnt/f/DocumentByMaking/Cpp_Challenge/socket/examples/ansynchronousTimer.cpp"
+}
+]

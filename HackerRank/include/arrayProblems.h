@@ -109,7 +109,7 @@ class ArrayProblems
                 }
                 subArr.push_back(elem);
 
-                if (subArr.size() == k)
+                if ((int)subArr.size() == k)
                 {
                     int _max = INT32_MIN;
                     for (auto elem : subArr)

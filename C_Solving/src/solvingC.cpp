@@ -2,122 +2,119 @@
 
 namespace C_Solving_Unit
 {
-    bool Deso1::isPrime(const int& _number)
+    namespace Deso12
     {
-        if (_number < 2)
+        void CheckingSine()
         {
-            // printf("%d is not prime number!\n", _number);
-            return false;
-        }
-
-        int num = 2;
-        do
-        {
-            if (_number % num == 0)
+            int rand_num;
+            srand(time(NULL));
+            double radius;
+            for (int i = 0; i < 50; i++)
             {
-                // printf("%d is not prime number!\n", _number);
-                return false;
+                rand_num = rand() % 360 + 1;
+                radius = rand_num*PI/180;
+                if (fabs(support::Sine(radius) - sin(radius)) < epsilon) //epsilon = 0.000001
+                {
+                    std::cout << "\nTest #" << i << ": x = " << rand_num << ", True";
+                }
+                else
+                {
+                    std::cout << "\nTest #" << i << ": x = " << rand_num << ", False";
+                }
             }
-            num++;
-        } while (num < _number / 2);
-
-        // printf("%d is prime number!\n", _number);
-        return true;
-    }
+        }
+    };
 
     /**
-     * @brief Problems for upgrading from above
+     * @brief Lib for some features which is neccesary for hanlding - especially of I/O functionality
      * 
-     *    
      */
-    bool Deso1::Prime(char* _number)
+    namespace InputAndOutput
     {
-        // printf("Checking: %s", _number);
-        int _size = strlen(_number);
-        char* temp = (char*)malloc(_size * sizeof(char));
-        int _idexOfTemp = 0;
-
-        for (int i = 0; i < _size; i++)
+        void enterArray(char** arr, const int& _size)
         {
-            if (_number[i] == '\n')
+            int _sizeForAllo = _size * sizeof(char);
+
+            /**
+             * Allocating the memory for the array
+             * 
+             */
+            for (int i = 0; i < _size; i++)
             {
-                break;
-            }
-            // double number input -> wrong
-            if (_number[i] == ',')
-            {
-                free(temp);
-                temp = NULL;
-                return false;
+                arr[i] = (char*) malloc(_sizeForAllo);
             }
 
-            // string input
-            if (_number[i] < '0' || _number[i] > '9')
+            for (int i = 0; i < _size; i++)
             {
-                return false;
+                /**
+                 *  initialzing buffer variables for getting input 
+                 */
+                char* buffer = (char*)malloc(_sizeForAllo);
+                int rc;
+
+                do
+                {
+                    printf("Enter %d-th elems:",i);
+                    rc = getdelim(&buffer, (size_t*)&_sizeForAllo, '\n' ,stdin);
+                    // sizeEnter = strlen(buffer) - 1;
+                } while (rc == -1);
+
+                /**
+                 *  copying from buffer to the i-th element of array
+                 * 
+                 */
+                strcpy(arr[i],  buffer);
+
+                /**
+                 *  deallocating memory
+                 * 
+                 */
+                free(buffer);
+                buffer = nullptr;
             }
 
-            temp[_idexOfTemp] = _number[i];
-            _idexOfTemp++;
         }
 
-        /**
-         * @brief   second way - shorter
-         * 
-         *          using atoi from stdlib.h
-         */
-        int number = atoi(temp);
-
-        free(temp);
-        temp = NULL;
-
-        if (isPrime(number))
+        void printArray(char* arr[], const int& _size)
         {
-            printf("%d - ", number);
-            return true;
+            if (!arr)
+            {
+                return;
+            }
+            for (int i = 0; i < _size; i++)
+            {
+                std::cout << arr[i] << " ";
+            }
         }
-        return false;
-    }
 
-    void Deso1::enterArr(char* arr[], int _size)
+    };
+
+    namespace support
     {
-        // allocate
-        for (int i = 0; i < _size; i++)
-            arr[i] = (char*)malloc(_size * sizeof(char));
-        
-        int _strlen;
-
-        for (int i = 0; i < _size; i++)
+        long double Factor(long n)
         {
-            // Enter the letter from keyboard
-            int malloc_size = _size * sizeof(char);
-            char* buffer = (char*)malloc(malloc_size);
+            if (n == 1 || n == 0)
+            {
+                return 1;
+            }
             
-            // checking for the user enters the numbers
+            return n*Factor(n-1);
+        }
+
+        
+        double Sine(double x)
+        {
+            double sine = 0;
+            double temp;
+            long int n = 0;
             do
             {
-                printf("Enter %d-th number: ",i);          
-                fgets(buffer, malloc_size, stdin);
-
-                
-                _strlen = strlen(buffer) - 1;
-            } while (_strlen == 0);
+                temp = pow(x,2*n+1)/Factor(2*n+1);
+                sine = sine + pow(-1,n)*temp;
+                n = n + 1;
+            } while (fabs(temp) >= epsilon);
             
-            
-            // Point the arr[i] to the buffer
-            strcpy(arr[i],buffer);
-            
-            // Free memory
-            free(buffer);
-            buffer = NULL;
+            return sine;
         }
-
-        // Checking for prime number
-        for (int i = 0; i < _size; i++)
-        {
-            Prime(arr[i]);
-        }
-        printf("\n");
-    }
-
+    };
 };

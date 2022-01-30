@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/f/DocumentByMaking/Cpp_Challenge/HackerRank/include/arrayProblems.h
+iostream
+-
+vector
+-
+map
+-
+deque
+-
+algorithm
+-
+
+/mnt/f/DocumentByMaking/Cpp_Challenge/HackerRank/src/arrayProblems.cpp
+../include/arrayProblems.h
+/mnt/f/DocumentByMaking/Cpp_Challenge/HackerRank/include/arrayProblems.h
+

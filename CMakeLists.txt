@@ -6,12 +6,12 @@ set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_VERBOSE_MAKEFILE ON)
 
 add_link_options($<$<CONFIG:RELEASE>:-s>)
-# add_executable(CPPChallenge Graphic/handlingFile/writingFile.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 # include(CPack)
 
+add_subdirectory(IOLib)
 add_subdirectory(C_Solving)
 add_subdirectory(Graph)
 add_subdirectory(CodeSignal)
@@ -19,7 +19,7 @@ add_subdirectory(competitiveProblems)
 add_subdirectory(HackerRank)
 add_subdirectory(LeetCode)
 add_subdirectory(DataStructure)
-
+add_subdirectory(socket)
 # add_definitions(-DBOOST_LOG_DYN_LINK)
 
 
