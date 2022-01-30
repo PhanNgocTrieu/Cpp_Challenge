@@ -113,9 +113,8 @@ namespace codeSignalProblems
 
     string Core::IntroGates::questionCorrectionBot(string question) 
     {   
-        int first_pos = 0;
         // remove all of the white space:
-        int i = 0;
+        size_t i = 0;
         // * at Start!
         while (question[i] == ' ')
         {
@@ -135,8 +134,8 @@ namespace codeSignalProblems
         {
             if (question[i] == ',')
             {
-                int pre_i = i - 1;
-                int aft_i = i + 1;
+                size_t pre_i = i - 1;
+                size_t aft_i = i + 1;
                 if (aft_i > question.length() - 1)
                 {
                     question.push_back(' ');
