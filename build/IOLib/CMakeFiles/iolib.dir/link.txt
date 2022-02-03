@@ -1,0 +1,2 @@
+/bin/ar qc libiolib.a  CMakeFiles/iolib.dir/src/IOLibrary.cpp.o
+/bin/ranlib libiolib.a

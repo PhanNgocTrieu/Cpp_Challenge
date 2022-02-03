@@ -485,6 +485,76 @@ namespace leetcode
         return (r-l+1);
     }
 
+    int LeetCodeProblems::lengthOfLongestSubstring(string s) 
+    {
+        unordered_set<char> set;
+        int _first=0;
+        int _ans = 0;
+        int _length = s.size();
+
+        for (int i=0;i< _length;i++)
+        {
+            while(set.find(s[i])!=set.end())
+            {
+                set.erase(s[_first]);
+                _first++;
+            }
+            set.insert(s[i]);
+            _ans = max(_ans,i - _first + 1);
+        }
+        return _ans;
+    }
     
+
+
+
+    /**
+     * **********************************************************************************
+     *                       @brief Problems of Medium Levels                           *
+     * **********************************************************************************
+     */
+
+    double LeetCodeProblems::findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        int _sizeOfVec = nums1.size() + nums2.size();
+        
+        int _first = 0;
+        int _second = 0;
+        double ans;
+        vector<int> stack;
+        for (int i = 0; i < _sizeOfVec; i++)
+        {
+            if (nums1[_first] == 0)
+            {
+                stack.push_back(nums2[_second]);
+                _second++;
+                continue;
+            }
+
+            if (nums2[_second] == 0)
+            {
+                stack.push_back(nums1[_first]);
+                _first++;
+                continue;
+            }
+
+            if (nums1[_first] > nums2[_second])
+            {
+                stack.push_back(nums2[_second]);
+                _second++;
+            }
+            else
+            {
+                stack.push_back(nums1[_first]);
+                _first++;
+            }
+        }
+        int _pos = stack.size() / 2;        
+        if (_sizeOfVec % 2 == 0)
+        {
+            ans = ((stack[_pos - 1] + stack[_pos]) / (double)2);
+            return ans;
+        }
+        return stack[_pos];
+    }
 
 };

@@ -7,6 +7,8 @@
 #include <algorithm>
 #include <stack>
 #include <limits.h>
+#include <set>
+#include <unordered_set>
 
 using namespace std;
 
@@ -21,8 +23,8 @@ namespace leetcode
     class LeetCodeProblems
     {
         public:
-            LeetCodeProblems();
-            ~LeetCodeProblems();
+            LeetCodeProblems() {}
+            ~LeetCodeProblems() {}
         private:
             void showProblemsWithID();
             void executedProblemsWithID(const uint32_t& _idOfProblems);
@@ -270,7 +272,7 @@ namespace leetcode
          *                       @brief Problems of Medium Levels                           *
          * **********************************************************************************
          */
-        private: 
+        public: 
 
             /*
                 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
@@ -425,6 +427,38 @@ namespace leetcode
             */
             int pallindromeLength(int &l, int &r, string &s);
             string longestPalindrome(string s);
+
+            /**
+             * @brief 
+             * 
+             *  Given a string s, find the length of the longest substring without repeating characters.
+             *  Input: s = "abcabcbb"
+             *  Output: 3
+             *  Explanation: The answer is "abc", with the length of 3.
+        
+             * @param s 
+             * @return int 
+             */
+            int lengthOfLongestSubstring(string s);
+        
+
+        /**
+         * **********************************************************************************
+         *                       @brief Problems of Hard Levels                             *
+         * **********************************************************************************
+         */
+        public: 
+
+            /**
+             * @brief 
+             *      Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+             *      The overall run time complexity should be O(log (m+n)).
+             * 
+             * @param nums1 
+             * @param nums2 
+             * @return double 
+             */
+            double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2);
 
         private:
             map<LevelOfProblems, uint32_t> m_tableOfProblems;
