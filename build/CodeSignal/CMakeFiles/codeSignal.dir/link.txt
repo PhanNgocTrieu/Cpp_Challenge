@@ -1,2 +1,0 @@
-/bin/ar qc libcodeSignal.a  CMakeFiles/codeSignal.dir/src/Core.cpp.o
-/bin/ranlib libcodeSignal.a
