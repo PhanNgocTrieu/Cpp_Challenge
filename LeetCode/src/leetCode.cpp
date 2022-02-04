@@ -475,6 +475,10 @@ namespace leetcode
         return ans;
     }
     
+    /**
+     * @brief Supporting function -> finding out the pallindrome string
+     * 
+     */
     int LeetCodeProblems::pallindromeLength(int &l, int &r, string &s) 
     {
         int _sizeOfStr = s.size();
@@ -484,33 +488,74 @@ namespace leetcode
         l++; r--;
         return (r-l+1);
     }
+    
 
     int LeetCodeProblems::lengthOfLongestSubstring(string s) 
     {
-        unordered_set<char> set;
-        int _first=0;
-        int _ans = 0;
-        int _length = s.size();
-
-        for (int i=0;i< _length;i++)
+        int n = s.size(), result = 0;
+        // creating hashmap for storing unique character and their index 
+        map<char, int> sm;
+        int start = 0, end = 0;
+        for (end = 0; end < n; end++)
         {
-            while(set.find(s[i])!=set.end())
+
+            if (sm.find(s[end]) != sm.end())   // if element is present in map then we have to find the previous substring size
             {
-                set.erase(s[_first]);
-                _first++;
+                // Update the result for the substring in the current window before we found duplicate character
+                result = max(result, end - start);
+                int duplicateIndex = sm[s[end]];
+                //  Remove all characters before the new
+                for (int i = start; i <= duplicateIndex; i++)   
+                {
+                    sm.erase(s[i]);
+                }
+                // Slide the window since we have found a duplicate character
+                start = duplicateIndex + 1;
             }
-            set.insert(s[i]);
-            _ans = max(_ans,i - _first + 1);
+            // Add the current character to hashmap
+            sm[s[end]] = end;
         }
-        return _ans;
+
+        return max(result, n - start);
     }
     
+
+    int LeetCodeProblems::findMaxLength(vector<int>& nums) {
+        unordered_map<int, int> map;
+        int _max = INT_MIN;
+        int _sum = 0;
+        int _idex = 0;
+        for (auto elems : nums)
+        {
+            _sum += elems == 0 ? -1 : 1;
+
+            if (_sum == 0)
+            {
+                _max = _idex + 1; 
+            }
+            else
+            {
+                if (map.find(_sum) == map.end())
+                {
+                    map[_sum] = _idex;
+                }
+                else
+                {
+                    _max = max(_max, _idex - map[_sum]);
+                }
+            }
+
+            _idex++;
+        }
+
+        return _max == INT_MIN ? 0 : _max;
+    }
 
 
 
     /**
      * **********************************************************************************
-     *                       @brief Problems of Medium Levels                           *
+     *                       @brief Problems of Hard Levels                             *
      * **********************************************************************************
      */
 

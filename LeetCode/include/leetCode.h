@@ -9,6 +9,9 @@
 #include <limits.h>
 #include <set>
 #include <unordered_set>
+#include <unordered_map>
+#include <cctype>
+
 
 using namespace std;
 
@@ -66,7 +69,7 @@ namespace leetcode
          *                       @brief Problems of Easy Levels                             *
          * **********************************************************************************
          */
-        private: 
+        public: 
 
             /*
                 Given two binary strings a and b, return their sum as a binary string.
@@ -440,7 +443,23 @@ namespace leetcode
              * @return int 
              */
             int lengthOfLongestSubstring(string s);
-        
+
+            /**
+             * @brief 
+             *      Given a binary array nums, return the maximum length of a contiguous subarray with an equal number of 0 and 1.
+             *      
+             *      Input: nums = [0,1]
+             *      Output: 2 
+             *      Explanation: [0, 1] is the longest contiguous subarray with an equal number of 0 and 1.     
+             *  
+             *      Input: nums = [0,1,0]
+             *      Output: 2
+             *      Explanation: [0, 1] (or [1, 0]) is a longest contiguous subarray with equal number of 0 and 1.
+             * 
+             * @param nums 
+             * @return int 
+             */
+            int findMaxLength(vector<int>& nums);
 
         /**
          * **********************************************************************************
