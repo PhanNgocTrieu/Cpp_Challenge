@@ -1,0 +1,2 @@
+/usr/bin/ar qc libDTST.a CMakeFiles/DTST.dir/src/dataStructure.cpp.o
+/usr/bin/ranlib libDTST.a

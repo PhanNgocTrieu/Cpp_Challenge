@@ -1,0 +1,1 @@
+/usr/bin/c++ -pthread -O3 -DNDEBUG -rdynamic -s CMakeFiles/codeSignalProblems.dir/main.cpp.o -o codeSignalProblems  ../../DataStructure/libDTST.a 

@@ -1,0 +1,1 @@
+/usr/bin/c++ -pthread -O3 -DNDEBUG -rdynamic -s CMakeFiles/solving.dir/main.cpp.o -o solving  ../libiolib.a 

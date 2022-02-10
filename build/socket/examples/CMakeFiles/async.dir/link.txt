@@ -1,0 +1,1 @@
+/usr/bin/c++ -pthread -O3 -DNDEBUG -rdynamic -s CMakeFiles/async.dir/ansynchronousTimer.cpp.o -o async 
