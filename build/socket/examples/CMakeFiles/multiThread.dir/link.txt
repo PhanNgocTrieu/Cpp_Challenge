@@ -1,1 +1,0 @@
-/usr/bin/c++ -pthread -O3 -DNDEBUG -rdynamic -s CMakeFiles/multiThread.dir/multithreadTimer.cpp.o -o multiThread  /usr/lib/libboost_log.so.1.78.0 /usr/lib/libboost_program_options.so.1.78.0 /usr/lib/libboost_thread.so.1.78.0 /usr/lib/libboost_chrono.so.1.78.0 /usr/lib/libboost_filesystem.so.1.78.0 /usr/lib/libboost_atomic.so.1.78.0 /usr/lib/libboost_regex.so.1.78.0 

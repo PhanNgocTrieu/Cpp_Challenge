@@ -1,2 +1,0 @@
-/usr/bin/ar qc libcSolving.a CMakeFiles/cSolving.dir/src/solvingC.cpp.o
-/usr/bin/ranlib libcSolving.a
