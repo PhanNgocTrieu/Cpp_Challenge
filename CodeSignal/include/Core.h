@@ -577,19 +577,13 @@ namespace codeSignalProblems
             {
                 /**
                  * @brief 
-                 *      Some people run along a straight line in the same direction. 
-                 *      They start simultaneously at pairwise distinct positions and run with constant speed (which may differ from person to person).
-                 *      If two or more people are at the same point at some moment we call that a meeting. The number of people gathered at the same point is called meeting cardinality.
-                 *      For the given starting positions and speeds of runners find the maximum meeting cardinality assuming that people run infinitely long. If there will be no meetings, return -1 instead.
-                 * 
-                 * Example:
-                 *      Some people run along a straight line in the same direction. 
-                 *      They start simultaneously at pairwise distinct positions and run with constant speed (which may differ from person to person).
-                 *      If two or more people are at the same point at some moment we call that a meeting. 
-                 *      The number of people gathered at the same point is called meeting cardinality.
+                 * Some people run along a straight line in the same direction. 
+                 * They start simultaneously at pairwise distinct positions and run with constant speed (which may differ from person to person).
+                 * If two or more people are at the same point at some moment we call that a meeting. 
+                 * The number of people gathered at the same point is called meeting cardinality.
                  *      
-                 *      For the given starting positions and speeds of runners find the maximum meeting cardinality assuming that people run infinitely long. 
-                 *      If there will be no meetings, return -1 instead.
+                 * For the given starting positions and speeds of runners find the maximum meeting cardinality assuming that people run infinitely long. 
+                 * If there will be no meetings, return -1 instead.
                  * 
                  * @param startPosition 
                  * @param speed 
@@ -597,11 +591,6 @@ namespace codeSignalProblems
                  */
                 int runnersMeeting(vector<int> startPosition, vector<int> speed);
             };
-
-        private:
-            supportedFunctions::problemsLevels m_level;
-            // map<supportedFunctions::problemsLevels, 
-
             
     };
 }
