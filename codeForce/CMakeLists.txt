@@ -1,7 +1,7 @@
 
 find_package(Boost 1.78 REQUIRED COMPONENTS thread log program_options)
 
-add_executable(codeForce minMaxSwap.cpp)
+add_executable(codeForce testingFunction.cpp)
 
 target_compile_options(codeForce PRIVATE -std=c++11 -Wall)
 
