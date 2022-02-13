@@ -9,6 +9,7 @@
 #include <deque>
 #include <stack>
 #include <algorithm>
+#include <nordered_map>
 
 using namespace std;
 
@@ -585,8 +586,8 @@ namespace codeSignalProblems
                  * For the given starting positions and speeds of runners find the maximum meeting cardinality assuming that people run infinitely long. 
                  * If there will be no meetings, return -1 instead.
                  * 
-                 * @param startPosition 
-                 * @param speed 
+                 * @param startPosition array of startPos of participants
+                 * @param speed arr of speed mapping with participants by idex
                  * @return int 
                  */
                 int runnersMeeting(vector<int> startPosition, vector<int> speed);

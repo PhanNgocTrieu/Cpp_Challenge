@@ -507,7 +507,51 @@ namespace codeSignalProblems
      *************************************************/
     int Core::SpringOfIntegration::runnersMeeting(vector<int> startPosition, vector<int> speed) 
     {
+        int _participants = startPosition.size();
+        int _max = -1;
+        int _second = 0;
+        unorder_map<bool, int> _alwaysMeets;
+        unorder_map<int, int> _willMeets;
+        unorder_map<int, int> _neverMeets;
+
+        vector<double> speedInSecond;
+        // Update the pos
+        for (auto _i = 0; _i < _participants; ++_i)
+        {
+            speedInSecond[_i] = (speed[_i] / 60.0)
+        }
+
+        /**
+         * @brief Checking for meetings
+         * 
+         */
         
-        return 0;
-    }
+        do
+        {
+            for (auto _idex = 0; _idex < _participants - 1; ++_idex)
+            {
+                for (int _jdex = _idex; _jdex < _participants; ++_jdex)
+                {
+                    if (startPosition[_idex] == startPosition[_jdex] && speed[_idex] == speed[_jdex])
+                    {
+                        _alwaysMeets[true]++;
+                    }
+
+                    if (startPosition[_idex] < startPosition[_jdex] && speed[_idex] > speed[_jdex])
+                    {
+                        _willMeets[_idex] = _second;
+                    }
+
+                }
+                _second = _second + 10;
+            }
+
+            if (_alwaysMeets.size() == _participants)
+            {
+                _max = _alwaysMeets.size();
+                break;
+            }
+        }while(true);
+
+        
 };

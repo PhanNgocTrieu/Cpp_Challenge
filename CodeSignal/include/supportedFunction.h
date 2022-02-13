@@ -10,6 +10,11 @@ using namespace std;
 
 namespace supportedFunctions
 {
+    struct runner{
+        int mPos;
+        int mV;
+    }
+
     typedef enum {
         CornerOf0sAnd1s = 0,
         Eruption_of_Light
@@ -93,6 +98,12 @@ namespace supportedFunctions
         }
         return true;
     }
+
+    std::make_pair<int, int> isMeeting()
+    {
+        
+    }
+
 };
 
 #endif

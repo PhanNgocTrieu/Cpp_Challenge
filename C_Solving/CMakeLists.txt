@@ -1,14 +1,9 @@
 find_package(Boost 1.69 REQUIRED COMPONENTS log timer)
 
-include_directories(include)
+add_executable(calSine Sine.cpp)
+target_compile_options(calSine PRIVATE -std=c++11 -Wall)
 
-set(CSOLVING_HDR include/solvingC.h)
+add_executable(giaithua giaiThua.cpp)
+target_compile_options(giaithua PRIVATE -std=c++11 -Wall)
 
-set(CSOLVING_SRC src/solvingC.cpp)
 
-# After setting we need to generate the library by this below command
-add_library(cSolving STATIC ${CSOLVING_HDR} ${CSOLVING_SRC})
-
-target_compile_options(cSolving PRIVATE -std=c++11 -Wall)
-
-add_subdirectory(examples)
