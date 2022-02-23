@@ -1,7 +1,6 @@
 #include <boost/asio.hpp>
 #include <iostream>
 
-
 // Function object for handle
 void print(const boost::system::error_code& )
 {

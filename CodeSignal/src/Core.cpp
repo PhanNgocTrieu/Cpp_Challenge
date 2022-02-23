@@ -510,15 +510,15 @@ namespace codeSignalProblems
         int _participants = startPosition.size();
         int _max = -1;
         int _second = 0;
-        unorder_map<bool, int> _alwaysMeets;
-        unorder_map<int, int> _willMeets;
-        unorder_map<int, int> _neverMeets;
+        unordered_map <bool, int> _alwaysMeets;
+        unordered_map <int, int> _willMeets;
+        unordered_map <int, int> _neverMeets;
 
         vector<double> speedInSecond;
         // Update the pos
         for (auto _i = 0; _i < _participants; ++_i)
         {
-            speedInSecond[_i] = (speed[_i] / 60.0)
+            speedInSecond[_i] = (speed[_i] / 60.0);
         }
 
         /**
@@ -553,5 +553,6 @@ namespace codeSignalProblems
             }
         }while(true);
 
-        
+        return 0;
+    }
 };

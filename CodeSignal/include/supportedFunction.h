@@ -13,7 +13,7 @@ namespace supportedFunctions
     struct runner{
         int mPos;
         int mV;
-    }
+    };
 
     typedef enum {
         CornerOf0sAnd1s = 0,
@@ -98,12 +98,6 @@ namespace supportedFunctions
         }
         return true;
     }
-
-    std::make_pair<int, int> isMeeting()
-    {
-        
-    }
-
 };
 
 #endif
