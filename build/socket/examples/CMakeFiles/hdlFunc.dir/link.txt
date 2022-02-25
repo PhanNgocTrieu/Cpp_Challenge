@@ -1,1 +1,0 @@
-/usr/bin/c++  -pthread -O3 -DNDEBUG  -rdynamic -s CMakeFiles/hdlFunc.dir/handleFunction.cpp.o  -o hdlFunc 
