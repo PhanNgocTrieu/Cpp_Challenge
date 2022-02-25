@@ -1,4 +1,5 @@
 #include "leetCode.h"
+#include "data.h"
 
 namespace leetcode
 {
@@ -231,9 +232,61 @@ namespace leetcode
         return res;
     }
 
+    /**
+     * @brief Solving the problems of deleteDuplicates
+     *  
+     */
+    ListNode* deleteDuplicates(ListNode* head)
+    {
+        if (head == nullptr)
+        {
+            return nullptr;
+        }
+        
+        ListNode* currList = head;
+        ListNode* nextList = nullptr;
+        
+        if (head->next != nullptr)
+            nextList = head->next;
+        
+        while(nextList != nullptr)
+        {
+            if (currList->val != nextList->val)
+            {
+                currList = nextList;
+                nextList = nextList->next;
+            }
+            else
+            {
+                currList->next = nextList->next;
+                ListNode * temp = nextList;
+                nextList = currList->next;
+                
+                delete temp;
+                temp = nullptr;
+            }
+        }
+        
+        currList = nullptr;
+        nextList = nullptr;
+        
+        return head;
+    }
 
-
-
+     /**
+     * @brief Solving the problems of merge
+     *  
+     */
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n)
+    {
+        // Don't you this way -> because you don't know the algorithm - even though this solution is very fast
+        std::merge(nums2.rbegin() + (nums2.size() - n), 
+                nums2.rend(), 
+                nums1.rbegin() + (nums1.size() - m), 
+                nums1.rend(), nums1.rbegin(),
+            [](const int l, const int r) { return l >= r; }
+        );
+    }
 
 
     /**
@@ -317,13 +370,13 @@ namespace leetcode
                 {
                     struct Combination temp2;
                     temp2 = temp;
-                    if(temp.sum + candidates[j] <= target)
+                    if (temp.sum + candidates[j] <= target)
                     {
                         temp2.arr.push_back(candidates[j]);
                         temp2.sum += candidates[j];
                         temp2.idx = j;
                         stack.push_back(temp2);
-                        if(temp.sum + candidates[j] == target)
+                        if (temp.sum + candidates[j] == target)
                         {
                             res.push_back(temp2.arr);
                             stack.pop_back();

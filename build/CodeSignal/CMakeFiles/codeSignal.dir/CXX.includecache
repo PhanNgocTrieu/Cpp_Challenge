@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../CodeSignal/include/Core.h
+supportedFunction.h
+../CodeSignal/include/supportedFunction.h
+vector
+-
+math.h
+-
+iostream
+-
+map
+-
+deque
+-
+stack
+-
+algorithm
+-
+unordered_map
+-
+
+../CodeSignal/include/supportedFunction.h
+Core.h
+../CodeSignal/include/Core.h
+vector
+-
+stack
+-
+iostream
+-
+
+/mnt/g/DocumentByMaking/Cpp_Challenge/CodeSignal/src/Core.cpp
+Core.h
+/mnt/g/DocumentByMaking/Cpp_Challenge/CodeSignal/src/Core.h
+

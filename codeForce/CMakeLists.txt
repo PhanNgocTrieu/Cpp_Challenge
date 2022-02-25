@@ -1,12 +1,16 @@
 
-find_package(Boost 1.78 REQUIRED COMPONENTS thread log program_options)
 
-add_executable(codeForce testingFunction.cpp)
+include_directories(include)
+
+set(CODEFORCE_HDR  include/codeForce.h
+)
+
+set(CODEFORCE_SRC  src/codeForce.cpp
+)
+
+# After setting we need to generate the library by this below command
+add_library(codeForce STATIC ${CODEFORCE_HDR} ${CODEFORCE_SRC})
 
 target_compile_options(codeForce PRIVATE -std=c++11 -Wall)
 
-target_link_libraries(codeForce ${CMAKE_THREAD_LIBS_INIT})
-
-
-## Using for boost::thread
-target_link_libraries(codeForce Boost::log Boost::program_options Boost::thread ${CMAKE_THREAD_LIBS_INIT})
+add_subdirectory(examples)

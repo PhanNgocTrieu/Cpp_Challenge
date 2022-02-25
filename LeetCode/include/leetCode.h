@@ -11,6 +11,7 @@
 #include <unordered_set>
 #include <unordered_map>
 #include <cctype>
+#include "data.h"
 
 
 using namespace std;
@@ -25,45 +26,6 @@ namespace leetcode
 
     class LeetCodeProblems
     {
-        public:
-            LeetCodeProblems() {}
-            ~LeetCodeProblems() {}
-        private:
-            void showProblemsWithID();
-            void executedProblemsWithID(const uint32_t& _idOfProblems);
-
-
-        /**
-         * **********************************************************************************
-         *                       @brief Supporting for the problems                         *
-         * **********************************************************************************
-         */
-        private: /* Struct for supporting these below problems */
-
-            /**
-             * @brief A definition of a combination struct
-             * 
-             */
-            struct Combination{
-                vector<int> arr;
-                int sum;
-                int idx;
-            };
-
-            /**
-             * @brief A definition of a tree
-             * 
-             */
-            struct TreeNode {
-                int val;
-                TreeNode* left;
-                TreeNode* right;
-            };
-
-
-
-
-
         /**
          * **********************************************************************************
          *                       @brief Problems of Easy Levels                             *
@@ -265,9 +227,35 @@ namespace leetcode
             */
 
             int singleNumber(vector<int>& nums);
+            
+            /**
+             * @brief 
+             *          Given the head of a sorted linked list, delete all duplicates such that each element appears only once. 
+             *          Return the linked list sorted as well.
+             * 
+             * @param head 
+             * @return ListNode* 
+             */
+            ListNode* deleteDuplicates(ListNode* head);
 
-
-
+            /**
+             * @brief   
+             *          You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, 
+             *          and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
+             *          
+             *          Merge nums1 and nums2 into a single array sorted in non-decreasing order.
+             *          
+             *          The final sorted array should not be returned by the function, but instead be stored inside the array nums1. 
+             *          To accommodate this, nums1 has a length of m + n, 
+             *          where the first m elements denote the elements that should be merged, 
+             *          and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+             * 
+             * @param nums1 
+             * @param m 
+             * @param nums2 
+             * @param n 
+             */
+            void merge(vector<int>& nums1, int m, vector<int>& nums2, int n);
 
 
         /**
