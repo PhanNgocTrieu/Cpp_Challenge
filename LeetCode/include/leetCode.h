@@ -258,6 +258,28 @@ namespace leetcode
             void merge(vector<int>& nums1, int m, vector<int>& nums2, int n);
 
 
+            /**
+             * @brief Given a string columnTitle that represents the column title as appear in an Excel sheet, return its corresponding column number.
+             * 
+             * @param columnTitle 
+             * @return int 
+             */
+            int titleToNumber(string columnTitle) {
+                int _size = columnTitle.length();
+                int _res = 0;
+                for (int i = 0; i < _size; i++) {
+                    if (i != 0) {
+                        
+                        _res = (_res * 26) + ((int)columnTitle[i] - 64);
+                    }
+                    else {
+                        _res += (int)columnTitle[i] - 64;
+                    }
+                }
+                return _res;
+            }
+
+
         /**
          * **********************************************************************************
          *                       @brief Problems of Medium Levels                           *

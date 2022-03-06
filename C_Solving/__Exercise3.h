@@ -157,7 +157,6 @@ int  isPrime(int n) {
  
 int main()
 {
-	// Just work on devC++
 	char arr[500][500];
 	int _size;
 	printf("Enter size: ");
@@ -176,21 +175,3 @@ int main()
 }
 
 
-
-
-
-
-
-
-
-//#include "source.h"
-//#include "supported.h"
-//#include "soTrungGian.h"
-//#include "giaithua.h"
-//#include "chuyenDoiCoSo.h"
-//#include "allOfSum.h"
-//#include "Sine.h"
-//#include "ptBac2.h"
-//#include "problemsOfPrinting.h"
-//#include "sortArray.h"
-//#include "_countZeros.h"

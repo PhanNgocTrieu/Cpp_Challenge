@@ -258,7 +258,7 @@ void enterIntNumber(long long int* _number, char * _name)
  * @param : _size <!! the size of string
  * @param : name <!! name of input
  */
-void enterString(char ** _arr, int _size, char * name)
+void enterString(char ***_arr, int _size, char * name)
 {
 	int isAllocated = false;
 	

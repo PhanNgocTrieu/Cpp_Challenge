@@ -236,7 +236,7 @@ namespace leetcode
      * @brief Solving the problems of deleteDuplicates
      *  
      */
-    ListNode* deleteDuplicates(ListNode* head)
+    ListNode* LeetCodeProblems::deleteDuplicates(ListNode* head)
     {
         if (head == nullptr)
         {
@@ -277,7 +277,7 @@ namespace leetcode
      * @brief Solving the problems of merge
      *  
      */
-    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n)
+    void LeetCodeProblems::merge(vector<int>& nums1, int m, vector<int>& nums2, int n)
     {
         // Don't you this way -> because you don't know the algorithm - even though this solution is very fast
         std::merge(nums2.rbegin() + (nums2.size() - n), 
@@ -286,6 +286,22 @@ namespace leetcode
                 nums1.rend(), nums1.rbegin(),
             [](const int l, const int r) { return l >= r; }
         );
+    }
+
+
+    int LeetCodeProblems::titleToNumber(string columnTitle) {
+        int _size = columnTitle.length();
+        int _res = 0;
+        for (int i = 0; i < _size; i++) {
+            if (i != 0) {
+                
+                _res = (_res * 26) + ((int)columnTitle[i] - 64);
+            }
+            else {
+                _res += (int)columnTitle[i] - 64;
+            }
+        }
+        return _res;
     }
 
 

@@ -44,12 +44,10 @@ double sumOfDivideN(long long int _n)
 		sum = sum + (_pre/_irun);
 		_irun++;		
 	}
-	
-//	printf("Sum: %0.15f\n", sum);s
 	return sum;
 }
 
-void solveOfSumOfN()
+void solveOfSum()
 {
 	double _x;
 	long long int _n;
