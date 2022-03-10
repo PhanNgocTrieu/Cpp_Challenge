@@ -264,20 +264,7 @@ namespace leetcode
              * @param columnTitle 
              * @return int 
              */
-            int titleToNumber(string columnTitle) {
-                int _size = columnTitle.length();
-                int _res = 0;
-                for (int i = 0; i < _size; i++) {
-                    if (i != 0) {
-                        
-                        _res = (_res * 26) + ((int)columnTitle[i] - 64);
-                    }
-                    else {
-                        _res += (int)columnTitle[i] - 64;
-                    }
-                }
-                return _res;
-            }
+            int titleToNumber(string columnTitle);
 
 
         /**

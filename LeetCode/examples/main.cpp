@@ -7,10 +7,10 @@ int main()
     std::vector<int> nums2 = {4,5};
     std::cout << problems.findMedianSortedArrays(nums1, nums2) << std::endl;
     std::cout << problems.findMedianSortedArrays(vector<int>() = {
-        1,2,3,10
+        1,2,
         }, 
         vector<int>() = {
-        5,8,9
+        3,4
     }) << std::endl;
     
     return 0;

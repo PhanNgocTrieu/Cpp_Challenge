@@ -1,0 +1,14 @@
+/mnt/g/DocumentByMaking/Cpp_Challenge/build/CMakeFiles/edit_cache.dir
+/mnt/g/DocumentByMaking/Cpp_Challenge/build/CMakeFiles/package_source.dir
+/mnt/g/DocumentByMaking/Cpp_Challenge/build/CMakeFiles/rebuild_cache.dir
+/mnt/g/DocumentByMaking/Cpp_Challenge/build/CMakeFiles/package.dir
+/mnt/g/DocumentByMaking/Cpp_Challenge/build/LeetCode/CMakeFiles/edit_cache.dir
+/mnt/g/DocumentByMaking/Cpp_Challenge/build/LeetCode/CMakeFiles/package_source.dir
+/mnt/g/DocumentByMaking/Cpp_Challenge/build/LeetCode/CMakeFiles/rebuild_cache.dir
+/mnt/g/DocumentByMaking/Cpp_Challenge/build/LeetCode/CMakeFiles/package.dir
+/mnt/g/DocumentByMaking/Cpp_Challenge/build/LeetCode/CMakeFiles/leetcode.dir
+/mnt/g/DocumentByMaking/Cpp_Challenge/build/LeetCode/examples/CMakeFiles/edit_cache.dir
+/mnt/g/DocumentByMaking/Cpp_Challenge/build/LeetCode/examples/CMakeFiles/package_source.dir
+/mnt/g/DocumentByMaking/Cpp_Challenge/build/LeetCode/examples/CMakeFiles/rebuild_cache.dir
+/mnt/g/DocumentByMaking/Cpp_Challenge/build/LeetCode/examples/CMakeFiles/package.dir
+/mnt/g/DocumentByMaking/Cpp_Challenge/build/LeetCode/examples/CMakeFiles/leetCode.dir

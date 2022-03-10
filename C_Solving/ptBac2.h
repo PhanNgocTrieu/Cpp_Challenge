@@ -6,10 +6,21 @@
 
 void ptBac2(double _a, double _b, double _c)
 {
+	// Truong hop suy bien
 	if (_a == 0)
 	{
-		printf("Error: a != 0!\n");
-		return;
+		if (_b == 0) {
+
+			if (_c == 0) {
+				printf("Phuong trinh vo so nghiem!\n");
+			}
+			else {
+				printf("Phuong trinh vo nghiem!\n");
+			}
+		}
+		else {
+			printf("Phuong trinh co 1 nghiem x = %llf\n", -c/b);
+		}
 	}
 	
 	double delta = _b * _b - 4 * _c * _a;

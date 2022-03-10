@@ -629,46 +629,44 @@ namespace leetcode
      */
 
     double LeetCodeProblems::findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
-        int _sizeOfVec = nums1.size() + nums2.size();
+        /*  Frist way */
+        const int m = nums1.size();
+        const int n = nums2.size();
+        bool isEven = (m + n) % 2 == 0 ? true : false;
+        int medianPos = isEven ? (m + n - 1) / 2 : (m + n) / 2;
+        double _result = 0;
+        vector<int> _res;
+        vector<int>::iterator _itrNums1 = nums1.begin();
+        vector<int>::iterator _itrNums2 = nums2.begin();
         
-        int _first = 0;
-        int _second = 0;
-        double ans;
-        vector<int> stack;
-        for (int i = 0; i < _sizeOfVec; i++)
+        while (_itrNums1 != nums1.end() && _itrNums2 != nums2.end())
         {
-            if (nums1[_first] == 0)
-            {
-                stack.push_back(nums2[_second]);
-                _second++;
-                continue;
+            if (*_itrNums1 < *_itrNums2) {
+                _res.push_back(*_itrNums1);
+                _itrNums1++;
             }
-
-            if (nums2[_second] == 0)
+            else 
             {
-                stack.push_back(nums1[_first]);
-                _first++;
-                continue;
-            }
-
-            if (nums1[_first] > nums2[_second])
-            {
-                stack.push_back(nums2[_second]);
-                _second++;
-            }
-            else
-            {
-                stack.push_back(nums1[_first]);
-                _first++;
+                _res.push_back(*_itrNums2);
+                _itrNums2++;
             }
         }
-        int _pos = stack.size() / 2;        
-        if (_sizeOfVec % 2 == 0)
-        {
-            ans = ((stack[_pos - 1] + stack[_pos]) / (double)2);
-            return ans;
+        
+        // pushing the rest of elems in vector1
+        while (_itrNums1 != nums1.end()) {
+            _res.push_back(*_itrNums1);
+            _itrNums1++;
         }
-        return stack[_pos];
+
+        // pushing the rest of elems in vector2
+        while (_itrNums2 != nums2.end()) {
+            _res.push_back(*_itrNums2);
+            _itrNums2++;
+        }
+
+        _result = isEven ? (_res[medianPos + 1] + _res[medianPos]) / 2.0 : _res[medianPos]/1.0;
+        return _result;
     }
+   
 
 };
