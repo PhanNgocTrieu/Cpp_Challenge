@@ -15,6 +15,6 @@ add_library(codeSignal STATIC ${CODESIGNAL_HDR} ${CODESIGNAL_SRC})
 
 target_compile_options(codeSignal PRIVATE -std=c++11 -Wall)
 
-add_subdirectory(Intro)
-add_subdirectory(TheCore)
+# add_subdirectory(Intro)
+# add_subdirectory(TheCore)
 add_subdirectory(examples)
