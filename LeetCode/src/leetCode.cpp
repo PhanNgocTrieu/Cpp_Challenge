@@ -11,7 +11,7 @@ namespace leetcode
 
     /**
      * @brief Solving the problems of addBinary
-     * 
+     *
      */
     string LeetCodeProblems::addBinary(string a, string b)
     {
@@ -25,12 +25,12 @@ namespace leetcode
             int sum = d1 + d2 + carry;
 
             if (sum == 2)
-            { //case of 1 1 0 or 1 0 1 or 0 1 1
+            { // case of 1 1 0 or 1 0 1 or 0 1 1
                 sum = 0;
                 carry = 1;
             }
             else if (sum == 3)
-            { //case  when a[i]=1,b[i]=1, carry=1;
+            { // case  when a[i]=1,b[i]=1, carry=1;
                 sum = 1;
                 carry = 1;
             }
@@ -42,23 +42,21 @@ namespace leetcode
         return res;
     }
 
-
-
     /**
      * @brief Solving the problems of longestCommonPrefix
-     * 
+     *
      * Algorithm:
-     * 
+     *
      * from above example we can see:
      * taking the first element is standard:
-     * strs[0] ------ f ------- l ------- o 
-     * checking: 
+     * strs[0] ------ f ------- l ------- o
+     * checking:
      * strs[1] ------ ^ ------- ^ ------- ^
      * strs[2] ------ ^ ------- ^ ------- x -> resturn res
      * --------------------------------------
      * res =          f        fl        return
-     * 
-     * 
+     *
+     *
      */
     string LeetCodeProblems::longestCommonPrefix(vector<string> &strs)
     {
@@ -86,7 +84,7 @@ namespace leetcode
 
     /**
      * @brief Solving the problems of twoSum
-     * 
+     *
      */
     vector<int> LeetCodeProblems::twoSum(vector<int> &nums, int target)
     {
@@ -113,7 +111,7 @@ namespace leetcode
         return res;
     }
 
-    int LeetCodeProblems::strStr(string haystack, string needle) 
+    int LeetCodeProblems::strStr(string haystack, string needle)
     {
         int _lengthOfStack = haystack.length();
         int _lengthOfNeedle = needle.length();
@@ -132,10 +130,10 @@ namespace leetcode
 
     /**
      * @brief Solving the problems of postorderTraversel
-     * 
-     *  
+     *
+     *
      */
-    vector<int> LeetCodeProblems::postorderTraversal(TreeNode* root) 
+    vector<int> LeetCodeProblems::postorderTraversal(TreeNode *root)
     {
         vector<int> res{};
         if (root == NULL)
@@ -144,10 +142,10 @@ namespace leetcode
         {
             vector<int> temp = postorderTraversal(root->left);
             std::copy(temp.begin(), temp.end(), std::back_inserter(res));
-        
+
             temp = postorderTraversal(root->right);
             std::copy(temp.begin(), temp.end(), std::back_inserter(res));
-        
+
             res.push_back(root->val);
         }
         return res;
@@ -155,11 +153,11 @@ namespace leetcode
 
     /**
      * @brief Solving the problems of removeDuplicates
-     * 
-     * @param nums 
-     * @return int 
+     *
+     * @param nums
+     * @return int
      */
-    int LeetCodeProblems::removeDuplicates(vector<int>& nums) 
+    int LeetCodeProblems::removeDuplicates(vector<int> &nums)
     {
         if (nums.size() == 1)
             return 1;
@@ -173,12 +171,12 @@ namespace leetcode
 
     /**
      * @brief Solving the problems of searchInsert
-     * 
-     * @param nums 
-     * @param target 
-     * @return int 
+     *
+     * @param nums
+     * @param target
+     * @return int
      */
-    int LeetCodeProblems::searchInsert(vector<int>& nums, int target) 
+    int LeetCodeProblems::searchInsert(vector<int> &nums, int target)
     {
         if (target <= nums[0])
             return 0;
@@ -189,15 +187,15 @@ namespace leetcode
         {
             return len - 1;
         }
-        return findPos(nums, target);   
+        return findPos(nums, target);
     }
 
-    int LeetCodeProblems::findPos(vector<int>& nums, int target)
+    int LeetCodeProblems::findPos(vector<int> &nums, int target)
     {
         int start = 0;
         int end = nums.size();
         int middle = (start + end) / 2;
-        while (!(nums[middle] == target || (nums[middle] > target && nums[middle - 1] < target) || (nums[middle] < target && target < nums[middle + 1]) ))
+        while (!(nums[middle] == target || (nums[middle] > target && nums[middle - 1] < target) || (nums[middle] < target && target < nums[middle + 1])))
         {
             middle = (start + end) / 2;
 
@@ -211,45 +209,42 @@ namespace leetcode
             return middle;
         if (nums[middle] < target && target < nums[middle + 1])
             return middle + 1;
-        
+
         return middle;
     }
 
-
-
-
     /**
      * @brief Solving the problems of singleNumber
-     *  
+     *
      */
-    int LeetCodeProblems::singleNumber(vector<int>& nums) 
-    {   
+    int LeetCodeProblems::singleNumber(vector<int> &nums)
+    {
         int res = {0};
         for (int i : nums)
         {
-        res ^= i;
+            res ^= i;
         }
         return res;
     }
 
     /**
      * @brief Solving the problems of deleteDuplicates
-     *  
+     *
      */
-    ListNode* LeetCodeProblems::deleteDuplicates(ListNode* head)
+    ListNode *LeetCodeProblems::deleteDuplicates(ListNode *head)
     {
         if (head == nullptr)
         {
             return nullptr;
         }
-        
-        ListNode* currList = head;
-        ListNode* nextList = nullptr;
-        
+
+        ListNode *currList = head;
+        ListNode *nextList = nullptr;
+
         if (head->next != nullptr)
             nextList = head->next;
-        
-        while(nextList != nullptr)
+
+        while (nextList != nullptr)
         {
             if (currList->val != nextList->val)
             {
@@ -259,51 +254,67 @@ namespace leetcode
             else
             {
                 currList->next = nextList->next;
-                ListNode * temp = nextList;
+                ListNode *temp = nextList;
                 nextList = currList->next;
-                
+
                 delete temp;
                 temp = nullptr;
             }
         }
-        
+
         currList = nullptr;
         nextList = nullptr;
-        
+
         return head;
     }
 
-     /**
+    /**
      * @brief Solving the problems of merge
-     *  
+     *
      */
-    void LeetCodeProblems::merge(vector<int>& nums1, int m, vector<int>& nums2, int n)
+    void LeetCodeProblems::merge(vector<int> &nums1, int m, vector<int> &nums2, int n)
     {
         // Don't you this way -> because you don't know the algorithm - even though this solution is very fast
-        std::merge(nums2.rbegin() + (nums2.size() - n), 
-                nums2.rend(), 
-                nums1.rbegin() + (nums1.size() - m), 
-                nums1.rend(), nums1.rbegin(),
-            [](const int l, const int r) { return l >= r; }
-        );
+        std::merge(nums2.rbegin() + (nums2.size() - n),
+                   nums2.rend(),
+                   nums1.rbegin() + (nums1.size() - m),
+                   nums1.rend(), nums1.rbegin(),
+                   [](const int l, const int r)
+                   { return l >= r; });
     }
 
-
-    int LeetCodeProblems::titleToNumber(string columnTitle) {
+    int LeetCodeProblems::titleToNumber(string columnTitle)
+    {
         int _size = columnTitle.length();
         int _res = 0;
-        for (int i = 0; i < _size; i++) {
-            if (i != 0) {
-                
+        for (int i = 0; i < _size; i++)
+        {
+            if (i != 0)
+            {
+
                 _res = (_res * 26) + ((int)columnTitle[i] - 64);
             }
-            else {
+            else
+            {
                 _res += (int)columnTitle[i] - 64;
             }
         }
         return _res;
     }
 
+    /**
+     * @brief 
+     */
+    bool isSameTree(TreeNode *p, TreeNode *q)
+    {
+        if (!p && !q)
+            return true;
+        if (!p || !q)
+            return false;
+        if (p->val != q->val)
+            return false;
+        return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
+    }
 
     /**
      * **********************************************************************************
@@ -311,12 +322,11 @@ namespace leetcode
      * **********************************************************************************
      */
 
-
     /**
      * @brief Solving the problems of isValid
-     * 
+     *
      */
-    bool LeetCodeProblems::isValid(string s) 
+    bool LeetCodeProblems::isValid(string s)
     {
         if (s.length() == 1)
             return false;
@@ -325,11 +335,10 @@ namespace leetcode
 
         stack<char> check;
         map<char, char> brackets{
-            {')','('},
-            {'}','{'},
-            {']','['}
-        };
-        
+            {')', '('},
+            {'}', '{'},
+            {']', '['}};
+
         for (char c : s)
         {
             if (c == '(' || c == '{' || c == '[')
@@ -347,20 +356,20 @@ namespace leetcode
         return check.size() == 0 ? true : false;
     }
 
-
     /**
      * @brief Solving the problems of combinationSum
      */
-    vector<vector<int>> LeetCodeProblems::combinationSum(vector<int>& candidates, int target) 
+    vector<vector<int>> LeetCodeProblems::combinationSum(vector<int> &candidates, int target)
     {
         vector<vector<int>> res;
         int _numberOfCadidates = candidates.size();
-        for (int i=0 ; i < _numberOfCadidates; i++) {
+        for (int i = 0; i < _numberOfCadidates; i++)
+        {
             vector<Combination> stack;
             struct Combination com;
 
             // check single value
-            if(candidates[i] == target)
+            if (candidates[i] == target)
             {
                 vector<int> okay;
                 okay.push_back(candidates[i]);
@@ -368,18 +377,18 @@ namespace leetcode
                 continue;
             }
 
-            //push i vao stack
+            // push i vao stack
             com.arr.push_back(candidates[i]);
             com.sum += candidates[i];
             com.idx = i;
             stack.push_back(com);
 
             // duyet stack
-            while(stack.size()!=0)
+            while (stack.size() != 0)
             {
                 // lay ra phan tu cuoi cung
                 struct Combination temp;
-                temp = stack[stack.size()-1]; 
+                temp = stack[stack.size() - 1];
                 stack.pop_back();
                 int _numOfCandidate = candidates.size();
                 for (int j = temp.idx; j < _numOfCandidate; j++)
@@ -397,7 +406,6 @@ namespace leetcode
                             res.push_back(temp2.arr);
                             stack.pop_back();
                         }
-
                     }
                 }
             }
@@ -405,14 +413,12 @@ namespace leetcode
         return res;
     }
 
-
-
     /**
      * @brief Solving the problems of intToRoman
      */
-    string LeetCodeProblems::intToRoman(int num) {
-        map<int, string> romanList
-        {
+    string LeetCodeProblems::intToRoman(int num)
+    {
+        map<int, string> romanList{
             {1000, "M"},
             {900, "CM"},
             {500, "D"},
@@ -425,33 +431,31 @@ namespace leetcode
             {9, "IX"},
             {5, "V"},
             {4, "IV"},
-            {1, "I"}
-        };
-            string res = "";
-            int arr[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-            int i = 0;
-            while(num > 0)
+            {1, "I"}};
+        string res = "";
+        int arr[] = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        int i = 0;
+        while (num > 0)
+        {
+            if (num < arr[i])
             {
-                if (num < arr[i])
-                {
-                    i++;
-                    continue;
-                }
-                else
-                {
-                    int temp = num / arr[i];
-                    // adding numbers of words
-                    for (int j = 0; j < temp; j++)
-                    {
-                        res += romanList[arr[i]];
-                    }
-                    num = num % arr[i];
-                    i++;
-                }
+                i++;
+                continue;
             }
-            
-            
-        return res; 
+            else
+            {
+                int temp = num / arr[i];
+                // adding numbers of words
+                for (int j = 0; j < temp; j++)
+                {
+                    res += romanList[arr[i]];
+                }
+                num = num % arr[i];
+                i++;
+            }
+        }
+
+        return res;
     }
 
     /**
@@ -462,28 +466,36 @@ namespace leetcode
         const int n = s.length();
         // 1.passing leading space
         int start = 0;
-        while (start < n && s[start] == ' ') {
+        while (start < n && s[start] == ' ')
+        {
             start++;
         }
-        if (start == n) return 0;
+        if (start == n)
+            return 0;
         // 2. sign
         bool positive = true;
-        if (s[start] == '-' || s[start] == '+') {
+        if (s[start] == '-' || s[start] == '+')
+        {
             positive = s[start] == '+';
             start++;
         }
         // 3. convert string to number
-        if (!isdigit(s[start])) return 0;
+        if (!isdigit(s[start]))
+            return 0;
         int ans = 0;
         int max_unit = INT_MAX % 10;
         int min_unit = INT_MIN % 10;
-        while (start < n && isdigit(s[start])) {
+        while (start < n && isdigit(s[start]))
+        {
             int unit = (s[start++] - '0');
-            if (!positive) {
+            if (!positive)
+            {
                 unit = -unit;
             }
-            if (ans > INT_MAX / 10 || (ans == INT_MAX / 10 && unit > max_unit)) return INT_MAX;
-            if (ans < INT_MIN / 10 || (ans == INT_MIN / 10 && unit < min_unit)) return INT_MIN;
+            if (ans > INT_MAX / 10 || (ans == INT_MAX / 10 && unit > max_unit))
+                return INT_MAX;
+            if (ans < INT_MIN / 10 || (ans == INT_MIN / 10 && unit < min_unit))
+                return INT_MIN;
             ans = ans * 10 + unit;
         }
 
@@ -517,64 +529,67 @@ namespace leetcode
         */
     }
 
-
     /**
      * @brief Solving the problems of longestPalindrome
-     * 
+     *
      */
-    string LeetCodeProblems::longestPalindrome(string s) 
+    string LeetCodeProblems::longestPalindrome(string s)
     {
         string ans = "";
         int len = 0, maxLen = 0, idx = 0;
         int _sizeOfString = s.size();
-        for (int i = 0; i < _sizeOfString; ++i) {
-            int left = i-1, right = i+1;
+        for (int i = 0; i < _sizeOfString; ++i)
+        {
+            int left = i - 1, right = i + 1;
             len = pallindromeLength(left, right, s);
             idx = (len > maxLen) ? left : idx;
             maxLen = max(len, maxLen);
-            
-            left = i; right = i+1;
+
+            left = i;
+            right = i + 1;
             len = pallindromeLength(left, right, s);
             idx = (len > maxLen) ? left : idx;
             maxLen = max(len, maxLen);
         }
-        
+
         if (maxLen)
             ans = s.substr(idx, maxLen);
         return ans;
     }
-    
+
     /**
      * @brief Supporting function -> finding out the pallindrome string
-     * 
+     *
      */
-    int LeetCodeProblems::pallindromeLength(int &l, int &r, string &s) 
+    int LeetCodeProblems::pallindromeLength(int &l, int &r, string &s)
     {
         int _sizeOfStr = s.size();
-        while(l >= 0 && r < _sizeOfStr && s[l] == s[r]) {
-            l--; r++;
+        while (l >= 0 && r < _sizeOfStr && s[l] == s[r])
+        {
+            l--;
+            r++;
         }
-        l++; r--;
-        return (r-l+1);
+        l++;
+        r--;
+        return (r - l + 1);
     }
-    
 
-    int LeetCodeProblems::lengthOfLongestSubstring(string s) 
+    int LeetCodeProblems::lengthOfLongestSubstring(string s)
     {
         int n = s.size(), result = 0;
-        // creating hashmap for storing unique character and their index 
+        // creating hashmap for storing unique character and their index
         map<char, int> sm;
         int start = 0, end = 0;
         for (end = 0; end < n; end++)
         {
 
-            if (sm.find(s[end]) != sm.end())   // if element is present in map then we have to find the previous substring size
+            if (sm.find(s[end]) != sm.end()) // if element is present in map then we have to find the previous substring size
             {
                 // Update the result for the substring in the current window before we found duplicate character
                 result = max(result, end - start);
                 int duplicateIndex = sm[s[end]];
                 //  Remove all characters before the new
-                for (int i = start; i <= duplicateIndex; i++)   
+                for (int i = start; i <= duplicateIndex; i++)
                 {
                     sm.erase(s[i]);
                 }
@@ -587,9 +602,9 @@ namespace leetcode
 
         return max(result, n - start);
     }
-    
 
-    int LeetCodeProblems::findMaxLength(vector<int>& nums) {
+    int LeetCodeProblems::findMaxLength(vector<int> &nums)
+    {
         unordered_map<int, int> map;
         int _max = INT_MIN;
         int _sum = 0;
@@ -600,7 +615,7 @@ namespace leetcode
 
             if (_sum == 0)
             {
-                _max = _idex + 1; 
+                _max = _idex + 1;
             }
             else
             {
@@ -620,15 +635,14 @@ namespace leetcode
         return _max == INT_MIN ? 0 : _max;
     }
 
-
-
     /**
      * **********************************************************************************
      *                       @brief Problems of Hard Levels                             *
      * **********************************************************************************
      */
 
-    double LeetCodeProblems::findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+    double LeetCodeProblems::findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2)
+    {
         /*  Frist way */
         const int m = nums1.size();
         const int n = nums2.size();
@@ -638,35 +652,37 @@ namespace leetcode
         vector<int> _res;
         vector<int>::iterator _itrNums1 = nums1.begin();
         vector<int>::iterator _itrNums2 = nums2.begin();
-        
+
         while (_itrNums1 != nums1.end() && _itrNums2 != nums2.end())
         {
-            if (*_itrNums1 < *_itrNums2) {
+            if (*_itrNums1 < *_itrNums2)
+            {
                 _res.push_back(*_itrNums1);
                 _itrNums1++;
             }
-            else 
+            else
             {
                 _res.push_back(*_itrNums2);
                 _itrNums2++;
             }
         }
-        
+
         // pushing the rest of elems in vector1
-        while (_itrNums1 != nums1.end()) {
+        while (_itrNums1 != nums1.end())
+        {
             _res.push_back(*_itrNums1);
             _itrNums1++;
         }
 
         // pushing the rest of elems in vector2
-        while (_itrNums2 != nums2.end()) {
+        while (_itrNums2 != nums2.end())
+        {
             _res.push_back(*_itrNums2);
             _itrNums2++;
         }
 
-        _result = isEven ? (_res[medianPos + 1] + _res[medianPos]) / 2.0 : _res[medianPos]/1.0;
+        _result = isEven ? (_res[medianPos + 1] + _res[medianPos]) / 2.0 : _res[medianPos] / 1.0;
         return _result;
     }
-   
 
 };
