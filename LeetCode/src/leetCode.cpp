@@ -303,7 +303,7 @@ namespace leetcode
     }
 
     /**
-     * @brief 
+     * @brief
      */
     bool isSameTree(TreeNode *p, TreeNode *q)
     {
@@ -636,6 +636,128 @@ namespace leetcode
     }
 
     /**
+     * @brief
+     *
+     * @param nums
+     * @return vector<vector<int>>
+     */
+    vector<vector<int>> threeSum(vector<int> &nums)
+    {
+
+        const size_t len = nums.size();
+        if (len < 3)
+            return {};
+
+        std::sort(nums.begin(), nums.end());
+
+        std::set<vector<int>> unique_results;
+
+        for (int i = 0; i < len - 2; i++)
+        {
+
+            int j = i + 1;
+            int k = len - 1;
+
+            while (j < k)
+            {
+                const int sum = nums[i] + nums[j] + nums[k];
+                if (0 == sum)
+                {
+                    unique_results.insert({nums[i], nums[j++], nums[k--]});
+                }
+                else if (0 > sum)
+                    j++;
+                else if (0 < sum)
+                    k--;
+            }
+        }
+
+        vector<vector<int>> results;
+
+        std::copy(
+            unique_results.begin(), unique_results.end(),
+            std::back_inserter(results));
+
+        return results;
+    }
+
+    /**
+     * @brief
+     *
+     * @param nums
+     * @param target
+     * @return vector<vector<int>>
+     */
+    vector<vector<int>> LeetCodeProblems::fourSum(vector<int> &nums, int target)
+    {
+        vector<vector<int>> solution;
+        sort(nums.begin(), nums.end());
+        for (int i = 0; i < nums.size(); i++)
+        {
+            for (int j = i + 1; j < nums.size(); j++)
+            {
+                for (int k = j + 1; k < nums.size(); k++)
+                {
+                    int x = (long long)target - (long long)nums[j] - (long long)nums[k] - (long long)nums[i];
+                    if (binary_search(nums.begin() + k + 1, nums.end(), x))
+                    {
+                        vector<int> ans{nums[i], nums[j], nums[k], x};
+
+                        int track = 0;
+                        for (int m = 0; m < solution.size(); m++)
+                        {
+
+                            for (int n = 0; n < ans.size(); n++)
+                            {
+                                if (solution[m][n] == ans[n])
+                                {
+                                    track++;
+                                }
+                            }
+                            if (track == ans.size())
+                            {
+                                break;
+                            }
+                            track = 0;
+                        }
+
+                        if (track != ans.size())
+                        {
+                            solution.push_back(ans);
+                        }
+                    }
+                }
+            }
+        }
+        return solution;
+    }
+
+    // 3 ^ 5 => 3 ^ 2 -> 3 ^ 1 => 3 ^ 0
+    // 9 * 9 * 3
+    /**
+     * @brief
+     */
+    double LeetCodeProblems::myPow(double x, int n)
+    {
+        if (n == -1)
+            return 1 / x;
+        if (n == 0)
+            return 1;
+
+        double tmp = myPow(x, n / 2);
+
+        if (n % 2 == 0)
+        {
+            return tmp * tmp;
+        }
+
+        if (n < 0)
+            return tmp * tmp * (1 / x);
+
+        return tmp * tmp * x;
+    }
+
+    /**
      * **********************************************************************************
      *                       @brief Problems of Hard Levels                             *
      * **********************************************************************************
@@ -684,5 +806,4 @@ namespace leetcode
         _result = isEven ? (_res[medianPos + 1] + _res[medianPos]) / 2.0 : _res[medianPos] / 1.0;
         return _result;
     }
-
 };

@@ -471,6 +471,18 @@ namespace leetcode
 
 
             /**
+             * @brief Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c]] such that:
+             * 0 <= a, b, c < n
+             * a, b and c are distinct.
+             * nums[a] + nums[b] + nums[c] == 0
+             * 
+             * @param nums 
+             * @return vector<vector<int>> 
+             */
+            vector<vector<int>> threeSum(vector<int>& nums);
+
+
+            /**
              * @brief Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:
              * 0 <= a, b, c, d < n
              * a, b, c, and d are distinct.
@@ -483,6 +495,29 @@ namespace leetcode
              * @return vector<vector<int>> 
              */
             vector<vector<int>> fourSum(vector<int>& nums, int target);
+
+
+            /**
+             * @brief Implement pow(x, n), which calculates x raised to the power n (i.e., xn).
+             * 
+             * @example 
+             *          Input: x = 2.00000, n = 10
+             *          Output: 1024.00000
+             *          
+             *          Input: x = 2.10000, n = 3
+             *          Output: 9.26100
+             * 
+             * 
+             *          Input: x = 2.00000, n = -2
+             *          Output: 0.25000
+             *          Explanation: 2-2 = 1/22 = 1/4 = 0.25
+             * 
+             * 
+             * @param x 
+             * @param n 
+             * @return double 
+             */
+            double myPow(double x, int n);
 
         /**
          * **********************************************************************************

@@ -1,5 +1,5 @@
 
-find_package(Boost 1.78 REQUIRED COMPONENTS thread log program_options)
+find_package(Boost 1.69 REQUIRED COMPONENTS thread log program_options)
 
 set(THREADS_PREFER_PTHREAD_FLAG TRUE)
 
