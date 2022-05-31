@@ -11,4 +11,4 @@ include(CPack)
 
 
 add_subdirectory(logger)
-add_subdirectory(game)
+add_subdirectory(management)
