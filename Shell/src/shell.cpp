@@ -296,7 +296,6 @@ void message::runLoop()
                 memcpy(&recmsg.header.length_of_data, buff + index, sizeof(recmsg.header.length_of_data));
                 index += sizeof(recmsg.header.length_of_data);
                 memcpy(&msgFromClient, buff + index, recmsg.header.length_of_data);
-                m_message->message = getString(msgFromClient, recmsg.header.length_of_data);
 
                 // **** CONVERT TO STRING ****
                 std::string filePath = getString(msgFromClient, recmsg.header.length_of_data);
@@ -315,7 +314,7 @@ void message::runLoop()
                 sendmsg.header.msg_type = e_msg_type_rm;
                 sendmsg.header.timestamp = millisec_since_epoch;
                 sendmsg.header.length_of_data = message.length();
-                sendmsg.announce = message;
+                sendmsg.message = message;
 
                 // **** SETUP MEMORY FOR SENDING ****
                 data_to_send = (char *)malloc(size_of_header_not_padding + sendmsg.header.length_of_data);
@@ -330,7 +329,7 @@ void message::runLoop()
                 idex += sizeof(sendmsg.header.timestamp);
                 memcpy(data_to_send + idex, &sendmsg.header.length_of_data, sizeof(sendmsg.header.length_of_data));
                 idex += sizeof(sendmsg.header.length_of_data);
-                memcpy(data_to_send + idex, (char *)sendmsg.announce.c_str(), sendmsg.header.length_of_data);
+                memcpy(data_to_send + idex, (char *)sendmsg.message.c_str(), sendmsg.header.length_of_data);
 
                 // ****** ALL OF BYTES THAT WE HAVE TO SEND ****
                 printf("\nTotal data to send: %d bytes", size_of_header_not_padding + sendmsg.header.length_of_data);
@@ -370,7 +369,7 @@ void message::runLoop()
                 memcpy(&recmsg.header.length_of_data, buff + index, sizeof(recmsg.header.length_of_data));
                 index += sizeof(recmsg.header.length_of_data);
                 memcpy(&msgFromClient, buff + index, recmsg.header.length_of_data);
-                recmsg.fileName = getString(msgFromClient, recmsg.header.length_of_data);
+                recmsg.file_path = getString(msgFromClient, recmsg.header.length_of_data);
 
                 // ****** SENDING RESPONSE TO CLIENT *****
                 char *filepath = (char *)malloc(recmsg.header.length_of_data);

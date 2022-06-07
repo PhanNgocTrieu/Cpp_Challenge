@@ -3,10 +3,15 @@
 include_directories(include)
 
 set(LEETCD_HDR  include/leetCode.h
+                include/common.h
                 include/data.h
+                include/hardLevel.h
+                include/mediumLevel.h
 )
 
 set(LEETCD_SRC  src/leetCode.cpp
+                src/hardLevel.cpp
+                src/mediumLevel.cpp
 )
 
 set(THREADS_PREFER_PTHREAD_FLAG TRUE)

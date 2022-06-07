@@ -99,6 +99,7 @@ class message
             struct message_header header;
             // Data
             std::string file_path;
+            std::string message;
         };
 
         /**
