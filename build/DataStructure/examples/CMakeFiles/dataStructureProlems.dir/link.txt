@@ -1,1 +1,0 @@
-/usr/bin/g++  -pthread -g  -rdynamic CMakeFiles/dataStructureProlems.dir/main.cpp.o  -o dataStructureProlems  ../libDTST.a 

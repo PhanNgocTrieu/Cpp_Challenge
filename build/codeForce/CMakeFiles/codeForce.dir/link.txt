@@ -1,2 +1,0 @@
-/usr/bin/ar qc libcodeForce.a  CMakeFiles/codeForce.dir/src/codeForce.cpp.o
-/usr/bin/ranlib libcodeForce.a

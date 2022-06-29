@@ -1,1 +1,0 @@
-/usr/bin/g++  -pthread -g  -rdynamic CMakeFiles/codeSignalProblems.dir/main.cpp.o  -o codeSignalProblems  ../libcodeSignal.a 
