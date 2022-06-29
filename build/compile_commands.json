@@ -1,0 +1,127 @@
+[
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/IOLib",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/IOLib/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/iolib.dir/src/IOLibrary.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/IOLib/src/IOLibrary.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/IOLib/src/IOLibrary.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/IOLib/examples",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/IOLib/include -I/home/trieupn/Documents/_git/Cpp_Challenge/IOLib/examples/../include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/solving.dir/main.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/IOLib/examples/main.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/IOLib/examples/main.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/codeForce",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/codeForce/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/codeForce.dir/src/codeForce.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/codeForce/src/codeForce.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/codeForce/src/codeForce.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/codeForce/examples",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/codeForce/include -I/home/trieupn/Documents/_git/Cpp_Challenge/codeForce/examples/../include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/codeforcing.dir/main.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/codeForce/examples/main.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/codeForce/examples/main.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/Graph",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/Graph/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/graphic.dir/src/Graph.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/Graph/src/Graph.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/Graph/src/Graph.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/Graph/examples",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/Graph/include -I/home/trieupn/Documents/_git/Cpp_Challenge/Graph/examples/../include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/graphicProblems.dir/main.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/Graph/examples/main.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/Graph/examples/main.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/CodeSignal",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/CodeSignal/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/codeSignal.dir/src/Core.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/CodeSignal/src/Core.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/CodeSignal/src/Core.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/CodeSignal/examples",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/CodeSignal/include -I/home/trieupn/Documents/_git/Cpp_Challenge/CodeSignal/examples/../include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/codeSignalProblems.dir/main.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/CodeSignal/examples/main.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/CodeSignal/examples/main.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/Shell",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/Shell/include  -pthread -g   -o CMakeFiles/Shell.dir/src/shell.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/Shell/src/shell.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/Shell/src/shell.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/HackerRank",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/HackerRank/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/hackerRank.dir/src/arrayProblems.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/HackerRank/src/arrayProblems.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/HackerRank/src/arrayProblems.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/HackerRank/examples",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/HackerRank/include -I/home/trieupn/Documents/_git/Cpp_Challenge/HackerRank/examples/../include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/arrayProblems.dir/main.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/HackerRank/examples/main.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/HackerRank/examples/main.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/LeetCode",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/LeetCode/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/leetcode.dir/src/easyLevel.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/LeetCode/src/easyLevel.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/LeetCode/src/easyLevel.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/LeetCode",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/LeetCode/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/leetcode.dir/src/hardLevel.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/LeetCode/src/hardLevel.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/LeetCode/src/hardLevel.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/LeetCode",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/LeetCode/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/leetcode.dir/src/mediumLevel.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/LeetCode/src/mediumLevel.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/LeetCode/src/mediumLevel.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/LeetCode/examples",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/LeetCode/include -I/home/trieupn/Documents/_git/Cpp_Challenge/LeetCode/examples/../include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/leetCode.dir/main.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/LeetCode/examples/main.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/LeetCode/examples/main.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/DataStructure",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/DataStructure/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/DTST.dir/src/dataStructure.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/DataStructure/src/dataStructure.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/DataStructure/src/dataStructure.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/DataStructure/examples",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/DataStructure/include -I/home/trieupn/Documents/_git/Cpp_Challenge/DataStructure/examples/../include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/dataStructureProlems.dir/main.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/DataStructure/examples/main.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/DataStructure/examples/main.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/University",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/University/include  -pthread -g   -o CMakeFiles/COMPLEX.dir/src/complex.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/University/src/complex.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/University/src/complex.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/University/examples",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/University/include -I/home/trieupn/Documents/_git/Cpp_Challenge/University/examples/../include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/test.dir/test.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/University/examples/test.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/University/examples/test.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/socket",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/socket/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/libsocket.dir/src/libSocket.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/socket/src/libSocket.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/socket/src/libSocket.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/socket/examples",
+  "command": "/usr/bin/g++  -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_CHRONO_DYN_LINK -DBOOST_CHRONO_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_LOG_DYN_LINK -DBOOST_LOG_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_PROGRAM_OPTIONS_NO_LIB -DBOOST_REGEX_DYN_LINK -DBOOST_REGEX_NO_LIB -DBOOST_THREAD_DYN_LINK -DBOOST_THREAD_NO_LIB -I/home/trieupn/Documents/_git/Cpp_Challenge/socket/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/multiThread.dir/multithreadTimer.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/socket/examples/multithreadTimer.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/socket/examples/multithreadTimer.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/socket/examples",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/socket/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/hdlFunc.dir/handleFunction.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/socket/examples/handleFunction.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/socket/examples/handleFunction.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/socket/examples",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/socket/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/binding.dir/handleBinding.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/socket/examples/handleBinding.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/socket/examples/handleBinding.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/socket/examples",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/socket/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/sync.dir/synchronousTimer.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/socket/examples/synchronousTimer.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/socket/examples/synchronousTimer.cpp"
+},
+{
+  "directory": "/home/trieupn/Documents/_git/Cpp_Challenge/build/socket/examples",
+  "command": "/usr/bin/g++  -DBOOST_LOG_DYN_LINK -I/home/trieupn/Documents/_git/Cpp_Challenge/socket/include  -pthread -g   -std=c++11 -Wall -o CMakeFiles/async.dir/ansynchronousTimer.cpp.o -c /home/trieupn/Documents/_git/Cpp_Challenge/socket/examples/ansynchronousTimer.cpp",
+  "file": "/home/trieupn/Documents/_git/Cpp_Challenge/socket/examples/ansynchronousTimer.cpp"
+}
+]

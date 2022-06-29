@@ -2,14 +2,14 @@
 
 include_directories(include)
 
-set(LEETCD_HDR  include/leetCode.h
+set(LEETCD_HDR  include/easyLevel.h
                 include/common.h
                 include/data.h
                 include/hardLevel.h
                 include/mediumLevel.h
 )
 
-set(LEETCD_SRC  src/leetCode.cpp
+set(LEETCD_SRC  src/easyLevel.cpp
                 src/hardLevel.cpp
                 src/mediumLevel.cpp
 )

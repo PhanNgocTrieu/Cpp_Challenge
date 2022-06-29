@@ -10,7 +10,8 @@ namespace staffManagement {
     _Developer::_Developer(const std::string& _account,
                         const std::string& _name,
                         const std::string& _job,
-                        const _typeJob& _typeOfJob
+                        const _typeJob& _typeOfJob,
+                        const double& _salary
                         ) : isInit(false)
     {
         this->m_infor = new _infoMember();
@@ -39,38 +40,14 @@ namespace staffManagement {
 
         isInit = false;
     }
-    
-    void _Developer::doInitialize() {
-        if (!isInit)
-        {
-            srand (time(NULL));
-            isInit = true;
-        }
-    }
 
     void _Developer::displayInfor() {
-        std::cout << *this;
+        std::cout << this;
     }
 
 
     _Developer& _Developer::operator=(const _Developer& _other) {
         this->m_infor = _other.m_infor;
         return *this;
-    }
-
-    std::ostream& operator<<(std::ostream& os, _Developer& _dev) {
-        os << "Information of Developer - with ID: " << _dev.getInfor()->_account << std::endl;
-        os << "Name: " << _dev.getName() << std::endl;
-        os << "Specific Job: " << _dev.getJob() << std::endl;
-        os << "Mothly Salary: " << _dev.getSalary() << std::endl;
-        return os;
-    }
-
-    std::istream& operator>>(std::istream& is, _Developer& _dev) {
-        std::cout << "Enter Information of Developer - with ID: " << _dev.getInfor()->_account << std::endl;
-        std::cout << "Name: ", is >> _dev.getInfor()->_name;
-        std::cout << "Specific Job: ", is >> _dev.getInfor()->_job;
-        std::cout << "Mothly Salary: ", is >> _dev.getInfor()->_salary;
-        return is;
     }
 }

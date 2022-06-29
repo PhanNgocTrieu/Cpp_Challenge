@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../codeForce/include/codeForce.h
+iostream
+-
+
+/home/trieupn/Documents/_git/Cpp_Challenge/codeForce/src/codeForce.cpp
+codeForce.h
+/home/trieupn/Documents/_git/Cpp_Challenge/codeForce/src/codeForce.h
+

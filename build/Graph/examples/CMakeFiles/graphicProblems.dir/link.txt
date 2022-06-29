@@ -1,0 +1,1 @@
+/usr/bin/g++  -pthread -g  -rdynamic CMakeFiles/graphicProblems.dir/main.cpp.o  -o graphicProblems  ../libgraphic.a 

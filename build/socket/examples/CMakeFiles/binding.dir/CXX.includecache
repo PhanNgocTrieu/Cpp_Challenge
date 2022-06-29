@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/trieupn/Documents/_git/Cpp_Challenge/socket/examples/handleBinding.cpp
+boost/asio.hpp
+-
+iostream
+-
+boost/bind/bind.hpp
+-
+

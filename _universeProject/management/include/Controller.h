@@ -3,6 +3,7 @@
 
 #include "Display.h"
 #include "Employee.h"
+#include "Developer.h"
 #include "common.h"
 
 namespace staffManagement {
@@ -17,11 +18,21 @@ namespace staffManagement {
             void welcomeScreen();
             void mainFlow();
 
+
+        protected:
+            void search(const std::string& _account);
+            void search(const uint32_t& _ID);
+            
+            void sort(const uint32_t& _typeOfSort);
+            
+            void filter(const std::string& _account);
+            void filter(const uint32_t& _ID);
+
+
         private:
             Display* m_Console;
-            std::unordered_map<uint32_t, Employee*> listOfMember;
-            std::unordered_map<uint32_t, Employee*> listOfDeveloper;
-            std::unordered_map<uint32_t, Employee*> listOfManager;
+            std::vector<_Employee*> listOfEmployees;
+            std::unordered_map<uint32_t, _Developer*> listOfDevelopers;
     };
 
 }

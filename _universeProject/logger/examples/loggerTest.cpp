@@ -9,7 +9,7 @@ int main() {
     int l = 10;
 
     do { // logger to stdout
-        loggerService* logger = loggerService::getInstance(0);
+        logService* logger = logService::getInstance(0);
 
         logger->setSeverityLevel(DEBUG_LEVEL);
 
@@ -22,7 +22,7 @@ int main() {
     }while(0);
 
     do { // logger to stderr
-        loggerService* logger = loggerService::getInstance(1);
+        logService* logger = logService::getInstance(1);
 
         logger->setSeverityLevel(DEBUG_LEVEL);
 
@@ -35,7 +35,7 @@ int main() {
     }while(0);
 
     do { // logger to stderr
-        loggerService* logger = loggerService::getInstance("/home/trieupn1/Documents/_work/_git/_universeProject/logger/data/logdata.log");
+        logService* logger = logService::getInstance("~/Documents/_git/_universeProject/logger/data/logdata.log");
 
         logger->setSeverityLevel(DEBUG_LEVEL);
 

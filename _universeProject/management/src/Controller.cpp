@@ -14,7 +14,7 @@ namespace staffManagement {
     }
 
     void flowController::welcomeScreen() {
-        m_Console->Menu();
+        m_Console->_MenuScreen();
     }
 
     void flowController::mainFlow() {

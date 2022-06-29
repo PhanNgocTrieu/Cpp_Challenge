@@ -2,24 +2,41 @@
 
 namespace logger
 {
-    loggerService *loggerService::getInstance(int channel)
+    logService *logService::getInstance(int channel)
     {
         if (channel == 0)
         {
-            return new loggerFile(stdout);
+            return new logConsole(stdout);
         }
         else
         {
-            return new loggerFile(stderr);
+            return new logConsole(stderr);
         }
     }
 
-    loggerService *loggerService::getInstance(const std::string &filePath)
+    logService *logService::getInstance(const std::string &filePath)
     {
-        return new loggerFile(filePath);
+        return new logFile(filePath);
     }
 
-    void loggerFile::log(int serverityLevelOfMessage, const char *format, ...)
+    void logService::setSeverityLevel(const int &severityLevel)
+    {
+        this->m_severityLevel = severityLevel;
+    }
+
+    int logService::getSeverityLevel() const
+    {
+        return this->m_severityLevel;
+    }
+
+
+
+    /**
+     ************************************************************************
+     *                       Log File module                                *
+     ************************************************************************
+     */
+    void logFile::log(int serverityLevelOfMessage, const char *format, ...)
     {
         if (!m_initialize) {
             return;
@@ -40,52 +57,24 @@ namespace logger
         {
             std::string severityLevel[] = {"ERR", "WRN", "INF", "DBG"};
             fprintf(outputHandle, "[%s][%s][%s]\n", strTime, severityLevel[serverityLevelOfMessage].c_str(), buffer);
-
-            if (!m_isConsole) {
-                fprintf(stdout, "[%s][%s][%s]\n", strTime, severityLevel[serverityLevelOfMessage].c_str(), buffer);
-            }
         }
     }
 
-    void loggerService::setSeverityLevel(const int &severityLevel)
-    {
-        this->m_severityLevel = severityLevel;
-    }
-
-    int loggerService::getSeverityLevel() const
-    {
-        return this->m_severityLevel;
-    }
-
-
-    /**
-     ************************************************************************
-     *                       Logger File module                             *
-     ************************************************************************
-     */
-    loggerFile::loggerFile(const std::string &filePath)
+    logFile::logFile(const std::string &filePath)
     {
         if ((this->outputHandle = fopen(filePath.c_str(), "a")) != nullptr) {
             this->deallocated(true);
-            m_isConsole = false;
             m_initialize = true;
         }
         else
         {
-            perror("Error! Could not open file! ");
+            perror("Path to file is wrong -> Could not open file! ");
             m_initialize = false;
             return;
         }
     }
 
-    loggerFile::loggerFile(FILE *alreadyHandle)
-    {
-        this->outputHandle = alreadyHandle;
-        m_isConsole = true;
-        m_initialize = true;
-    }
-
-    loggerFile::~loggerFile()
+    logFile::~logFile()
     {
         if (this->m_isDeallocated)
         {
@@ -93,7 +82,62 @@ namespace logger
         }
     }
 
-    void loggerFile::deallocated(bool _isNeeded)
+    void logFile::deallocated(bool _isNeeded)
+    {
+        this->m_isDeallocated = _isNeeded;
+    }
+
+
+
+    /**
+     ************************************************************************
+     *                       log Console module                             *
+     ************************************************************************
+     */
+    logConsole::logConsole(FILE *alreadyHandle)
+    {
+        this->outputHandle = alreadyHandle;
+        m_initialize = true;
+    }
+
+    void logConsole::log(int serverityLevelOfMessage, const char *format, ...)
+    {
+        if (!m_initialize) {
+            return;
+        }
+
+        time_t t = time(nullptr);
+        struct tm *_time = localtime(&t);
+        char *strTime = new char[256];
+        strftime(strTime, 256, "%c", _time);
+
+        char *buffer = new char[256];
+        va_list arguments;
+        va_start(arguments, format);
+        vsprintf(buffer, format, arguments);
+        va_end(arguments);
+
+        if (serverityLevelOfMessage > 0 || serverityLevelOfMessage < 3)
+        {
+            std::string severityLevel[] = {"ERR", "WRN", "INF", "DBG"};
+            fprintf(stdout, "[%s][%s][%s]\n", strTime, severityLevel[serverityLevelOfMessage].c_str(), buffer);
+        }
+    }
+
+    logConsole::logConsole()
+    {
+    }
+
+    logConsole::~logConsole()
+    {
+        if (this->m_isDeallocated)
+        {
+            fclose(outputHandle);
+            this->m_isDeallocated = false;
+        }
+    }
+
+    void logConsole::deallocated(bool _isNeeded)
     {
         this->m_isDeallocated = _isNeeded;
     }

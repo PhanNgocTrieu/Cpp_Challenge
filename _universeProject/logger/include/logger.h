@@ -5,23 +5,23 @@
 
 namespace logger{
 
-    class loggerService {
+    class logService {
         public:
             /**
              * @brief Get the Instance object
              * 
              * @param channel channel for logging - stderr or stdout
-             * @return loggerService* logger object
+             * @return logger* logger object
              */
-            static loggerService* getInstance(int channel);
+            static logService* getInstance(int channel);
 
             /**
              * @brief Get the Instance object
              * 
              * @param filePath path to logger file
-             * @return loggerService* logger object
+             * @return logger* logger object
              */
-            static loggerService* getInstance(const std::string& filePath);
+            static logService* getInstance(const std::string& filePath);
 
             /**
              * @brief Get the Severity Level object
@@ -54,35 +54,6 @@ namespace logger{
             int m_severityLevel;
 
             /**
-             * @brief Construct a new logger Service object
-             * 
-             */
-            loggerService() {};
-
-            /**
-             * @brief Locking of copying object
-             * 
-             */
-            loggerService(const loggerService&) = delete;
-
-            /**
-             * @brief Locking assigning object
-             * 
-             * @return loggerService& 
-             */
-            loggerService &operator=(const loggerService&) = delete;
-    };
-
-
-    class loggerFile : public loggerService {
-        
-        friend loggerService* loggerService::getInstance(int channel);
-        friend loggerService* loggerService::getInstance(const std::string& filePath);
-
-        public:
-            void log(int _severityLevelOfMessage, const char* format, ...) override;
-        protected:
-            /**
              * @brief Ouput of open/close file
              * 
              */
@@ -95,55 +66,122 @@ namespace logger{
             bool m_isDeallocated;
 
             /**
-             * @brief Flag dedicate whether logging on console or file
-             * 
-             */
-            bool m_isConsole;
-
-            /**
              * @brief 
              * 
              */
             bool m_initialize;
 
             /**
+             * @brief Construct a new logger Service object
+             * 
+             */
+            logService() {};
+
+            /**
+             * @brief Locking of copying object
+             * 
+             */
+            logService(const logService&) = delete;
+
+            /**
+             * @brief Locking assigning object
+             * 
+             * @return logger& 
+             */
+            logService &operator=(const logService&) = delete;
+    };
+
+
+    class logFile : public logService {
+        
+        friend logService* logService::getInstance(int channel);
+        friend logService* logService::getInstance(const std::string& filePath);
+
+        public:
+            void log(int _severityLevelOfMessage, const char* format, ...) override;
+        protected:
+
+
+            /**
              * @brief Construct a new logger File object with the logger file
              * 
              * @param filePath 
              */
-            loggerFile(const std::string& filePath);
-
-            /**
-             * @brief Construct a new logger File object with the created channel
-             * 
-             * @param alreadyHandle 
-             */
-            loggerFile(FILE* alreadyHandle);
+            logFile(const std::string& filePath);
 
             /**
              * @brief Construct a new logger File object
              * 
              */
-            loggerFile();
+            logFile();
 
             /**
              * @brief Locking construct a new logger File object
              * 
              */
-            loggerFile(const loggerFile&) = delete;
+            logFile(const logFile&) = delete;
 
             /**
-             * @brief Locking assigning loggerFile object
+             * @brief Locking assigning logFile object
              * 
-             * @return loggerFile& 
+             * @return logFile& 
              */
-            loggerFile& operator=(const loggerFile&) = delete;
+            logFile& operator=(const logFile&) = delete;
 
             /**
              * @brief Destroy the logger File object
              * 
              */
-            ~loggerFile();
+            ~logFile();
+
+            /**
+             * @brief 
+             * 
+             * @param _isNeeded 
+             */
+            void deallocated(bool _isNeeded);
+    };
+
+
+    class logConsole : logService {
+        friend logService* logService::getInstance(int channel);
+        friend logService* logService::getInstance(const std::string& filePath);
+
+        public:
+            void log(int _severityLevelOfMessage, const char* format, ...) override;
+
+        protected:
+            /**
+             * @brief Construct a new logger File object with the created channel
+             * 
+             * @param alreadyHandle 
+             */
+            logConsole(FILE* alreadyHandle);
+
+            /**
+             * @brief Construct a new logger File object
+             * 
+             */
+            logConsole();
+
+            /**
+             * @brief Locking construct a new logger File object
+             * 
+             */
+            logConsole(const logConsole&) = delete;
+
+            /**
+             * @brief Locking assigning logFile object
+             * 
+             * @return logFile& 
+             */
+            logConsole& operator=(const logConsole&) = delete;
+
+            /**
+             * @brief Destroy the logger File object
+             * 
+             */
+            ~logConsole();
 
             /**
              * @brief 

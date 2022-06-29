@@ -247,6 +247,14 @@ namespace leetcode {
              * @return double 
              */
             double myPow(double x, int n); 
+
+            /**
+             * @brief Container with Most Water - problem
+             * 
+             * @param height Array of the height of water
+             * @return int Result of the max area
+             */
+            int maxArea(const vector<int>& height);
     };
 };
 

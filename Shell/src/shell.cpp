@@ -127,7 +127,7 @@ void message::doInitialize(const int &argc, const char *argv[])
     }
 }
 
-void message::socketConnect(const uint32_t &PF_METHOD = AF_INET, const uint32_t &sockMode = SOCK_STREAM)
+void message::socketConnect(const uint32_t &PF_METHOD, const uint32_t &sockMode)
 {
 
     if (this->_isServer == true)

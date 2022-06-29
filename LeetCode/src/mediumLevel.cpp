@@ -1,4 +1,4 @@
-#include "medium.h"
+#include "mediumLevel.h"
 
 
 namespace leetcode {
@@ -340,7 +340,7 @@ namespace leetcode {
 
         std::set<vector<int>> unique_results;
 
-        for (int i = 0; i < len - 2; i++)
+        for (size_t i = 0; i < len - 2; i++)
         {
 
             int j = i + 1;
@@ -380,11 +380,11 @@ namespace leetcode {
     {
         vector<vector<int>> solution;
         sort(nums.begin(), nums.end());
-        for (int i = 0; i < nums.size(); i++)
+        for (size_t i = 0; i < nums.size(); i++)
         {
-            for (int j = i + 1; j < nums.size(); j++)
+            for (size_t j = i + 1; j < nums.size(); j++)
             {
-                for (int k = j + 1; k < nums.size(); k++)
+                for (size_t k = j + 1; k < nums.size(); k++)
                 {
                     int x = (long long)target - (long long)nums[j] - (long long)nums[k] - (long long)nums[i];
                     if (binary_search(nums.begin() + k + 1, nums.end(), x))
@@ -392,24 +392,24 @@ namespace leetcode {
                         vector<int> ans{nums[i], nums[j], nums[k], x};
 
                         int track = 0;
-                        for (int m = 0; m < solution.size(); m++)
+                        for (size_t m = 0; m < solution.size(); m++)
                         {
 
-                            for (int n = 0; n < ans.size(); n++)
+                            for (size_t n = 0; n < ans.size(); n++)
                             {
                                 if (solution[m][n] == ans[n])
                                 {
                                     track++;
                                 }
                             }
-                            if (track == ans.size())
+                            if ((size_t)track == ans.size())
                             {
                                 break;
                             }
                             track = 0;
                         }
 
-                        if (track != ans.size())
+                        if ((size_t)track != ans.size())
                         {
                             solution.push_back(ans);
                         }
@@ -443,6 +443,22 @@ namespace leetcode {
             return tmp * tmp * (1 / x);
 
         return tmp * tmp * x;
+    }
+
+    int mediumLevel::maxArea(const vector<int>& height) {
+        int water = 0;
+        int left = 0, right = height.size() - 1;
+        int minHeight = INT_MIN;
+
+        while (left < right) {
+
+            while (height[left] <= minHeight && left < right) left++;
+            while (height[right] <= minHeight && left < right) right--;
+
+            minHeight = min(height[left], height[right]);
+            water = max(water, (right - left) * minHeight);
+        }
+        return water;
     }
 
 };

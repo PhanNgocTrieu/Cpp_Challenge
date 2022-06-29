@@ -13,6 +13,15 @@
 #include <cctype>
 #include "data.h"
 
+
+namespace leetcode {
+    typedef enum {
+        EASY    =   0,
+        MEDI,
+        HARD
+    } levels;
+}
+
 using namespace std;
 
 #endif // COMMON_LEETCODE_H

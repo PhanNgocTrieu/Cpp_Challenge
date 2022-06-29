@@ -7,9 +7,8 @@ namespace staffManagement {
     
     class Display {
         public:
-            void Welcome();
-            void Menu();
-            void Filter();
+            void _MenuScreen();
+            void _AddingNewMemberScreen();
     };
 
 }

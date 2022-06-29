@@ -6,7 +6,7 @@
 
 namespace staffManagement
 {
-    class Manager : public Employee {
+    class Manager : public _Employee {
 
     };
 } // namespace staffManagement

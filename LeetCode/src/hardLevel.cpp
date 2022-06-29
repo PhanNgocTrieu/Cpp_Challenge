@@ -59,8 +59,8 @@ namespace leetcode {
         /**
          * Filling all of data to 0
          */
-        for (uint32_t idex; idex <= len_p; idex++) {
-            for (uint32_t jdex; jdex <= len_s; jdex++) {
+        for (int idex; idex <= len_p; idex++) {
+            for (int jdex; jdex <= len_s; jdex++) {
                 _table[idex][jdex] = 0;
             }
         }
@@ -71,10 +71,10 @@ namespace leetcode {
 
         _table[0][0] = 1;
 
-        for (uint32_t index = 1; index <= len_p; index++) {
+        for (int index = 1; index <= len_p; index++) {
             if (p[index - 1] == '*') {
                 if (index == 1) {
-                    _table[1][0] == 1;
+                    _table[1][0] = 1;
                 }
                 else if (_table[index - 2][0]) {
                     _table[index][0] = 1;
@@ -88,8 +88,8 @@ namespace leetcode {
             }
         }
 
-        uint32_t idex;
-        uint32_t jdex;
+        int idex;
+        int jdex;
         for (idex = 1; idex <= len_p; idex++) {
             for (jdex = 1; jdex <=  len_s; jdex++) {
                 if ((p[idex-1]==s[jdex-1]) || p[idex - 1] == '.') {

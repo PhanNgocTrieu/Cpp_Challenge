@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/trieupn/Documents/_git/Cpp_Challenge/socket/examples/ansynchronousTimer.cpp
+boost/asio.hpp
+-
+iostream
+-
+

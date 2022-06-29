@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../socket/include/libSocket.h
+arpa/inet.h
+-
+stdio.h
+-
+string.h
+-
+sys/socket.h
+-
+
+/home/trieupn/Documents/_git/Cpp_Challenge/socket/src/libSocket.cpp
+libSocket.h
+/home/trieupn/Documents/_git/Cpp_Challenge/socket/src/libSocket.h
+
