@@ -3,6 +3,8 @@
 # find_package(PkgConfig REQUIRED)
 
 # pkg_check_modules(libsocketcan REQUIRED libsocketcan>=0.0.10)
+cmake_minimum_required(VERSION 3.0.0)
+project(Graphic_Structure VERSION 0.1.0)
 
 include_directories(include)
 

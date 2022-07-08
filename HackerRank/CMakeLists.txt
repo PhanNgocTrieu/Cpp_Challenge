@@ -1,4 +1,6 @@
 # find_package(Boost 1.69 REQUIRED COMPONENTS log timer)
+cmake_minimum_required(VERSION 3.0.0)
+project(HACKER_RANK VERSION 0.1.0)
 
 include_directories(include)
 

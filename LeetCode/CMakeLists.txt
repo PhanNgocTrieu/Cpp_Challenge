@@ -1,3 +1,6 @@
+cmake_minimum_required(VERSION 3.0.0)
+project(leetcode_problems VERSION 0.1.0)
+
 # find_package(Boost 1.69 REQUIRED COMPONENTS log thread)
 
 include_directories(include)
