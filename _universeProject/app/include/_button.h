@@ -2,7 +2,6 @@
 #define _BUTTON_H_
 
 #include "_common_dic.h"
-#include 
 
 namespace gui {
     class Button {

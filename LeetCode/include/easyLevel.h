@@ -255,11 +255,10 @@ namespace leetcode
          */
         bool isSameTree(TreeNode *p, TreeNode *q);
 
-
         /**
          * @brief Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
-         * 
-         * 
+         *
+         *
          *          1
          *      /       \
          *     2         2
@@ -267,11 +266,27 @@ namespace leetcode
          *  3    4     4    3
          * Input: root = [1,2,2,3,4,4,3]
          * Output: true
-         * 
+         *
          * @param root
          * @return true or false
          */
-        bool isSymmetric(TreeNode* root);
+        bool isSymmetric(TreeNode *root);
+
+        /**
+         * @brief A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+         * 
+         *              3
+         *           /     \
+         *         9        20
+         *       /   \     /   \
+         *    null  null  15    7
+         * 
+         * Input: root = [3,9,20,null,null,15,7]
+         * Output: 3
+         * @param root 
+         * @return int 
+         */
+        int maxDepth(TreeNode *root);
     };
 };
 

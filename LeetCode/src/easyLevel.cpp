@@ -316,31 +316,51 @@ namespace leetcode
         return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
     }
 
-
     /**
      * @brief Supported function
-     * 
+     *
      */
-    bool compareNode(TreeNode *left, TreeNode *right) {
-        if(left == nullptr && right == nullptr) {
+    bool compareNode(TreeNode *left, TreeNode *right)
+    {
+        if (left == nullptr && right == nullptr)
+        {
             return true;
-        } else if(left != nullptr && right != nullptr) {
-            if(left->val == right->val) {
-                return compareNode(left->right, right->left) 
-                    && compareNode(left->left, right->right);
-            } else {
+        }
+        else if (left != nullptr && right != nullptr)
+        {
+            if (left->val == right->val)
+            {
+                return compareNode(left->right, right->left) && compareNode(left->left, right->right);
+            }
+            else
+            {
                 return false;
             }
-        } else {
+        }
+        else
+        {
             return false;
         }
     }
 
-    bool easyLevel::isSymmetric(TreeNode* root) {
-        if(root == nullptr) {
+    bool easyLevel::isSymmetric(TreeNode *root)
+    {
+        if (root == nullptr)
+        {
             return true;
-        } else {
+        }
+        else
+        {
             return compareNode(root->left, root->right);
         }
+    }
+    
+    int easyLevel::maxDepth(TreeNode *root)
+    {
+        if (root == NULL)
+            return 0;
+        int left = maxDepth(root->left);
+        int right = maxDepth(root->right);
+        return max(left, right) + 1;
     }
 };

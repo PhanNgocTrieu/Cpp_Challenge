@@ -8,16 +8,6 @@ namespace staffManagement {
     
     class _Developer : public _Employee {
         public:
-
-            friend std::ostream& operator<<(std::ostream& os, const _Developer*& _dev) {
-                
-            }
-            
-            friend std::istream& operator>>(std::istream& is, _Developer*& _dev) {
-                
-            }
-
-        public:
             _Developer();
             _Developer(const _Developer& _other);
             ~_Developer();
