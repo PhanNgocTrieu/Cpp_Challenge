@@ -1,6 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory '/home/trieupn1/Documents/_work/_git/_universeProject'
-make: Leaving directory '/home/trieupn1/Documents/_work/_git/_universeProject'
- 
-make: *** No targets specified and no makefile found.  Stop.
-
