@@ -546,12 +546,54 @@ namespace leetcode
                         return s;
 
                 if (s < target)
-                    l++;    
+                    l++;
                 else
                     r--;
             }
         }
 
         return answer;
+    }
+
+    /**
+     * @brief Solving the problems of swapping pairs of nodes in list
+     *  
+     */
+    ListNode *mediumLevel::swapPairs(ListNode *head)
+    {
+        if (head == nullptr)
+        {
+            return nullptr;
+        }
+
+        ListNode *root = head;
+
+        do
+        {
+
+            if (root->next == nullptr)
+            {
+                break;
+            }
+
+            if (root != nullptr)
+            {
+                ListNode *temp = root->next;
+                int tempVal = root->val;
+                root->val = temp->val;
+                temp->val = tempVal;
+
+                if (temp->next != nullptr)
+                {
+                    root = temp->next;
+                }
+                else
+                {
+                    break;
+                }
+            }
+        } while (true);
+
+        return head;
     }
 };
