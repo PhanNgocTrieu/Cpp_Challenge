@@ -397,21 +397,18 @@ namespace leetcode
         return max(leftH, rightH) + 1;
     }
 
-    
-
     /**
      * @brief
      *
      * @param words
      * @return int
      */
-    int uniqueMorseRepresentations(vector<string> &words)
+    int easyLevel::uniqueMorseRepresentations(vector<string> &words)
     {
         std::vector<std::string> MorseTable = {".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....",
-                                     "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.",
-                                     "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", 
-                                     "-.--", "--.."
-                                     };
+                                               "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.",
+                                               "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-",
+                                               "-.--", "--.."};
 
         std::unordered_map<std::string, int> _listWords;
 
@@ -423,6 +420,27 @@ namespace leetcode
             _listWords[_morseWord] = 1;
         }
         return _listWords.size();
+    }
+
+    /**
+     * @brief
+     *
+     * @param s
+     * @return string
+     */
+    string easyLevel::reverseWords(string s)
+    {
+        stringstream ss(s);
+        string t, ans;
+
+        while (getline(ss, t, ' '))
+        {
+            reverse(t.begin(), t.end());
+            ans += t + ' ';
+        }
+        // We will take substring of one less size as there will be space after last
+        // word which is not required.
+        return ans.substr(0, ans.size() - 1);
     }
 
 };

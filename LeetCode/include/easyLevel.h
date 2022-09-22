@@ -312,6 +312,14 @@ namespace leetcode
          * @return int 
          */
         int uniqueMorseRepresentations(vector<string>& words);
+
+        /**
+         * @brief 
+         * 
+         * @param s 
+         * @return string 
+         */
+        string reverseWords(string s);
     };
 };
 
