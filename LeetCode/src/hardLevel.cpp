@@ -1,6 +1,7 @@
 #include "hardLevel.h"
 
-namespace leetcode {
+namespace leetcode
+{
     /**
      * **********************************************************************************
      *                       @brief Problems of Hard Levels                             *
@@ -50,7 +51,8 @@ namespace leetcode {
         return _result;
     }
 
-    bool hardLevel::isMatch(string s, string p) {
+    bool hardLevel::isMatch(string s, string p)
+    {
         int len_s = s.length();
         int len_p = p.length();
 
@@ -59,8 +61,10 @@ namespace leetcode {
         /**
          * Filling all of data to 0
          */
-        for (int idex; idex <= len_p; idex++) {
-            for (int jdex; jdex <= len_s; jdex++) {
+        for (int idex; idex <= len_p; idex++)
+        {
+            for (int jdex; jdex <= len_s; jdex++)
+            {
                 _table[idex][jdex] = 0;
             }
         }
@@ -71,40 +75,54 @@ namespace leetcode {
 
         _table[0][0] = 1;
 
-        for (int index = 1; index <= len_p; index++) {
-            if (p[index - 1] == '*') {
-                if (index == 1) {
+        for (int index = 1; index <= len_p; index++)
+        {
+            if (p[index - 1] == '*')
+            {
+                if (index == 1)
+                {
                     _table[1][0] = 1;
                 }
-                else if (_table[index - 2][0]) {
+                else if (_table[index - 2][0])
+                {
                     _table[index][0] = 1;
                 }
-                else {
+                else
+                {
                     _table[index][0] = 0;
                 }
             }
-            else {
+            else
+            {
                 _table[index][0] = 0;
             }
         }
 
         int idex;
         int jdex;
-        for (idex = 1; idex <= len_p; idex++) {
-            for (jdex = 1; jdex <=  len_s; jdex++) {
-                if ((p[idex-1]==s[jdex-1]) || p[idex - 1] == '.') {
+        for (idex = 1; idex <= len_p; idex++)
+        {
+            for (jdex = 1; jdex <= len_s; jdex++)
+            {
+                if ((p[idex - 1] == s[jdex - 1]) || p[idex - 1] == '.')
+                {
                     _table[idex][jdex] = _table[idex - 1][jdex - 1];
                 }
-                else {
-                    if (p[idex - 1] == '*') {
-                        if (s[jdex - 1] == p[idex - 2] || p[idex - 2] == '.') {
+                else
+                {
+                    if (p[idex - 1] == '*')
+                    {
+                        if (s[jdex - 1] == p[idex - 2] || p[idex - 2] == '.')
+                        {
                             _table[idex][jdex] = (_table[idex - 2][jdex] || _table[idex][jdex - 1]);
                         }
-                        else {
+                        else
+                        {
                             _table[idex][jdex] = _table[idex - 2][jdex];
                         }
                     }
-                    else {
+                    else
+                    {
                         _table[idex][jdex] = 0;
                     }
                 }
@@ -112,5 +130,85 @@ namespace leetcode {
         }
 
         return _table[idex][jdex];
+    }
+
+    ListNode *hardLevel::mergeKLists(vector<ListNode *> &lists)
+    {
+        ListNode *result = nullptr;
+        ListNode *lastNode = nullptr;
+        int sizeOflists = lists.size();
+        while (true)
+        {
+            int min = 9999;
+            int countOfNull = 0;
+            int rememberIndex = -1;
+            for (int index = 0; index < sizeOflists; ++index)
+            {
+                if (lists[index] != nullptr)
+                {
+                    if (lists[index]->val < min)
+                    {
+                        min = lists[index]->val;
+                        rememberIndex = index;
+                    }
+                }
+                else
+                {
+                    countOfNull++;
+                }
+            }
+
+            // When all of lists on container are null -> we do not need to check any more
+            if (countOfNull == sizeOflists)
+            {
+                break;
+            }
+
+            // Concanate val in list
+            if (rememberIndex > -1)
+            {
+                if (result == nullptr)
+                {
+                    result = lists[rememberIndex];
+                    lists[rememberIndex] = lists[rememberIndex]->next;
+                    lastNode = result;
+                }
+                else
+                {
+                    ListNode *new_node = new ListNode(lists[rememberIndex]->val);
+                    lastNode->next = new_node;
+                    lastNode = new_node;
+                    lists[rememberIndex] = lists[rememberIndex]->next;
+                }
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        // ======================= Another way -> faster ===================== //
+        /*
+        priority_queue<int> pq;
+        for (auto it : lists)
+        {
+            while (it)
+            {
+                pq.push(-it->val);
+                it = it->next;
+            }
+        }
+        ListNode *dummy = new ListNode();
+        ListNode *ans = dummy;
+        while (!pq.empty())
+        {
+            ans->next = new ListNode(-pq.top());
+            pq.pop();
+            ans = ans->next;
+        }
+        return dummy->next;
+        */
+
+        return result;
     }
 };

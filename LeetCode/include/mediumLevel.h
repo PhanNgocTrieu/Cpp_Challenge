@@ -286,9 +286,6 @@ namespace leetcode {
              * 
              */
             ListNode* swapPairs(ListNode* head);
-
-
-            ListNode *mergeKLists(vector<ListNode *> &lists);
     };
 };
 
