@@ -411,7 +411,7 @@ namespace leetcode
                                                "-.--", "--.."};
 
         std::unordered_map<std::string, int> _listWords;
-
+    
         for (int i = 0; i < words.size(); i++)
         {
             std::string _morseWord = "";

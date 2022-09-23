@@ -557,7 +557,7 @@ namespace leetcode
 
     /**
      * @brief Solving the problems of swapping pairs of nodes in list
-     *  
+     *
      */
     ListNode *mediumLevel::swapPairs(ListNode *head)
     {
@@ -595,5 +595,65 @@ namespace leetcode
         } while (true);
 
         return head;
+    }
+
+    ListNode *mergeKLists(vector<ListNode *> &lists)
+    {
+        ListNode *result = nullptr;
+        ListNode *lastNode = nullptr;
+        int sizeOflists = lists.size();
+        while (true)
+        {
+            int min = 9999;
+            int countOfNull = 0;
+            int rememberIndex = -1;
+            for (int index = 0; index < sizeOflists; ++index)
+            {
+                if (lists[index] != nullptr)
+                {
+                    if (lists[index]->val < min)
+                    {
+                        min = lists[index]->val;
+                        rememberIndex = index;
+                    }
+                }
+                else
+                {
+                    countOfNull++;
+                }
+            }
+
+            // When all of lists on container are null -> we do not need to check any more
+            if (countOfNull == sizeOflists)
+            {
+                break;
+            }
+            
+            // Concanate val in list 
+            if (rememberIndex > -1)
+            {
+                if (result == nullptr)
+                {
+                    result = lists[rememberIndex];
+                    lists[rememberIndex] = lists[rememberIndex]->next;
+                    cout << "Moving index 1!" << endl;
+                    lastNode = result;
+                }
+                else
+                {
+                    ListNode *new_node = new ListNode(lists[rememberIndex]->val);
+                    lastNode->next = new_node;
+                    lastNode = new_node;
+                    lists[rememberIndex] = lists[rememberIndex]->next;
+                    cout << "Moving index 2!" << endl;
+                }
+            }
+            else
+            {
+                break;
+            }
+        }
+
+        return result;
     }
 };
