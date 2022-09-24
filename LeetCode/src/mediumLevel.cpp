@@ -595,4 +595,8 @@ namespace leetcode
         } while (true);
         return head;
     }
+
+    int mediumLevel::concatenatedBinary(int n) {
+        
+    }
 };
