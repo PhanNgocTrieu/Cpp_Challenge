@@ -15,50 +15,54 @@
 #include <queue>
 #include "data.h"
 
-
-namespace leetcode {
-    typedef enum {
-        EASY    =   0,
+namespace leetcode
+{
+    typedef enum
+    {
+        EASY = 0,
         MEDI,
         HARD
     } levels;
 
-    bool checkTarget(TreeNode *root, int target, int &result) {
-        if (root == nullptr) {
+
+    /**
+     * @brief Function support for easy-"hasPathSum" problem!
+     *
+     */
+    bool checkTarget(TreeNode *root, int target, int &result)
+    {
+        if (root == nullptr)
+        {
             return false;
         }
-
         result += root->val;
-        if (result == target && root->left == nullptr && root->right == nullptr) {
+        std::cout << "Cur node: " << root->val << " - result: " << result << std::endl;
+        if (result == target && root->left == nullptr && root->right == nullptr)
+        {
             return true;
         }
 
-        if (checkTarget(root->left, target, result)) {
+        std::cout << "Calling left! -> ";
+        if (checkTarget(root->left, target, result))
+        {
             return true;
         }
-        else {
+        else
+        {
             result -= root->left ? root->left->val : 0;
         }
-        
-        if (checkTarget(root->right, target, result)) {
+        std::cout << std::endl;
+        std::cout << "Calling right! -> ";
+        if (checkTarget(root->right, target, result))
+        {
             return true;
         }
-        else {
-            result -= root->right ? root->left->val : 0;
+        else
+        {
+            result -= root->right ? root->right->val : 0;
         }
+        std::cout << std::endl;
         return false;
-        }
-
-    bool hasPathSum(TreeNode *root, int targetSum) {
-    if (root == nullptr) {
-        return false;
-    }
-    int result = 0;
-    if (checkTarget(root, targetSum, result)) {
-        return true;
-    }
-
-    return false;
     }
 }
 

@@ -189,8 +189,6 @@ namespace leetcode
 
             You must implement a solution with a linear runtime complexity and use only constant extra space.
 
-
-
             Example 1:
 
             Input: nums = [2,2,1]
@@ -274,17 +272,17 @@ namespace leetcode
 
         /**
          * @brief A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
-         * 
+         *
          *              3
          *           /     \
          *         9        20
          *       /   \     /   \
          *    null  null  15    7
-         * 
+         *
          * Input: root = [3,9,20,null,null,15,7]
          * Output: 3
-         * @param root 
-         * @return int 
+         * @param root
+         * @return int
          */
         int maxDepth(TreeNode *root);
 
@@ -292,56 +290,50 @@ namespace leetcode
          * @brief   Given a binary tree, determine if it is height-balanced.
          *          For this problem, a height-balanced binary tree is defined as:
          *              a binary tree in which the left and right subtrees of every node differ in height by no more than 1.
-         * 
-         * @param root 
-         * @return true 
-         * @return false 
+         *
+         * @param root
+         * @return true
+         * @return false
          */
-        bool isBalanced(TreeNode* root); 
+        bool isBalanced(TreeNode *root);
         int dfsHeight(TreeNode *node);
 
-
         /**
-         * @brief 
+         * @brief
          *      International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows:
          *              'a' maps to ".-",
          *              'b' maps to "-...",
          *              'c' maps to "-.-.", and so on.
-         * 
-         * @param words 
-         * @return int 
+         *
+         * @param words
+         * @return int
          */
-        int uniqueMorseRepresentations(vector<string>& words);
+        int uniqueMorseRepresentations(vector<string> &words);
 
-        /*
-            Given a string s, reverse the order of characters in each word within a
-            sentence while still preserving whitespace and initial word order.
-
-            Input: s = "Let's take LeetCode contest"
-            Output: "s'teL ekat edoCteeL tsetnoc"
-
-        */
-
-       /**
-        * @brief 
-        *           Given a string s, reverse the order of characters in each word within a 
-        *           sentence while still preserving whitespace and initial word order.
-        *           
-        *           Input: s = "Let's take LeetCode contest"
-        *           Output: "s'teL ekat edoCteeL tsetnoc"
-        * 
-        * @param s 
-        * @return string 
-        */
+        /**
+         * @brief
+         *           Given a string s, reverse the order of characters in each word within a
+         *           sentence while still preserving whitespace and initial word order.
+         *
+         *           Input: s = "Let's take LeetCode contest"
+         *           Output: "s'teL ekat edoCteeL tsetnoc"
+         *
+         * @param s
+         * @return string
+         */
         string reverseWords(string s);
 
         /**
-         * @brief 
-         * 
-         * @param root 
-         * @param targetSum 
-         * @return true 
-         * @return false 
+         * @brief
+         *          Given the root of a binary tree and an integer targetSum, return true if the
+         *          tree has a root-to-leaf path such that adding up all the values along the path
+         *          equals targetSum.
+         *
+         *          A leaf is a node with no children.
+         *
+         * @param root a tree which invoke searching
+         * @param targetSum target sum value for finding
+         * @return result of finding target Sum
          */
         bool hasPathSum(TreeNode *root, int targetSum);
     };

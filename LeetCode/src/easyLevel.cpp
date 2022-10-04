@@ -411,7 +411,7 @@ namespace leetcode
                                                "-.--", "--.."};
 
         std::unordered_map<std::string, int> _listWords;
-    
+
         for (int i = 0; i < words.size(); i++)
         {
             std::string _morseWord = "";
@@ -424,9 +424,7 @@ namespace leetcode
 
     /**
      * @brief
-     *
-     * @param s
-     * @return string
+     * 
      */
     string easyLevel::reverseWords(string s)
     {
@@ -441,6 +439,26 @@ namespace leetcode
         // We will take substring of one less size as there will be space after last
         // word which is not required.
         return ans.substr(0, ans.size() - 1);
+    }
+
+    /**
+     * @brief 
+     * 
+     */
+    bool easyLevel::hasPathSum(TreeNode *root, int targetSum)
+    {
+        if (root == nullptr)
+        {
+            return false;
+        }
+
+        int result = 0;
+        if (checkTarget(root, targetSum, result))
+        {
+            return true;
+        }
+
+        return false;
     }
 
 };
