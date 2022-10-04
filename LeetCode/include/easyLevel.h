@@ -334,6 +334,16 @@ namespace leetcode
         * @return string 
         */
         string reverseWords(string s);
+
+        /**
+         * @brief 
+         * 
+         * @param root 
+         * @param targetSum 
+         * @return true 
+         * @return false 
+         */
+        bool hasPathSum(TreeNode *root, int targetSum);
     };
 };
 
