@@ -507,6 +507,88 @@ namespace codeSignalProblems
      *************************************************/
     int Core::SpringOfIntegration::runnersMeeting(vector<int> startPosition, vector<int> speed) 
     {
+        map<tuple<int,int,int>, int> meetings;
+        int pairs{};
+        for (int i{ 1 }; i < startPosition.size(); ++i)
+            for (int j{}; j < i; ++j) {
+                int ds = startPosition[i] - startPosition[j];
+                int dv = speed[j] - speed[i];
+                if (ds * dv > 0) {
+                    int g = gcd(ds, dv);
+                    ds = abs(ds / g);
+                    dv = abs(dv / g);
+                    pairs = max(pairs, ++meetings[tuple{
+                        ds,
+                        dv,
+                        startPosition[i] * dv + speed[i] * ds}]);
+                }
+            }
         
+        return pairs ? (1 + sqrt(1 + 8 * pairs)) / 2 : -1; 
+    }
+
+
+    int Core::SpringOfIntegration::arrayConversion(vector<int> inputArray) {
+        if (inputArray.size() == 1)
+            return inputArray[0];
+
+        int control = 0;
+        while (inputArray.size() > 2)
+        {
+            control++;
+            vector<int> us;
+            if (control % 2 != 0)
+            {
+                for (int idex = 0; idex < inputArray.size(); idex = idex + 2)
+                {
+                    us.push_back(inputArray[idex] + inputArray[idex + 1]);
+                }
+            }
+            else
+            {
+                for (int idex = 0; idex < inputArray.size(); idex = idex + 2)
+                {
+                    us.push_back(inputArray[idex] * inputArray[idex + 1]);
+                }
+            }
+            inputArray = us;
+        }
+
+        if (control % 2 != 0)
+        {
+            return (inputArray[0] * inputArray[1]);
+        }
+        return (inputArray[0] + inputArray[1]);
+    }
+
+
+    vector<int> Core::SpringOfIntegration::arrayPreviousLess(vector<int> items) {
+        vector<int> res;
+        int len = items.size();
+        for (int idex = 0; idex < len; idex++)
+        {
+            if (idex == 0)   
+            {
+                res.push_back(-1);
+            }
+            else
+            {
+                int flag = 0;
+                for (int jdex = idex - 1; jdex >= 0; jdex--)
+                {
+                    if (items[jdex] < items[idex])
+                    {
+                        res.push_back(items[jdex]);
+                        flag = 1;
+                        break;
+                    }
+                }
+
+                // not found
+                if (flag == 0)
+                    res.push_back(-1);
+            }
+        }
+        return res;
     }
 };
