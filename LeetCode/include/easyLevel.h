@@ -336,6 +336,11 @@ namespace leetcode
          * @return result of finding target Sum
          */
         bool hasPathSum(TreeNode *root, int targetSum);
+
+        /*
+        
+        */
+        int minDepth(TreeNode* root);
     };
 };
 

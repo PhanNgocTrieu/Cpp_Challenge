@@ -461,4 +461,21 @@ namespace leetcode
         return false;
     }
 
+    /**
+     * @brief 
+     * 
+     */
+    int easyLevel::minDepth(TreeNode* root) {
+        int l=100000,r=100000;
+        if(root==NULL) return 0;
+        if(root->left==NULL and root->right==NULL) return 1;
+        else{
+            if(root->left!=NULL)
+                l=minDepth(root->left);
+            if(root->right!=NULL)
+                r=minDepth(root->right);
+        }
+        return l<r?l+1:r+1;
+    }
+
 };
