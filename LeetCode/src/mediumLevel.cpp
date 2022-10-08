@@ -643,6 +643,27 @@ namespace leetcode
         }
         return dominoes;
     }
+
+    void mediumLevel::flatten(TreeNode* root) {
+        if (root == NULL) {
+            return;
+        }
+        
+        TreeNode* curr = root;
+        
+        while (curr) {
+            if (curr->left) {
+                TreeNode* prev = curr->left;
+                while (prev->right) {
+                    prev = prev->right;
+                }
+                
+                prev->right = curr->right;
+                curr->right = curr->left;
+                curr->left = nullptr;
+            }
+            
+            curr = curr->right;
+        }
+    }
 }
-}
-;
