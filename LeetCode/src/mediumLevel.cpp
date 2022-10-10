@@ -644,26 +644,108 @@ namespace leetcode
         return dominoes;
     }
 
-    void mediumLevel::flatten(TreeNode* root) {
-        if (root == NULL) {
+    void mediumLevel::flatten(TreeNode *root)
+    {
+        if (root == NULL)
+        {
             return;
         }
-        
-        TreeNode* curr = root;
-        
-        while (curr) {
-            if (curr->left) {
-                TreeNode* prev = curr->left;
-                while (prev->right) {
+
+        TreeNode *curr = root;
+
+        while (curr)
+        {
+            if (curr->left)
+            {
+                TreeNode *prev = curr->left;
+                while (prev->right)
+                {
                     prev = prev->right;
                 }
-                
+
                 prev->right = curr->right;
                 curr->right = curr->left;
                 curr->left = nullptr;
             }
-            
+
             curr = curr->right;
         }
+    }
+
+    int mediumLevel::searchRotatedSortedArray(vector<int> &nums, int target)
+    {
+        int l = 0;
+        int r = nums.size() - 1;
+
+        while (l <= r)
+        {
+            int mid = l + (r - l) / 2;
+            int midElem = nums[mid];
+
+            if (midElem == target)
+            {
+                return mid;
+            }
+
+            int leftElem = nums[l];
+            int rightElem = nums[r];
+
+            if (leftElem == target)
+            { // Similar to check above
+                return l;
+            }
+            else if (rightElem == target)
+            {
+                return r;
+            }
+
+            if (midElem < rightElem)
+            { // Soft inquiry to the right portion of mid
+                if (midElem < target && target <= rightElem)
+                { // Intial inquiry was correct! & this portion is not rotated
+                    l = mid + 1;
+                }
+                else
+                { // Upon further examination, we'll look into the left portion of mid instead
+                    r = mid - 1;
+                }
+            }
+            else
+            { // Soft inquiry to the left portion of mid
+                if (midElem > target && target >= leftElem)
+                { // Inquiry was correct! We'll further investigate the left portion of mid & this portion is not rotated
+                    r = mid - 1;
+                }
+                else
+                { // Initial inquiry was incorrect, instead we will investigate the right portion of mid
+                    l = mid + 1;
+                }
+            }
+        }
+        return -1;
+    }
+
+    vector<int> mediumLevel::searchRange(vector<int> &nums, int target)
+    {
+        vector<int> ans(2, -1);
+        int firstfind = 0;
+        int size = nums.size();
+        for (int i = 0; i < size; i++)
+        {
+            if (nums[i] == target)
+            {
+                if (firstfind == 0)
+                {
+                    firstfind = 1;
+                    ans[0] = i;
+                    ans[1] = i;
+                }
+                else
+                {
+                    ans[1] = i;
+                }
+            }
+        }
+        return ans;
     }
 }
