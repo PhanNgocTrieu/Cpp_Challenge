@@ -2,14 +2,6 @@
 #define __CORE_H
 
 #include "supportedFunction.h"
-#include <vector>
-#include <math.h>
-#include <iostream>
-#include <map>
-#include <deque>
-#include <stack>
-#include <algorithm>
-#include <unordered_map>
 
 using namespace std;
 
