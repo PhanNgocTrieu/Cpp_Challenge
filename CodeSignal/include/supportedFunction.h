@@ -1,10 +1,7 @@
 #ifndef __SUPPORT_H
 #define __SUPPORT_H
 
-#include "Core.h"
-#include <vector>
-#include <stack>
-#include <iostream>
+#include "common.h"
 
 using namespace std;
 
@@ -97,6 +94,17 @@ namespace supportedFunctions
             }
         }
         return true;
+    }
+
+    int findValue(vector<int> vec, int _value)
+    {
+        int len = vec.size();
+        for (int idex = 0; idex < len; idex++)
+        {
+            if (vec[idex] == _value)
+                return idex;
+        }
+        return -1;
     }
 };
 

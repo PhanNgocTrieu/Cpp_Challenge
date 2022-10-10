@@ -1,6 +1,5 @@
 #include "supportedFunction.h"
 
-
 namespace codeSignalProblems
 {
     class Intro {
