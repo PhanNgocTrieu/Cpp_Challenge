@@ -344,6 +344,26 @@ namespace leetcode
             Note: A leaf is a node with no children.
         */
         int minDepth(TreeNode* root);
+
+        /**
+         * @brief 
+         *          Given two non-negative integers, num1 and num2 represented as string, return the sum of num1 and num2 as a string.
+         *          You must solve the problem without using any built-in library for handling large integers (such as BigInteger). 
+         *          You must also not convert the inputs to integers directly.
+         * 
+         *          Example:
+         *              Input: num1 = "11", num2 = "123"
+         *              Output: "134"
+         *          
+         *          Example: 
+         *              Input: num1 = "456", num2 = "77"
+         *              Output: "533"
+         * @param num1 
+         * @param num2 
+         * @return string 
+         */
+        string addStrings(string num1, string num2);
+
     };
 };
 

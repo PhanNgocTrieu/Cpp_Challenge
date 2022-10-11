@@ -424,7 +424,7 @@ namespace leetcode
 
     /**
      * @brief
-     * 
+     *
      */
     string easyLevel::reverseWords(string s)
     {
@@ -442,8 +442,8 @@ namespace leetcode
     }
 
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     bool easyLevel::hasPathSum(TreeNode *root, int targetSum)
     {
@@ -462,20 +462,47 @@ namespace leetcode
     }
 
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
-    int easyLevel::minDepth(TreeNode* root) {
-        int l=100000,r=100000;
-        if(root==NULL) return 0;
-        if(root->left==NULL and root->right==NULL) return 1;
-        else{
-            if(root->left!=NULL)
-                l=minDepth(root->left);
-            if(root->right!=NULL)
-                r=minDepth(root->right);
+    int easyLevel::minDepth(TreeNode *root)
+    {
+        int l = 100000, r = 100000;
+        if (root == NULL)
+            return 0;
+        if (root->left == NULL && root->right == NULL)
+            return 1;
+        else
+        {
+            if (root->left != NULL)
+                l = minDepth(root->left);
+            if (root->right != NULL)
+                r = minDepth(root->right);
         }
-        return l<r?l+1:r+1;
+        return l < r ? l + 1 : r + 1;
+    }
+
+    string easyLevel::addStrings(string num1, string num2)
+    {
+        if (num1 == "0")
+        {
+            return num2;
+        }
+        if (num2 == "0")
+        {
+            return num1;
+        }
+
+        vector<int> ans(num1.size() + num2.size(), 0);
+        int num1Run = num1.size() - 1;
+        int num2Run = num2.size() - 1;
+        while (num1Run >= 0 && num2Run >= 0) {
+            int total = (num1[num1Run] - '0') + (num2[num2Run] - '0');
+            if (total > 10) {
+                ans[num1Run + num2Run + 1] = total % 10;
+                ans[num1Run + num2Run] = total / 10;
+            }
+        }
     }
 
 };
