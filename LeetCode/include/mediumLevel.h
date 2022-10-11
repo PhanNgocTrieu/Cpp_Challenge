@@ -359,6 +359,9 @@ namespace leetcode
             You must write an algorithm with O(log n) runtime complexity.
         */
         vector<int> searchRange(vector<int>& nums, int target);
+
+
+        string multiply(string num1, string num2);
     };
 };
 

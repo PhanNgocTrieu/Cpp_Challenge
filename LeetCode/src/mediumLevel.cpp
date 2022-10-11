@@ -748,4 +748,41 @@ namespace leetcode
         }
         return ans;
     }
+
+
+    string mediumLevel::multiply(string num1, string num2) {
+        if (num1 == "0" || num2 == "0") {
+            return "0";
+        }
+
+        vector<int> res(num1.size() + num2.size(), 0);
+
+        for (int idex = num1.size() - 1; idex >= 0; --idex) {
+            for (int jdex = num2.size() - 1; jdex >= 0; --jdex) {
+                // Multiple 2 number from right to left as multiple calculating
+                res[idex + jdex + 1] += (num1[idex] - '0') * (num2[jdex] - '0');
+
+                // Storing the first number
+                res[idex + jdex] += res[idex + jdex + 1] / 10;
+
+                // Taking the second number
+                res[idex + jdex + 1] = res[idex + jdex + 1] % 10;
+            }
+        }
+
+        int idex = 0;
+        string ans = "";
+
+        // Removing 0 number on array
+        while(res[idex] == 0) {
+            idex++;
+        }
+
+        // Concatenating strng
+        while (idex < res.size()) {
+            ans += to_string(res[idex++]);
+        }
+
+        return ans;
+    }
 }
