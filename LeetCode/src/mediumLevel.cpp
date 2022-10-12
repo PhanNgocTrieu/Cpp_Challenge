@@ -749,16 +749,19 @@ namespace leetcode
         return ans;
     }
 
-
-    string mediumLevel::multiply(string num1, string num2) {
-        if (num1 == "0" || num2 == "0") {
+    string mediumLevel::multiply(string num1, string num2)
+    {
+        if (num1 == "0" || num2 == "0")
+        {
             return "0";
         }
 
         vector<int> res(num1.size() + num2.size(), 0);
 
-        for (int idex = num1.size() - 1; idex >= 0; --idex) {
-            for (int jdex = num2.size() - 1; jdex >= 0; --jdex) {
+        for (int idex = num1.size() - 1; idex >= 0; --idex)
+        {
+            for (int jdex = num2.size() - 1; jdex >= 0; --jdex)
+            {
                 // Multiple 2 number from right to left as multiple calculating
                 res[idex + jdex + 1] += (num1[idex] - '0') * (num2[jdex] - '0');
 
@@ -774,17 +777,34 @@ namespace leetcode
         string ans = "";
 
         // Removing 0 number on array
-        while(res[idex] == 0) {
+        while (res[idex] == 0)
+        {
             idex++;
         }
 
         // Concatenating strng
-        while (idex < res.size()) {
+        while (idex < res.size())
+        {
             ans += to_string(res[idex++]);
         }
 
         return ans;
     }
 
-    
+    bool increasingTriplet(vector<int> &nums)
+    {
+        int first = INT_MAX;
+        int second = INT_MAX;
+
+        for (const int num : nums) {
+            if (num <= first)
+                first = num;
+            else if (num <= second) // First < num <= second
+                second = num;
+            else
+                return true; // First < second < num (third)
+        }
+        
+        return false;
+    }
 }

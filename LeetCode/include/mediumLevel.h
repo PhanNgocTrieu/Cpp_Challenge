@@ -349,7 +349,7 @@ namespace leetcode
                 Input: nums = [5,7,7,8,8,10], target = 8
                 Output: [3,4]
         */
-        vector<int> searchRange(vector<int>& nums, int target);
+        vector<int> searchRange(vector<int> &nums, int target);
 
         /**
             Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
@@ -358,10 +358,36 @@ namespace leetcode
 
             You must write an algorithm with O(log n) runtime complexity.
         */
-        vector<int> searchRange(vector<int>& nums, int target);
+        vector<int> searchRange(vector<int> &nums, int target);
 
-
+        /**
+         * Given two non-negative integers num1 and num2 represented as strings,
+         * return the product of num1 and num2, also represented as a string.
+         *
+         * Note: You must not use any built-in BigInteger library or convert the inputs to integer directly.
+         * 
+         * Example:
+         *      Input: num1 = "56", num2 = "21"
+         *      Output: "1176"
+         */
         string multiply(string num1, string num2);
+
+        /**
+         * @brief 
+         * 
+         *          Given an integer array nums, 
+         *          return true if there exists a triple of indices (i, j, k) such that i < j < k and nums[i] < nums[j] < nums[k]. 
+         *          If no such indices exists, return false.
+         * 
+         *          Example 1:
+         *              Input: nums = [1,2,3,4,5]
+         *              Output: true
+         *          Explanation: Any triplet where i < j < k is valid.
+         * @param nums 
+         * @return true 
+         * @return false 
+         */
+        bool increasingTriplet(vector<int>& nums);
     };
 };
 
