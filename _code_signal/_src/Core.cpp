@@ -498,26 +498,25 @@ namespace codeSignalProblems
      *************************************************/
     int Core::SpringOfIntegration::runnersMeeting(vector<int> startPosition, vector<int> speed)
     {
-        map<tuple<int, int, int>, int> meetings;
-        int pairs{};
-        for (int i{1}; i < startPosition.size(); ++i)
-            for (int j{}; j < i; ++j)
-            {
-                int ds = startPosition[i] - startPosition[j];
-                int dv = speed[j] - speed[i];
-                if (ds * dv > 0)
-                {
-                    int g = gcd(ds, dv);
-                    ds = abs(ds / g);
-                    dv = abs(dv / g);
-                    pairs = max(pairs, ++meetings[tuple{
-                                           ds,
-                                           dv,
-                                           startPosition[i] * dv + speed[i] * ds}]);
-                }
-            }
-
-        return pairs ? (1 + sqrt(1 + 8 * pairs)) / 2 : -1;
+        // map<tuple<int, int, int>, int> meetings;
+        // int pairs{};
+        // for (int i{1}; i < startPosition.size(); ++i)
+        //     for (int j{}; j < i; ++j)
+        //     {
+        //         int ds = startPosition[i] - startPosition[j];
+        //         int dv = speed[j] - speed[i];
+        //         if (ds * dv > 0)
+        //         {
+        //             int g = gcd(ds, dv);
+        //             ds = abs(ds / g);
+        //             dv = abs(dv / g);
+        //             pairs = max(pairs, ++meetings[tuple{
+        //                                    ds,
+        //                                    dv,
+        //                                    startPosition[i] * dv + speed[i] * ds}]);
+        //         }
+        //     }
+        // return pairs ? (1 + sqrt(1 + 8 * pairs)) / 2 : -1;
     }
 
     int Core::SpringOfIntegration::arrayConversion(vector<int> inputArray)

@@ -6,10 +6,16 @@
 #include <vector>
 #include <math.h>
 #include <iostream>
+#include <string>
 #include <map>
+#include <set>
 #include <deque>
 #include <algorithm>
 #include <unordered_map>
 #include <numeric>
+#include <sstream>
+#include <functional>
+
+using namespace std;
 
 #endif
