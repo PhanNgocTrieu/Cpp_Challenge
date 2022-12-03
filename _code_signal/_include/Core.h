@@ -2025,7 +2025,8 @@ namespace codeSignalProblems
                 s1 --> a : 1 | b : 1 | c : 1 | d : 2
                 s2 --> a : 3 | b : 2 | c : 3 | d : 4
 
-                if we build first string of s1 from s2 => a : 2 | b : 1 | c : 2 | d : 2 => we can build the second one -s2--> a : 2 | b : 0 | c : 1 | d : 0
+                if we build first string of s1 from s2 => a : 2 | b : 1 | c : 2 | d : 2 
+                => we can build the second one -s2--> a : 2 | b : 0 | c : 1 | d : 0
 
                 ==> We can see that output of this problem is ---- min[a(s1)/a(s2);b(s1)/b(s2);c(s1)/c(s2);d(s1)/d(s2)]
                 from above example:
