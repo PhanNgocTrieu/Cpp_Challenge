@@ -1,7 +1,6 @@
 #ifndef __ARRAYPROBLEMS_H
 #define __ARRAYPROBLEMS_H
 
-
 #include <iostream>
 #include <vector>
 #include <map>
