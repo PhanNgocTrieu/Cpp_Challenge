@@ -211,4 +211,52 @@ namespace leetcode
 
         return result;
     }
+
+
+    ListNode* hardLevel::reverseKGroup(ListNode* head, int k) {
+        if (head == nullptr)
+        {
+            return new ListNode();
+        }
+
+        ListNode* result = new ListNode();
+        ListNode* ref_result = result;
+        stack<ListNode*> node_stack;
+        ListNode* temp_run = head;
+        int n = k;
+        
+        do {
+            // Pushing elements on stack
+            node_stack.push(temp_run);
+
+            // Reducing the number of k
+            n--;
+
+
+            // If node numbers == k then pushing into the result
+            if (n == 0)
+            {
+                // Travelling through the node_stack
+                while(!node_stack.empty()) {
+                    // Making new node on result list;
+                    ref_result->next = new ListNode(node_stack.top()->val);
+                    ref_result = ref_result->next;
+
+                    // Reference to the next elemet (for the rest of list when the list is not enough k elem)
+                    ref_result->next = temp_run->next;
+                    // Delete the node
+                    node_stack.pop();
+                }
+
+                // Reset k-group
+                n = k;
+            }
+
+            // next elem of head
+            temp_run = temp_run->next;
+        } while(temp_run != nullptr);
+        
+
+        return result->next;
+    }
 };

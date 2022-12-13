@@ -1067,7 +1067,7 @@ namespace codeSignalProblems
             string messageFromBinaryCode(string code)
             {
                 string res = "";
-                bitset<8> bit;
+                std::bitset<8> bit;
                 stringstream read(code);
                 while (read >> bit)
                 {
