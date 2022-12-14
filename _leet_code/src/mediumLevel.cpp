@@ -791,7 +791,7 @@ namespace leetcode
         return ans;
     }
 
-    bool increasingTriplet(vector<int> &nums)
+    bool mediumLevel::increasingTriplet(vector<int> &nums)
     {
         int first = INT_MAX;
         int second = INT_MAX;
@@ -806,5 +806,185 @@ namespace leetcode
         }
         
         return false;
+    }
+
+    /**
+     * @brief 
+     * 
+     * Input: board = 
+     *          [["5","3",".",".","7",".",".",".","."]
+     *          ,["6",".",".","1","9","5",".",".","."]
+     *          ,[".","9","8",".",".",".",".","6","."]
+     *          ,["8",".",".",".","6",".",".",".","3"]
+     *          ,["4",".",".","8",".","3",".",".","1"]
+     *          ,["7",".",".",".","2",".",".",".","6"]
+     *          ,[".","6",".",".",".",".","2","8","."]
+     *          ,[".",".",".","4","1","9",".",".","5"]
+     *          ,[".",".",".",".","8",".",".","7","9"]]
+     * 
+     * 
+     * Output: true
+     * 
+     */
+    bool isValidSudoku(vector<vector<char>>& board)
+    {
+        map<char, bool> map_sudoku;
+
+        // Checking every rows
+        for (int iRow = 0; iRow < 9; iRow++)
+        {
+            map_sudoku =
+            {
+                {'1', false},
+                {'2', false},
+                {'3', false},
+                {'4', false},
+                {'5', false},
+                {'6', false},
+                {'7', false},
+                {'8', false},
+                {'9', false},
+            };
+            for (int iCol = 0; iCol < 9; iCol++)
+            {
+                if (map_sudoku[board[iRow][iCol]] == true)
+                {
+                    return false;
+                }
+                // Making already when passing
+                if (board[iRow][iCol] != '.')
+                    map_sudoku[board[iRow][iCol]] = true;
+            }
+        }
+
+
+
+        // Checking every colums
+        for (int idex = 0; idex < 9; ++idex)
+        {
+            map_sudoku =
+            {
+                {'1', false},
+                {'2', false},
+                {'3', false},
+                {'4', false},
+                {'5', false},
+                {'6', false},
+                {'7', false},
+                {'8', false},
+                {'9', false},
+            };
+
+            for (int jdex = 0; jdex < 9; ++jdex)
+            {
+                if (map_sudoku[board[jdex][idex]] == true)
+                {
+                    return false;
+                }
+                
+                if (board[jdex][idex] != '.')
+                    map_sudoku[board[jdex][idex]] = true;
+            }
+        }
+
+        // Travelling a matrix of 3x3
+        int step = 0;
+        int size = 3;
+        do {
+
+            do {
+                // Checking the first matrix
+                map_sudoku =
+                {
+                    {'1', false},
+                    {'2', false},
+                    {'3', false},
+                    {'4', false},
+                    {'5', false},
+                    {'6', false},
+                    {'7', false},
+                    {'8', false},
+                    {'9', false},
+                };
+
+                for (int iRow = step; iRow < size; ++iRow)
+                {
+                    for (int iCol = 0; iCol < 3; ++iCol)
+                    {
+                        if (map_sudoku[board[iRow][iCol]] == true)
+                        {
+                            return false;
+                        }
+                        if (board[iRow][iCol] != '.')
+                            map_sudoku[board[iRow][iCol]] = true;
+                    }
+                }
+            } while (0);
+
+
+            do {
+                // Checking the second matrix
+                map_sudoku =
+                {
+                    {'1', false},
+                    {'2', false},
+                    {'3', false},
+                    {'4', false},
+                    {'5', false},
+                    {'6', false},
+                    {'7', false},
+                    {'8', false},
+                    {'9', false},
+                };
+
+                for (int iRow = step; iRow < size; ++iRow)
+                {
+                    for (int iCol = 3; iCol < 6; ++iCol)
+                    {
+                        if (map_sudoku[board[iRow][iCol]] == true)
+                        {
+                            return false;
+                        }
+                        if (board[iRow][iCol] != '.')
+                            map_sudoku[board[iRow][iCol]] = true;
+                    }
+                }
+            } while (0);
+
+            do {
+                // Checking the third matrix
+                map_sudoku =
+                {
+                    {'1', false},
+                    {'2', false},
+                    {'3', false},
+                    {'4', false},
+                    {'5', false},
+                    {'6', false},
+                    {'7', false},
+                    {'8', false},
+                    {'9', false},
+                };
+
+                for (int iRow = step; iRow < size; ++iRow)
+                {
+                    for (int iCol = 6; iCol < 9; ++iCol)
+                    {
+                        if (map_sudoku[board[iRow][iCol]] == true)
+                        {
+                            return false;
+                        }
+                        if (board[iRow][iCol] != '.')
+                            map_sudoku[board[iRow][iCol]] = true;
+                    }
+                }
+            }while (0);
+
+
+            step += 3;
+            size += 3;
+        }while (size <= 9);
+
+        return true;
     }
 }

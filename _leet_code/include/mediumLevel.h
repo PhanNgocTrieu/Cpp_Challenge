@@ -348,13 +348,6 @@ namespace leetcode
             Example:
                 Input: nums = [5,7,7,8,8,10], target = 8
                 Output: [3,4]
-        */
-        vector<int> searchRange(vector<int> &nums, int target);
-
-        /**
-            Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
-
-            If target is not found in the array, return [-1, -1].
 
             You must write an algorithm with O(log n) runtime complexity.
         */
@@ -388,6 +381,24 @@ namespace leetcode
          * @return false 
          */
         bool increasingTriplet(vector<int>& nums);
+
+        /**
+         * @brief 
+         * 
+         *      Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+         *      Each row must contain the digits 1-9 without repetition. 
+         *      Each column must contain the digits 1-9 without repetition.
+         *      Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+         * 
+         *      Note:
+         *          A Sudoku board (partially filled) could be valid but is not necessarily solvable.
+         *          Only the filled cells need to be validated according to the mentioned rules.
+         * 
+         * @param board 
+         * @return true 
+         * @return false 
+         */
+        bool isValidSudoku(vector<vector<char>>& board);
     };
 };
 
