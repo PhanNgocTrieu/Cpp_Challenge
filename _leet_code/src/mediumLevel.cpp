@@ -826,7 +826,7 @@ namespace leetcode
      * Output: true
      * 
      */
-    bool isValidSudoku(vector<vector<char>>& board)
+    bool mediumLevel::isValidSudoku(vector<vector<char>>& board)
     {
         map<char, bool> map_sudoku;
 
@@ -986,5 +986,44 @@ namespace leetcode
         }while (size <= 9);
 
         return true;
+    }
+
+
+    
+
+
+    ListNode* mediumLevel::detectCycle(ListNode *head) {
+        if (head == nullptr || head->next == nullptr)
+        {
+            return nullptr;
+        }
+
+        ListNode *faster = head;
+        ListNode *slower = head;
+        bool flag = false;
+        while (faster->next != nullptr && faster->next->next != nullptr)
+        {
+            faster = faster->next->next;
+            slower = slower->next;
+            if (faster == slower)
+            {
+                flag == true;
+                break;
+            }
+        }
+
+        if (!flag)
+        {
+            return false;
+        }
+
+        slower = head;
+        while (slower != faster)
+        {
+            slower = slower->next;
+            faster = faster->next;
+        }
+        
+        return slower;
     }
 }

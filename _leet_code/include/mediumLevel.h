@@ -399,6 +399,15 @@ namespace leetcode
          * @return false 
          */
         bool isValidSudoku(vector<vector<char>>& board);
+
+        
+        /**
+         * @brief 
+         * 
+         * @param head 
+         * @return ListNode* 
+         */
+        ListNode *detectCycle(ListNode *head);
     };
 };
 
