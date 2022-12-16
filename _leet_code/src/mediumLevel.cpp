@@ -796,7 +796,8 @@ namespace leetcode
         int first = INT_MAX;
         int second = INT_MAX;
 
-        for (const int num : nums) {
+        for (const int num : nums)
+        {
             if (num <= first)
                 first = num;
             else if (num <= second) // First < num <= second
@@ -804,14 +805,14 @@ namespace leetcode
             else
                 return true; // First < second < num (third)
         }
-        
+
         return false;
     }
 
     /**
-     * @brief 
-     * 
-     * Input: board = 
+     * @brief
+     *
+     * Input: board =
      *          [["5","3",".",".","7",".",".",".","."]
      *          ,["6",".",".","1","9","5",".",".","."]
      *          ,[".","9","8",".",".",".",".","6","."]
@@ -821,12 +822,12 @@ namespace leetcode
      *          ,[".","6",".",".",".",".","2","8","."]
      *          ,[".",".",".","4","1","9",".",".","5"]
      *          ,[".",".",".",".","8",".",".","7","9"]]
-     * 
-     * 
+     *
+     *
      * Output: true
-     * 
+     *
      */
-    bool mediumLevel::isValidSudoku(vector<vector<char>>& board)
+    bool mediumLevel::isValidSudoku(vector<vector<char>> &board)
     {
         map<char, bool> map_sudoku;
 
@@ -834,17 +835,17 @@ namespace leetcode
         for (int iRow = 0; iRow < 9; iRow++)
         {
             map_sudoku =
-            {
-                {'1', false},
-                {'2', false},
-                {'3', false},
-                {'4', false},
-                {'5', false},
-                {'6', false},
-                {'7', false},
-                {'8', false},
-                {'9', false},
-            };
+                {
+                    {'1', false},
+                    {'2', false},
+                    {'3', false},
+                    {'4', false},
+                    {'5', false},
+                    {'6', false},
+                    {'7', false},
+                    {'8', false},
+                    {'9', false},
+                };
             for (int iCol = 0; iCol < 9; iCol++)
             {
                 if (map_sudoku[board[iRow][iCol]] == true)
@@ -857,44 +858,10 @@ namespace leetcode
             }
         }
 
-
-
         // Checking every colums
         for (int idex = 0; idex < 9; ++idex)
         {
             map_sudoku =
-            {
-                {'1', false},
-                {'2', false},
-                {'3', false},
-                {'4', false},
-                {'5', false},
-                {'6', false},
-                {'7', false},
-                {'8', false},
-                {'9', false},
-            };
-
-            for (int jdex = 0; jdex < 9; ++jdex)
-            {
-                if (map_sudoku[board[jdex][idex]] == true)
-                {
-                    return false;
-                }
-                
-                if (board[jdex][idex] != '.')
-                    map_sudoku[board[jdex][idex]] = true;
-            }
-        }
-
-        // Travelling a matrix of 3x3
-        int step = 0;
-        int size = 3;
-        do {
-
-            do {
-                // Checking the first matrix
-                map_sudoku =
                 {
                     {'1', false},
                     {'2', false},
@@ -906,6 +873,40 @@ namespace leetcode
                     {'8', false},
                     {'9', false},
                 };
+
+            for (int jdex = 0; jdex < 9; ++jdex)
+            {
+                if (map_sudoku[board[jdex][idex]] == true)
+                {
+                    return false;
+                }
+
+                if (board[jdex][idex] != '.')
+                    map_sudoku[board[jdex][idex]] = true;
+            }
+        }
+
+        // Travelling a matrix of 3x3
+        int step = 0;
+        int size = 3;
+        do
+        {
+
+            do
+            {
+                // Checking the first matrix
+                map_sudoku =
+                    {
+                        {'1', false},
+                        {'2', false},
+                        {'3', false},
+                        {'4', false},
+                        {'5', false},
+                        {'6', false},
+                        {'7', false},
+                        {'8', false},
+                        {'9', false},
+                    };
 
                 for (int iRow = step; iRow < size; ++iRow)
                 {
@@ -921,21 +922,21 @@ namespace leetcode
                 }
             } while (0);
 
-
-            do {
+            do
+            {
                 // Checking the second matrix
                 map_sudoku =
-                {
-                    {'1', false},
-                    {'2', false},
-                    {'3', false},
-                    {'4', false},
-                    {'5', false},
-                    {'6', false},
-                    {'7', false},
-                    {'8', false},
-                    {'9', false},
-                };
+                    {
+                        {'1', false},
+                        {'2', false},
+                        {'3', false},
+                        {'4', false},
+                        {'5', false},
+                        {'6', false},
+                        {'7', false},
+                        {'8', false},
+                        {'9', false},
+                    };
 
                 for (int iRow = step; iRow < size; ++iRow)
                 {
@@ -951,20 +952,21 @@ namespace leetcode
                 }
             } while (0);
 
-            do {
+            do
+            {
                 // Checking the third matrix
                 map_sudoku =
-                {
-                    {'1', false},
-                    {'2', false},
-                    {'3', false},
-                    {'4', false},
-                    {'5', false},
-                    {'6', false},
-                    {'7', false},
-                    {'8', false},
-                    {'9', false},
-                };
+                    {
+                        {'1', false},
+                        {'2', false},
+                        {'3', false},
+                        {'4', false},
+                        {'5', false},
+                        {'6', false},
+                        {'7', false},
+                        {'8', false},
+                        {'9', false},
+                    };
 
                 for (int iRow = step; iRow < size; ++iRow)
                 {
@@ -978,52 +980,36 @@ namespace leetcode
                             map_sudoku[board[iRow][iCol]] = true;
                     }
                 }
-            }while (0);
-
+            } while (0);
 
             step += 3;
             size += 3;
-        }while (size <= 9);
+        } while (size <= 9);
 
         return true;
     }
 
-
-    
-
-
-    ListNode* mediumLevel::detectCycle(ListNode *head) {
+    ListNode *mediumLevel::detectCycle(ListNode *head)
+    {
         if (head == nullptr || head->next == nullptr)
-        {
             return nullptr;
-        }
-
-        ListNode *faster = head;
-        ListNode *slower = head;
-        bool flag = false;
-        while (faster->next != nullptr && faster->next->next != nullptr)
+        ListNode *fast = head, *slow = head;
+        while (fast && fast->next)
         {
-            faster = faster->next->next;
-            slower = slower->next;
-            if (faster == slower)
+            fast = fast->next->next;
+            slow = slow->next;
+            if (fast == slow)
             {
-                flag == true;
-                break;
+                fast = head;
+                // Findind the node that the tail point to from the head
+                while (fast != slow)
+                {
+                    fast = fast->next;
+                    slow = slow->next;
+                }
+                return fast;
             }
         }
-
-        if (!flag)
-        {
-            return false;
-        }
-
-        slower = head;
-        while (slower != faster)
-        {
-            slower = slower->next;
-            faster = faster->next;
-        }
-        
-        return slower;
+        return nullptr;
     }
 }

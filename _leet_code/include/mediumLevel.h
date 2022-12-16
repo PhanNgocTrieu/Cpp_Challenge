@@ -400,7 +400,6 @@ namespace leetcode
          */
         bool isValidSudoku(vector<vector<char>>& board);
 
-        
         /**
          * @brief 
          * 
