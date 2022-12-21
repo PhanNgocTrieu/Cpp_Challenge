@@ -382,6 +382,31 @@ namespace leetcode
          * @return false 
          */
         bool hasCycle(ListNode *head);
+
+
+        /**
+         * Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. 
+         * If the two linked lists have no intersection at all, return null.
+         * 
+         * The intersected node is the node that two list point to the same location in memory
+        */
+        ListNode *getIntersectionNode(ListNode *headA, ListNode *headB);
+
+        /**
+         * @brief Given an integer columnNumber, return its corresponding column title as it appears in an Excel sheet.
+         * 
+         *  Example:
+         *      A   ->  1
+         *      B   ->  2
+         *      C   ->  3
+         *      .....
+         *      Z   ->  26
+         *      AA  ->  27
+         * 
+         * @param columnNumber 
+         * @return string 
+         */
+        string convertToTitle(int columnNumber);
     };
 };
 

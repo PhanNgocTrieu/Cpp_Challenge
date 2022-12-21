@@ -559,4 +559,57 @@ namespace leetcode
         // return false;
     }
 
+
+    ListNode *easyLevel::getIntersectionNode(ListNode *headA, ListNode *headB) {
+        
+        if (headA == nullptr || headB == nullptr)
+        {
+            return nullptr;
+        }
+
+        map<ListNode*, bool> mem_mapping;
+
+        ListNode* temp = headA;
+        while (temp != nullptr)
+        {
+            mem_mapping[temp] = true;
+            temp = temp->next;
+        }
+
+        temp = headB;
+        while (temp != nullptr)
+        {
+            if (mem_mapping.find(temp) != mem_mapping.end())
+            {
+                return temp;
+            }
+            temp = temp->next;
+        }
+        return nullptr;
+    }
+
+
+
+    string reverse(string s){
+        int l=0 ;
+        int h=s.length()-1 ;
+        while(l<h){
+            swap(s[l],s[h]) ;
+            l++ ;
+            h-- ;
+        }
+        return s ;
+    }
+
+    string easyLevel::convertToTitle(int columnNumber)
+    {
+        string  s="" ;
+        while(columnNumber>0)
+        {
+            char letter=(columnNumber-1) % 26+'A' ;
+            s.push_back(letter);
+            columnNumber=(columnNumber-1)/26 ;
+        }        
+        return reverse(s);
+    }
 };
