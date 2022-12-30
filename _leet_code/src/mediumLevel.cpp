@@ -1012,4 +1012,51 @@ namespace leetcode
         }
         return nullptr;
     }
+
+    bool checking_word(const string& ref, const string& word)
+    {
+        if (ref.length() != word.length())
+        {
+            return false;
+        }
+        
+        sort(ref.begin(),ref.end());
+        sort(word.begin(),word.end());
+        char * letter_find = &((char)ref[0]);
+        char * letter_dest = &((char)word[0]);
+
+        do {
+            if (*letter_dest != *letter_find)
+            {
+                return false;
+            }
+
+            if (letter_dest == nullptr)
+            {
+                break;
+            }
+
+            letter_dest++;
+            letter_find++;
+
+        } while (1);
+
+        return true;
+    }       
+
+    vector<vector<string>> mediumLevel::groupAnagrams(vector<string>& strs)
+    {
+        vector<vector<string>> result;
+
+        if (strs.empty())
+        {
+            return result;
+        }
+
+        for (auto& word : strs)
+        {
+        }
+        
+        return result;
+    }
 }
