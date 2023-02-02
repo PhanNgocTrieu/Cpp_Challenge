@@ -441,6 +441,43 @@ namespace leetcode
         return ans.substr(0, ans.size() - 1);
     }
 
+
+    bool checkTarget(TreeNode *root, int target, int &result)
+    {
+        if (root == nullptr)
+        {
+            return false;
+        }
+        result += root->val;
+        std::cout << "Cur node: " << root->val << " - result: " << result << std::endl;
+        if (result == target && root->left == nullptr && root->right == nullptr)
+        {
+            return true;
+        }
+
+        std::cout << "Calling left! -> ";
+        if (checkTarget(root->left, target, result))
+        {
+            return true;
+        }
+        else
+        {
+            result -= root->left ? root->left->val : 0;
+        }
+        std::cout << std::endl;
+        std::cout << "Calling right! -> ";
+        if (checkTarget(root->right, target, result))
+        {
+            return true;
+        }
+        else
+        {
+            result -= root->right ? root->right->val : 0;
+        }
+        std::cout << std::endl;
+        return false;
+    }
+
     /**
      * @brief
      *

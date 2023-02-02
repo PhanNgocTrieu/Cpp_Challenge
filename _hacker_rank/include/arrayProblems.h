@@ -21,7 +21,7 @@ class ArrayProblems
          * Note: If you've already solved our C++ domain's Arrays Introduction challenge, you may want to skip this.
          * Example:
          *  Arr = [1,2,3]
-         * Return: ơ3,2,1]
+         * Return: [3,2,1]
          * 
          * Function Description
          * Complete the function reverseArray in the editor below. reverseArray has the following parameter(s):

@@ -418,6 +418,14 @@ namespace leetcode
          *
          */
         vector<vector<string>> groupAnagrams(vector<string>& strs);
+
+        /**
+         * @brief 
+         * 
+         * @param n 
+         * @return string 
+         */
+        string countAndSay(int n);
     };
 };
 

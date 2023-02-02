@@ -1013,36 +1013,36 @@ namespace leetcode
         return nullptr;
     }
 
-    bool checking_word(const string& ref, const string& word)
-    {
-        if (ref.length() != word.length())
-        {
-            return false;
-        }
+    // bool checking_word(const string& ref, const string& word)
+    // {
+    //     if (ref.length() != word.length())
+    //     {
+    //         return false;
+    //     }
         
-        sort(ref.begin(),ref.end());
-        sort(word.begin(),word.end());
-        char * letter_find = &((char)ref[0]);
-        char * letter_dest = &((char)word[0]);
+    //     sort(ref.begin(),ref.end());
+    //     sort(word.begin(),word.end());
+    //     char * letter_find = &((char)ref[0]);
+    //     char * letter_dest = &((char)word[0]);
 
-        do {
-            if (*letter_dest != *letter_find)
-            {
-                return false;
-            }
+    //     do {
+    //         if (*letter_dest != *letter_find)
+    //         {
+    //             return false;
+    //         }
 
-            if (letter_dest == nullptr)
-            {
-                break;
-            }
+    //         if (letter_dest == nullptr)
+    //         {
+    //             break;
+    //         }
 
-            letter_dest++;
-            letter_find++;
+    //         letter_dest++;
+    //         letter_find++;
 
-        } while (1);
+    //     } while (1);
 
-        return true;
-    }       
+    //     return true;
+    // }       
 
     vector<vector<string>> mediumLevel::groupAnagrams(vector<string>& strs)
     {
@@ -1058,5 +1058,50 @@ namespace leetcode
         }
         
         return result;
+    }
+
+    std::string transform(std::string s) {
+        // First character
+        char curr = s[0];
+        // frequency
+        int curr_freq = 1;
+
+        // Result
+        string ans = "";
+
+        for (int i = 1; i < s.length(); ++i) {
+            // Checking sequence of character
+            if (s[i] == curr) {
+                curr_freq++;
+            }
+            else {
+                // Concatenating string with number of digit
+                ans += (char)(curr_freq + '0');
+                // Concatenating string with digit
+                ans += (char)(curr);
+
+                // Set the new digit and reset frequency
+                curr = s[i];
+                curr_freq = 1;
+            }
+        }
+        
+        /*
+            Adding the number of digit and digital number while exit loop
+            Because when catching the condition they did not add it yet.
+        */
+
+        // Concatenating string with number of digit
+        ans += (char)(curr_freq + '0');
+        // Concatenating string with digit
+        ans += (char)(curr);
+        return ans;
+    }
+
+    std::string mediumLevel::countAndSay(int n) {
+        if (n == 1) {
+            return "1";
+        }
+        return transform(countAndSay(n - 1));
     }
 }

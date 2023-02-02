@@ -1,6 +1,3 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(CODESIGNAL VERSION 0.1.0)
-
 include_directories(_include)
 
 set(CODESIGNAL_HDR  _include/Intro.h
@@ -9,7 +6,6 @@ set(CODESIGNAL_HDR  _include/Intro.h
 )
 
 set(CODESIGNAL_SRC  _src/Core.cpp
-
 )
 
 # After setting we need to generate the library by this below command
