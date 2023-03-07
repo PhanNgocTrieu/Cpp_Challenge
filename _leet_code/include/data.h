@@ -24,7 +24,7 @@ struct Combination{
 };
 
 /**
-* @brief A definition of a tree
+* @brief A definition of a tree 
 * 
 */
 struct TreeNode {

@@ -15,7 +15,6 @@
 #include <numeric>
 #include <sstream>
 #include <functional>
-#include <bit>
 #include <bitset>
 #include <regex>
 #include <memory>

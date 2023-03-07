@@ -1104,4 +1104,30 @@ namespace leetcode
         }
         return transform(countAndSay(n - 1));
     }
+
+    bool checkingPath(TreeNode* root, int targetSum, std::vector<int>& vector) {
+        if (root == nullptr) {
+            false;
+        }
+
+        if (root->val > targetSum) {
+            false;
+        }
+        else if (root->val == targetSum) {
+            if (root->left == nullptr && root->right == nullptr) {
+                return true;
+            }
+        }
+
+        vector.push_back(root->val);
+        bool res;
+        res = checkingPath(root->left, targetSum - root->val, vector);
+        res = checkingPath(root->right, targetSum - root->val, vector);
+        
+        return res;
+    }
+
+    vector<vector<int>> mediumLevel::pathSum(TreeNode* root, int targetSum) {
+        
+    }
 }

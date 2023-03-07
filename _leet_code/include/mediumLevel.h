@@ -426,6 +426,18 @@ namespace leetcode
          * @return string 
          */
         string countAndSay(int n);
+
+        /**
+         * @brief 
+         *          Given the root of a binary tree and an integer targetSum, 
+         *          return all root-to-leaf paths where the sum of the node values in the path equals targetSum. 
+         *          Each path should be returned as a list of the node values, not node references.
+         * 
+         * @param root the root of tree
+         * @param targetSum the target 
+         * @return vector<vector<int>> Array of paths
+         */
+        vector<vector<int>> pathSum(TreeNode* root, int targetSum);
     };
 };
 
