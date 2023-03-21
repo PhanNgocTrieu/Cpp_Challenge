@@ -565,6 +565,10 @@ namespace codeSignalProblems
             int seatsInTheater(int nCols, int nRows, int col, int row);
         };
 
+        /**
+         * @brief 
+         * 
+         */
         struct SpringOfIntegration
         {
             /**
@@ -2065,6 +2069,88 @@ namespace codeSignalProblems
                 }
                 std::cout << "\n";
                 return min;
+            }
+
+            /**
+             * @brief 
+             *      It's Christmas time! To share his Christmas spirit with all his friends, 
+             *      the young Christmas Elf decided to send each of them a Christmas e-mail with a nice Christmas tree. 
+             *      Unfortunately, Internet traffic is very expensive in the North Pole, 
+             *      so instead of sending an actual image he got creative and drew the tree using nothing but asterisks ('*' symbols). 
+             *      He has given you the specs (see below) and your task is to write a program that will generate trees following the spec and some initial parameters.
+             * 
+             *      Each tree has a crown as follows:
+             *              *
+             *              *
+             *            * * *
+             * 
+             *      Define a line as a horizontal group of asterisks and a level as a collection of levelHeight lines stacked one on top of the other.
+             *      
+             *      Below the crown there are levelNum levels.
+             *      The tree is perfectly symmetrical so all the middle asterisks of the lines lie on the center of the tree.
+             *      Each line of the same level (excluding the first one) has two more asterisks than the previous one (one added to each end);
+             *      The number of asterisks in the first line of each level is chosen as follows:
+             *          the first line of the first level has 5 asterisks;
+             *          the first line of each consecutive level contains two more asterisks than the first line of the previous level.
+             *      
+             *      And finally there is the tree foot which has a height of levelNum and a width of:
+             *          levelHeight asterisks if levelHeight is odd;
+             *          levelHeight + 1 asterisks if levelHeight is even.
+             *  
+             * @param levelNum the level number of tree
+             * @param levelHeight the height of level
+             * @return vector<string> return the christmas tree
+             */
+            vector<string> solution(int levelNum, int levelHeight) {
+                int start = 5;
+                int levelTemp = 1;
+                vector<string> result;
+                // Making header
+                do {
+                    std::string space = std::string(levelHeight + levelNum ,' ');
+                    result.push_back(space +  "*");
+                    result.push_back(space +  "*");
+                    space = std::string(levelHeight + levelNum - 1,' ');
+                    result.push_back(space +  "***");
+                } while (0);
+
+                // Making body
+                int remain = levelNum;                      // Checking how many level we will build
+                do {
+                    int temp = start;                               // Starting with the value of 5 asterisks 
+                    int tempspace = levelHeight - 1;                // Temspace is the spacing for building line
+                    for (int i = 0; i < levelHeight; ++i) {    
+                        std::string space = std::string(tempspace + remain - 1, ' ');
+                        std::string stuff(temp, '*');      // start of the level of body
+                        std::cout << "space + stuff: " << space + stuff << std::endl;
+                        result.push_back(space + stuff);
+
+                        temp += 2;
+                        tempspace--;
+
+                    }
+                    start += 2;
+                    levelTemp++;
+                    remain--;
+                } while (levelTemp <= levelNum);
+                
+
+                // Making footer
+                if (levelHeight % 2 == 0) {
+                    for (int i = 0; i < levelNum; ++i) {
+                        std::string spacing(levelHeight, ' ');
+                        std::string stuff(levelHeight + 1, '*');
+                        result.push_back(spacing + stuff);
+                    }
+                }
+                else {
+                    for (int i = 0; i < levelNum; ++i) {
+                        std::string spacing(levelHeight, ' ');
+                        std::string stuff(levelHeight, '*');
+                        result.push_back(spacing + stuff);
+                    }
+                }
+                return result;
             }
         };
     };

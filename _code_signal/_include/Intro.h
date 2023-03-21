@@ -42,7 +42,6 @@ namespace codeSignalProblems
                     return true;
                 }
                 // in the sub-Diagonal
-
                 Pos_Bishop = (int)(bishop[0] - bishop[1]);
                 Pos_Pawn = (int)(pawn[0] - pawn[1]);
                 if (Pos_Bishop == Pos_Pawn)
