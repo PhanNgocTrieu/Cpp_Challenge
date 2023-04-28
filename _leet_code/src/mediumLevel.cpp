@@ -1055,7 +1055,9 @@ namespace leetcode
 
         for (auto& word : strs)
         {
+            std::cout << word << " ";
         }
+        std::cout << std::endl;
         
         return result;
     }
@@ -1107,11 +1109,11 @@ namespace leetcode
 
     bool checkingPath(TreeNode* root, int targetSum, std::vector<int>& vector) {
         if (root == nullptr) {
-            false;
+            return false;
         }
 
         if (root->val > targetSum) {
-            false;
+            return false;
         }
         else if (root->val == targetSum) {
             if (root->left == nullptr && root->right == nullptr) {
@@ -1128,6 +1130,52 @@ namespace leetcode
     }
 
     vector<vector<int>> mediumLevel::pathSum(TreeNode* root, int targetSum) {
-        
+        return vector<vector<int>>();
+    }
+
+    // With the size of nums is 3 -> we have number is 3! + 1 = 7
+    // With the empty in the 
+    vector<vector<int>> mediumLevel::subsets(vector<int>& nums) {
+        // creating the vector of result which contains the empty vector<int> firstly
+        vector<vector<int>> result{vector<int>()};
+        if (nums.size() == 0) {
+            result;
+        }
+
+        // Firstly, We will take for the size of nums into the result
+        for (int i = 0; i < nums.size(); ++i) {
+            // Creating the vector with the main element in nums
+            vector<int> temp{nums[i]};
+            // Pushing itself into the container
+            result.push_back(temp);
+
+            // Creating the previous container keeping
+            vector<int> keepCtn = temp;
+
+            // Loop from the next element until the end.
+            for (int j = i + 1; j < nums.size(); ++j) {
+                // Getting the prev container
+                vector<int> insideTemp = keepCtn;
+
+                if (std::find(result.begin(), result.end(), nums[j]) == result.end()) {
+                    result.push_back(nums)
+                }
+
+                // Pushing the new container which contains the previous container and new value
+                insideTemp.push_back(nums[j]);
+
+                // Pushing the new container into the result container
+                result.push_back(insideTemp);
+
+                // Changing the previous container keeper
+                keepCtn = insideTemp;
+            }
+
+        }
+
+        // Pushing lastly items;
+        result.push_back(nums);
+
+        return result;
     }
 }
