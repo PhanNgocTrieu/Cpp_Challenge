@@ -1133,49 +1133,125 @@ namespace leetcode
         return vector<vector<int>>();
     }
 
-    // With the size of nums is 3 -> we have number is 3! + 1 = 7
-    // With the empty in the 
+    
+    /**
+     *  [1,2,3]
+     *      [{}]
+     *      [{},{1}]
+     *      [{},{1},{1,2},{2}]
+     *      [{},{1},{1,2},{2}] + {3}
+     *      [{},{1},{1,2},{2},{1,3},{1,2,3},{2,3},{3}]
+    */
     vector<vector<int>> mediumLevel::subsets(vector<int>& nums) {
         // creating the vector of result which contains the empty vector<int> firstly
-        vector<vector<int>> result{vector<int>()};
-        if (nums.size() == 0) {
-            result;
+        vector<vector<int>> result{vector<int>{}};
+        // In constrains: nums.length > 0
+        result.push_back(vector<int>{nums[0]});
+        int size = nums.size();
+        for (int i = 1; i < size; ++i) {
+            int getVal = nums[i];
+            int size_of_result = result.size();
+            for (int j = 1; j < size_of_result; ++j) {
+                vector<int> temp = result[j];
+                temp.push_back(getVal);
+                result.push_back(temp);
+            }
+            result.push_back(vector<int>{nums[i]});
         }
+        return result;
+    }
 
-        // Firstly, We will take for the size of nums into the result
-        for (int i = 0; i < nums.size(); ++i) {
-            // Creating the vector with the main element in nums
-            vector<int> temp{nums[i]};
-            // Pushing itself into the container
-            result.push_back(temp);
-
-            // Creating the previous container keeping
-            vector<int> keepCtn = temp;
-
-            // Loop from the next element until the end.
-            for (int j = i + 1; j < nums.size(); ++j) {
-                // Getting the prev container
-                vector<int> insideTemp = keepCtn;
-
-                if (std::find(result.begin(), result.end(), nums[j]) == result.end()) {
-                    result.push_back(nums)
+    vector<vector<int>> mediumLevel::subsetsWithDup(vector<int>& nums) {
+        vector<vector<int>> result{vector<int>{}};
+        result.push_back(vector<int>{nums[0]});
+        
+        int size = nums.size();
+        for (int i = 1; i < size; ++i) {
+            int getVal = nums[i];
+            int size_of_result = result.size();
+            for (int j = 1; j < size_of_result; ++j) {
+                vector<int> temp = result[j];
+                temp.push_back(getVal);
+                if (!isFoundOnVec2D(result, temp)) {
+                    result.push_back(temp); 
                 }
+            }
+            vector<int>temp{nums[i]};
+            if (!isFoundOnVec2D(result, temp)) {
+                result.push_back(temp);
+            }
+        }
+        return result;
+    }
 
-                // Pushing the new container which contains the previous container and new value
-                insideTemp.push_back(nums[j]);
+    unordered_map<char, int> templateMapping(string container) {
+        unordered_map<char, int> map;
+        for (auto elem : container) {
+            map[elem]++;
+        }
+        return map;
+    }
 
-                // Pushing the new container into the result container
-                result.push_back(insideTemp);
+    bool isContain(string word, string subword) {
+        auto word_mapping = templateMapping(word);
+        auto subword_mapping = templateMapping(subword);
+        for (auto itr = subword_mapping.begin(); itr != subword_mapping.end(); itr++) {
+            if (word_mapping[itr->first] < itr->second)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 
-                // Changing the previous container keeper
-                keepCtn = insideTemp;
+    unordered_map<char, int> mapping(const string input) {
+        unordered_map<char, int> map;
+        for (auto c : input) {
+            map[c]++;
+        }
+        return map;
+    }
+
+    /**
+     *  input:
+     *      word1: ["amazon","apple","facebook","google","leetcode"]
+     *      word2: ["el", "eo"]
+     *      
+     *          map[amazon] :
+     *              -> map[el] -> false
+     *                  break;
+     *          map[apple]:
+     *              -> map["el"] -> true
+     *              -> map["el"] -> false
+     *                  break;
+     *          map[]
+     * 
+     * 
+    */
+    vector<string> mediumLevel::wordSubsets(const vector<string>& words1,const vector<string>& words2) {
+        vector<string>res;
+        vector<int>hash1(26,0);
+
+        for(int i=0;i<words2.size();i++){
+            vector<int>temp(26,0);
+            for(int j=0;j<words2[i].length();j++){
+                temp[words2[i][j]-97]++;
             }
 
+            for(int j=0;j<26;j++){
+                hash1[j]=max(hash1[j],temp[j]);
+            }
+        } 
+        
+
+        for(int i=0;i<words1.size();i++){
+            vector<int>hash2(26,0);
+            string temp=words1[i];
+            for(int j=0;j<temp.length();j++){
+                hash2[temp[j]-97]++;
+            }
+            if(isSame(hash1,hash2))res.push_back(temp);
         }
-
-        // Pushing lastly items;
-        result.push_back(nums);
-
-        return result;
+        return res;
     }
 }

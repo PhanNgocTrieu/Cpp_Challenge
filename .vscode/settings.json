@@ -95,6 +95,23 @@
         "valarray": "cpp",
         "variant": "cpp",
         "source_location": "cpp",
-        "*.ipp": "cpp"
+        "*.ipp": "cpp",
+        "__hash_table": "cpp",
+        "__tree": "cpp",
+        "queue": "cpp",
+        "__config": "cpp",
+        "__bit_reference": "cpp",
+        "__bits": "cpp",
+        "__debug": "cpp",
+        "__errc": "cpp",
+        "__locale": "cpp",
+        "__mutex_base": "cpp",
+        "__node_handle": "cpp",
+        "__split_buffer": "cpp",
+        "__threading_support": "cpp",
+        "__tuple": "cpp",
+        "__verbose_abort": "cpp",
+        "__nullptr": "cpp",
+        "__string": "cpp"
     }
 }

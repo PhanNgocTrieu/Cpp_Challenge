@@ -8,13 +8,25 @@ namespace leetcode
 
     class mediumLevel
     {
+    
+    public:
+        enum VAR_TYPE{
+            CHAR    =   0,
+            INT,
+            LONG,
+            LONGLONG,
+            FLOAT,
+            DOUBLE,
+            STRING
+        };
+
     public:
         /**
          * **********************************************************************************
          *                       @brief Problems of Medium Levels                           *
          * **********************************************************************************
          */
-    public:
+
         /*
             Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
@@ -48,39 +60,37 @@ namespace leetcode
         bool isValid(string s);
 
         /*
-        Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.
+            Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.
 
-        The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the frequency of at least one of the chosen numbers is different.
+            The same number may be chosen from candidates an unlimited number of times. Two combinations are unique if the frequency of at least one of the chosen numbers is different.
 
-        It is guaranteed that the number of unique combinations that sum up to target is less than 150 combinations for the given input.
+            It is guaranteed that the number of unique combinations that sum up to target is less than 150 combinations for the given input.
 
-        Example 1:
+            Example 1:
 
-        Input: candidates = [2,3,6,7], target = 7
-        Output: [[2,2,3],[7]]
-        Explanation:
-        2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.
-        7 is a candidate, and 7 = 7.
-        These are the only two combinations.
-        Example 2:
+            Input: candidates = [2,3,6,7], target = 7
+            Output: [[2,2,3],[7]]
+            Explanation:
+            2 and 3 are candidates, and 2 + 2 + 3 = 7. Note that 2 can be used multiple times.
+            7 is a candidate, and 7 = 7.
+            These are the only two combinations.
+            Example 2:
 
-        Input: candidates = [2,3,5], target = 8
-        Output: [[2,2,2,2],[2,3,3],[3,5]]
-        Example 3:
+            Input: candidates = [2,3,5], target = 8
+            Output: [[2,2,2,2],[2,3,3],[3,5]]
+            Example 3:
 
-        Input: candidates = [2], target = 1
-        Output: []
-        Example 4:
+            Input: candidates = [2], target = 1
+            Output: []
+            Example 4:
 
-        Input: candidates = [1], target = 1
-        Output: [[1]]
-        Example 5:
+            Input: candidates = [1], target = 1
+            Output: [[1]]
+            Example 5:
 
-        Input: candidates = [1], target = 2
-        Output: [[1,1]]
+            Input: candidates = [1], target = 2
+            Output: [[1,1]]
         */
-
-        // using stack - we can use queue (but we have to implement it!)
         vector<vector<int>> combinationSum(vector<int> &candidates, int target);
 
         /*
@@ -451,7 +461,59 @@ namespace leetcode
          * @return vector<vector<int>> 
          */
         vector<vector<int>> subsets(vector<int>& nums);
+
+        /**
+         * @brief
+         *          This problems is the same of subests problems
+         *          but making sure that no duplicated caser in output
+        */
+        vector<vector<int>> subsetsWithDup(vector<int>& nums);
+
+        /**
+         * @brief
+         *          You are given two string arrays words1 and words2.
+         *          A string b is a subset of string a if every letter in b occurs in a including multiplicity.
+         * 
+         *          For example, "wrr" is a subset of "warrior" but is not a subset of "world".
+         *      
+         *          A string a from words1 is universal if for every string b in words2, b is a subset of a.
+         *          Return an array of all the universal strings in words1. You may return the answer in any order.
+        */
+        vector<string> wordSubsets(const vector<string>& words1, const vector<string>& words2);
+        
+    private:
+        /* ===================== These functions for supporting ============================= */
+        std::unordered_map<int, int> getMapping(const std::vector<int>& vec) {
+            std::unordered_map<int, int> res;
+            for (auto elem : vec) {
+                res[elem]++;
+            }
+            return res;
+        }
+
+        bool isFoundOnVec2D(const std::vector<vector<int>>& vec2D,
+                            const std::vector<int>& vec)
+        {   
+            for (auto elem : vec2D) {
+                if (elem.size() == vec.size()) {    
+                    std::unordered_map<int, int> firMap = getMapping(elem);
+                    std::unordered_map<int, int> secMap = getMapping(vec);
+                    if (firMap == secMap) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        
+        bool isSame(vector<int>h1,vector<int>h2){
+            for(int i=0;i<26;i++){
+                if(h1[i]>h2[i])return false;
+            }
+            return true;
+        }
     };
+
 };
 
 #endif // _MEDIUM_LEETCODE_H_
