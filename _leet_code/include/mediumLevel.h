@@ -480,6 +480,36 @@ namespace leetcode
          *          Return an array of all the universal strings in words1. You may return the answer in any order.
         */
         vector<string> wordSubsets(const vector<string>& words1, const vector<string>& words2);
+
+        /**
+         * @brief 
+         *      Given a string path, which is an absolute path (starting with a slash '/') to a file or directory in a Unix-style file system, convert it to the simplified canonical path.
+         *      In a Unix-style file system, a period '.' refers to the current directory, a double period '..' refers to the directory up a level, and any multiple consecutive slashes (i.e. '//') are treated as a single slash '/'. 
+         *      For this problem, any other format of periods such as '...' are treated as file/directory names.
+         * 
+         *      The canonical path should have the following format:
+         *          The path starts with a single slash '/'.
+         *          Any two directories are separated by a single slash '/'.
+         *          The path does not end with a trailing '/'.
+         *          The path only contains the directories on the path from the root directory to the target file or directory (i.e., no period '.' or double period '..')
+         * 
+         *      Return the simplified canonical path.
+         * 
+         * @example:
+         *      ---------
+         *      @param Input: path = "/home/"
+         *      @param Output: "/home"
+         *      ---------
+         *      @param Input: path = "/../"
+         *      @param Output: "/"
+         *      ---------
+         *      @param Input: "/home//foo/"
+         *      @param Output: "/home/foo"
+         * 
+         * @param path the input path which was provided
+         * @return std::string the result after involked the command as the path
+         */
+        std::string simplifyPath(std::string path);
         
     private:
         /* ===================== These functions for supporting ============================= */
@@ -511,6 +541,42 @@ namespace leetcode
                 if(h1[i]>h2[i])return false;
             }
             return true;
+        }
+
+        vector<string> split(string path, char lim) {
+            vector<string> res;
+            string temp = "";
+            for (char c : path) {
+                do {
+                    if (c == lim) {
+                        if (temp == "") {
+                            break;
+                        }
+                        res.push_back(temp);
+                        temp = "";
+                        break;
+                    }
+                    temp += c;
+                } while (0);
+            }
+            if (temp != "") {
+                res.push_back(temp);
+            }
+            return res;
+        }
+
+        std::string remove(std::string& str) {
+            bool nextReturn = false;
+            while (1) {
+                if (str[str.length() - 1] == '/') {
+                    if (nextReturn) {
+                        break;
+                    }
+                    nextReturn = true;
+                }
+                str.erase(str.length() - 1);
+            }
+            return str;
         }
     };
 

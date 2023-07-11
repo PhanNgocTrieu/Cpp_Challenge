@@ -4,7 +4,8 @@
 
 using namespace leetcode;
 
-void reallocated(void * temp) {
+template <class _Ty>
+void reallocated(_Ty * temp) {
     if (temp) {
         delete temp;
         temp = nullptr;
@@ -17,11 +18,8 @@ int main()
     leetcode::mediumLevel* mediumlevelController = new mediumLevel();
     leetcode::hardLevel* hardlevelController = new hardLevel();
 
-    std::vector<int> input = {1,2,3};
-    auto getVal = mediumlevelController->wordSubsets(
-        vector<string>{"amazon","apple","facebook","google","leetcode"},
-        vector<string>{"e","o"}
-    );
+    auto getVal = mediumlevelController->simplifyPath("/.///NWtm/KBp/TQdj/a/v/rsJ/n/j/../../lsw/./j/../Gh/////gNBxM/./");
+    std::cout << "res: " << getVal << std::endl;
 
     reallocated(easylevelController);
     reallocated(mediumlevelController);

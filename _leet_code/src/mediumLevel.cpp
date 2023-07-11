@@ -1254,4 +1254,40 @@ namespace leetcode
         }
         return res;
     }
+
+    // Fixme for completed this one
+    // Badcase: 
+    //      @Input: "/.///NWtm/KBp/TQdj/a/v/rsJ/n/j/../../lsw/./j/../Gh/////gNBxM/./"
+    //      @Output: "/NWtm/KBp/TQdj/a/v/rsJ/lsw/Gh/gNBxM"
+    std::string mediumLevel::simplifyPath(std::string path) {
+        string res = "/";
+        vector<string> splitString = split(path, '/');
+        for (auto idex = 0; idex < splitString.size(); ++idex) {
+            do {
+                if (splitString[idex] == ".") {
+                    break;
+                }
+
+                if (splitString[idex] == "..") {
+                    if (res.length() <= 1) {
+                        break;
+                    }
+                    remove(res);
+                    break;
+                }
+                
+                if (res[res.length() - 1] != '/') {
+                    res += "/";
+                }
+                res += splitString[idex];
+                res += "/";
+            } while (0);
+        }
+
+        if (res.length() > 1) {
+            res.erase(res.end() - 1);
+        }
+
+        return res;
+    }
 }
