@@ -76,7 +76,18 @@ namespace leetcode
          */
         ListNode* reverseKGroup(ListNode* head, int k);
 
-    private:
+        /**
+         * @brief Given an integer n, count the total number of digit 1 appearing in all non-negative integers less than or equal to n.
+         * 
+         * @example 
+         *      Input: n = 13, Output: n = 6
+         *      Input: n = 0, Output: n = 0
+         *      Input: n = 100, Output: n = 21
+         * 
+         * @param n 
+         * @return int 
+         */
+        int countDigitOne(int n);
     };
 };
 
